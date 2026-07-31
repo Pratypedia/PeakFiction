@@ -1,0 +1,285 @@
+.mountain-container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #0d1321;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  /* Removed 3D perspective to use performant 2D JS-bound parallax */
+}
+
+.mountain-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.scroll-spacer {
+  position: relative;
+  width: 100%;
+  height: 400vh; /* The actual scrollable canvas */
+  overflow: hidden;
+}
+
+.layer-segment {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120vh; /* Slightly taller for overlap */
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+/* Base positions and parallax transforms */
+/* The transform uses a CSS variable --scroll-y updated via onScroll */
+
+.layer-peak {
+  top: 0vh;
+  z-index: 1;
+  background-image: url('./assets/layer-peak.jpg');
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.7));
+}
+
+.layer-s {
+  top: 70vh;
+  z-index: 2;
+  background-image: url('./assets/layer-s.jpg');
+  -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+  mask-image: linear-gradient(to top, black 80%, transparent 100%);
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.5));
+}
+
+.layer-clouds {
+  top: 140vh;
+  z-index: 3;
+  background-image: url('./assets/layer-clouds.jpg');
+  -webkit-mask-image: linear-gradient(to top, black 70%, transparent 100%);
+  mask-image: linear-gradient(to top, black 70%, transparent 100%);
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.35));
+}
+
+.layer-a {
+  top: 210vh;
+  z-index: 4;
+  background-image: url('./assets/layer-a.jpg');
+  -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+  mask-image: linear-gradient(to top, black 80%, transparent 100%);
+  transform: translateY(calc(var(--scroll-y, 0px) * 0.2));
+}
+
+.layer-b {
+  top: 280vh;
+  z-index: 5;
+  background-image: url('./assets/layer-b.jpg');
+  -webkit-mask-image: linear-gradient(to top, black 85%, transparent 100%);
+  mask-image: linear-gradient(to top, black 85%, transparent 100%);
+  transform: translateY(calc(var(--scroll-y, 0px) * 0));
+}
+
+
+.nav-btn-cards {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease;
+}
+
+.nav-btn-cards:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.flag-marker {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  width: 45px;
+  height: 60px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  z-index: 10;
+}
+
+.flag-marker:hover {
+  transform: translate(-50%, -110%) scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+  z-index: 50;
+}
+
+.flag-pole {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #ccc;
+  transform: translateX(-50%);
+}
+
+.flags-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.flag-banner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 23px;
+  background: #ff4757;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.flag-peak .flag-banner {
+  background: #ffd32a;
+  width: 38px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.flag-b-empty {
+  opacity: 0.6;
+  transform: translate(-50%, -100%) scale(0.7);
+}
+
+.flag-label {
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  font-weight: 600;
+  transform: translateX(-50%) translateY(5px);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.story-tooltip {
+  position: absolute;
+  transform: translate(20px, -50%);
+  width: 250px;
+  background: rgba(20, 20, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  color: white;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.story-tooltip h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.tooltip-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.tooltip-meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tier-badge, .score-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.tier-badge { color: #ffa502; }
+
+.tooltip-comments {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Minimap */
+.minimap {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 60vh;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  z-index: 100;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.minimap-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.minimap-dot {
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  background: #ff4757;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.minimap-viewport {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  pointer-events: none;
+  transition: top 0.1s ease;
+  z-index: 5;
+}

@@ -1,0 +1,1927 @@
+[
+  {
+    "id": "story-1",
+    "name": "omniscient readers viewpoint",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Apocalyptic"
+    ],
+    "length": "",
+    "score": "10",
+    "rankingPratyush": "Peak",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/69/Omniscient_Reader%27s_Viewpoint_Volume_1_Cover.jpg"
+  },
+  {
+    "id": "story-2",
+    "name": "The Beginning After the end",
+    "medium": [
+      "comic",
+      "Novel"
+    ],
+    "genre": [
+      "Isekai",
+      "Fantasy",
+      "Action"
+    ],
+    "length": "",
+    "score": "9.8",
+    "rankingPratyush": "Peak",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/cc/The_Beginning_After_the_End_webtoon_volume_1_cover.jpg"
+  },
+  {
+    "id": "story-3",
+    "name": "Avatar: ATLA + Korra",
+    "medium": [
+      "show",
+      "comic"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "9.5",
+    "rankingPratyush": "Peak",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar_The_Last_Airbender_The_Promise_Part_1_cover.jpg"
+  },
+  {
+    "id": "story-4",
+    "name": "Cowboy Bebop",
+    "medium": [
+      "anime"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Action"
+    ],
+    "length": "",
+    "score": "9.2",
+    "rankingPratyush": "Peak",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png"
+  },
+  {
+    "id": "story-5",
+    "name": "Jujutsu Kaisen",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Dark Fantasy",
+      "Supernatural"
+    ],
+    "length": "",
+    "score": "9",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-H3TdM3g5ZUe9.jpg"
+  },
+  {
+    "id": "story-6",
+    "name": "Arcane",
+    "medium": [
+      "show"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi/Fantasy"
+    ],
+    "length": "",
+    "score": "8.95",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "id": "story-7",
+    "name": "Cyberpunk Edgerunners",
+    "medium": [
+      "anime"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Action",
+      "Cyberpunk"
+    ],
+    "length": "",
+    "score": "8.9",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg"
+  },
+  {
+    "id": "story-8",
+    "name": "Fullmetal Alchemist Brotherhood",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "8.8",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg"
+  },
+  {
+    "id": "story-9",
+    "name": "Mistborn",
+    "medium": [
+      "Book"
+    ],
+    "genre": [
+      "High Fantasy",
+      "Adventure"
+    ],
+    "length": "",
+    "score": "8.7",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1617768316i/68428.jpg"
+  },
+  {
+    "id": "story-10",
+    "name": "Frieren",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Fantasy",
+      "Adventure"
+    ],
+    "length": "",
+    "score": "8.6",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg"
+  },
+  {
+    "id": "story-11",
+    "name": "Death Note",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Psychological Thriller",
+      "Supernatural"
+    ],
+    "length": "",
+    "score": "8.5",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+  },
+  {
+    "id": "story-12",
+    "name": "Sherlock Holmes",
+    "medium": [
+      "Book",
+      "movie",
+      "show"
+    ],
+    "genre": [
+      "Mystery",
+      "Crime",
+      "Detective"
+    ],
+    "length": "",
+    "score": "8.3",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://cdn.kobo.com/book-images/c443ba6e-f336-410e-abcf-24c80b2fcf7e/1200/1200/False/the-adventures-of-sherlock-holmes-extraordinary-edition-with-illustrations.jpg"
+  },
+  {
+    "id": "story-13",
+    "name": "Alice in Borderland",
+    "medium": [
+      "show",
+      "Manga"
+    ],
+    "genre": [
+      "Thriller",
+      "Survival",
+      "Sci-Fi"
+    ],
+    "length": "",
+    "score": "8.25",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZDdhMTAwMmQtOTVlYi00OTcwLTllZGMtMjc4NGU0NzFhODM3XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "id": "story-14",
+    "name": "Invincible",
+    "medium": [
+      "show",
+      "comic"
+    ],
+    "genre": [
+      "Superhero",
+      "Action",
+      "Drama"
+    ],
+    "length": "",
+    "score": "8.2",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/61z68MpchzL._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "id": "story-15",
+    "name": "The Greatest Estate Developer",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Isekai",
+      "Comedy",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "8.15",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png"
+  },
+  {
+    "id": "story-16",
+    "name": "Violet Evergarden",
+    "medium": [
+      "anime",
+      "Novel"
+    ],
+    "genre": [
+      "Drama",
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "length": "",
+    "score": "8.1",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-ubzq619ZA2E9.png"
+  },
+  {
+    "id": "story-17",
+    "name": "Odd Taxi",
+    "medium": [
+      "anime"
+    ],
+    "genre": [
+      "Mystery",
+      "Thriller"
+    ],
+    "length": "",
+    "score": "8.05",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx128564-TOB0GlDMx2xe.jpg"
+  },
+  {
+    "id": "story-18",
+    "name": "Overgeared",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "LitRPG",
+      "Fantasy",
+      "Action"
+    ],
+    "length": "",
+    "score": "8",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/91j2VjH7jSL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": "story-19",
+    "name": "Solo leveling",
+    "medium": [
+      "Manhwa",
+      "Novel",
+      "anime"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "LitRPG"
+    ],
+    "length": "",
+    "score": "7.9",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/81jS951SgDL.jpg"
+  },
+  {
+    "id": "story-20",
+    "name": "One Piece",
+    "medium": [
+      "show"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "7.8",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-BeslEMqiPhlk.jpg"
+  },
+  {
+    "id": "story-21",
+    "name": "Death is the only ending for the villainess",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Isekai",
+      "Romance",
+      "Drama"
+    ],
+    "length": "",
+    "score": "7.7",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118408-zZuOINqjBZYn.jpg"
+  },
+  {
+    "id": "story-22",
+    "name": "Six of Crows",
+    "medium": [
+      "Book"
+    ],
+    "genre": [
+      "Fantasy",
+      "Heist",
+      "Young Adult"
+    ],
+    "length": "",
+    "score": "7.6",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXutcZTb4QY2BDU6v61Y78IB_9nlYnxr3_0DE8Oz5qOA&s"
+  },
+  {
+    "id": "story-23",
+    "name": "Regressed Mercenary’s Machinations",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Time Travel"
+    ],
+    "length": "",
+    "score": "7.5",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://webtoon-phinf.pstatic.net/20250118_29/1737135307367qsj6k_PNG/5EpisodeList_PC_Character.png"
+  },
+  {
+    "id": "story-24",
+    "name": "Studio Ghibli",
+    "medium": [
+      "movie"
+    ],
+    "genre": [
+      "Fantasy",
+      "Adventure",
+      "Family"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/91ktK7p2SAL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": "story-25",
+    "name": "Disney",
+    "medium": [
+      "show"
+    ],
+    "genre": [
+      "Family",
+      "Animation",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRoaVhCbCpEuzT8QAFTKjcXMD53i-HblDO8siwVIdC_w&s=10"
+  },
+  {
+    "id": "story-26",
+    "name": "I want to eat your pancreas",
+    "medium": [
+      "movie",
+      "Novel",
+      "Manga"
+    ],
+    "genre": [
+      "Drama",
+      "Romance",
+      "Tragedy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9UJat_yusOIcLwpsgpkP_d4tSYLdvPVNVAm98NUb8-Q&s=10"
+  },
+  {
+    "id": "story-27",
+    "name": "Naruto + Shippudden",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Martial Arts"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/71975/poster_image/large-fa9104c92d8304d6a1fdf50cc25890f1.jpeg"
+  },
+  {
+    "id": "story-28",
+    "name": "All of DragonBall",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Martial Arts",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnPEhyYchpORLDGIMYUWruByae2npcva1ReE068YeSiQ&s"
+  },
+  {
+    "id": "story-29",
+    "name": "One Punch Man",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Comedy",
+      "Superhero"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74347-sZpmNJ5xLwRK.jpg"
+  },
+  {
+    "id": "story-30",
+    "name": "Classroom of the Elite",
+    "medium": [
+      "anime",
+      "Novel"
+    ],
+    "genre": [
+      "Psychological Thriller",
+      "Drama"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx96798-SIQLQqS8HO9h.jpg"
+  },
+  {
+    "id": "story-31",
+    "name": "iFunny",
+    "medium": [
+      "other"
+    ],
+    "genre": [
+      "Comedy",
+      "Meme"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK6TayVxcQvK9HCtqQGBuwO0dAx1etoA4pYr6zsxkSJQ&s=10"
+  },
+  {
+    "id": "story-32",
+    "name": "The Game That I Came From",
+    "medium": [
+      "Manhwa"
+    ],
+    "genre": [
+      "LitRPG",
+      "Action",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/59620/large.jpg"
+  },
+  {
+    "id": "story-33",
+    "name": "Everyone else is a returnee",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "LitRPG",
+      "Action",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/66087/poster_image/large-3944dde1c00910d2a4404d815c5dd6d9.jpeg"
+  },
+  {
+    "id": "story-34",
+    "name": "The World After The End",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Apocalyptic"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2m7Fzgg-X5bsEfuhniIYmNOFII6I7e5rYOAspqeNjkg&s=10"
+  },
+  {
+    "id": "story-35",
+    "name": "Player who can’t level up",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "LitRPG"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/58886/large.jpg"
+  },
+  {
+    "id": "story-36",
+    "name": "Player Who Returned 10,000 years later",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Comedy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/63977/poster_image/large-bcc7100bc646f56fab6f90304b7bc24d.jpeg"
+  },
+  {
+    "id": "story-37",
+    "name": "Regressor instruction manual",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Fantasy",
+      "Isekai",
+      "Psychological"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/61570/poster_image/large-a2cca59f103c01a0201fa1947eff6983.jpeg"
+  },
+  {
+    "id": "story-38",
+    "name": "My School Life Pretending To Be a Worthless Person",
+    "medium": [
+      "Manhwa"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "School"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/64308/poster_image/large-03b8be96a31ec173ae76ae44d5768ae1.jpeg"
+  },
+  {
+    "id": "story-39",
+    "name": "Shadowless night",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Fantasy",
+      "Action",
+      "Romance"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/64657/poster_image/large-c922f6927e9ccd801659963a50c4e0d2.jpeg"
+  },
+  {
+    "id": "story-40",
+    "name": "The Newbie is Too Strong",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "LitRPG"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/63854/poster_image/large-138c8e795b11d2a8a5f30b5a79f36108.jpeg"
+  },
+  {
+    "id": "story-41",
+    "name": "Reincarnation of the strongest sword god",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "LitRPG",
+      "Action",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZhzzlkNNWdUb6u_cAdLjFw8zieSIrqQZyniv4DUQQOA&s=10"
+  },
+  {
+    "id": "story-42",
+    "name": "Doctor’s rebirth",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Martial Arts",
+      "Medical",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/59179/large.jpg"
+  },
+  {
+    "id": "story-43",
+    "name": "Sleeping Ranker",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "LitRPG",
+      "Action",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/62861/poster_image/large-f2eedf38daf4265c881ce3ca22a0c6fc.jpeg"
+  },
+  {
+    "id": "story-44",
+    "name": "Villain to Kill",
+    "medium": [
+      "Manhwa"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Superhero"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/59357/large.jpg"
+  },
+  {
+    "id": "story-45",
+    "name": "Legendary Son of the Marquis House",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Reincarnation"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThfCNx2ZckVaBs4S5hGThzlwXHjAoMRAPaS8uHyFiWgQ&s=10"
+  },
+  {
+    "id": "story-46",
+    "name": "The Live",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Survival"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/56292/large.jpg"
+  },
+  {
+    "id": "story-47",
+    "name": "Book Eater",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/60656/large.jpg"
+  },
+  {
+    "id": "story-48",
+    "name": "Baki",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Martial Arts",
+      "Action"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQvnI_H9cn_WziouTXAgO2bIKn9MEXnDrdLPzv8lRxpg&s=10"
+  },
+  {
+    "id": "story-49",
+    "name": "Hell's Paradise",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Dark Fantasy",
+      "Historical"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/40546/large.jpg"
+  },
+  {
+    "id": "story-50",
+    "name": "Demon Slayer",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Dark Fantasy",
+      "Historical"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/37280/poster_image/large-e7e54c8f2b193ff53f645f46ee6608e1.jpeg"
+  },
+  {
+    "id": "story-51",
+    "name": "My Hero Academia",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Superhero",
+      "Action"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/26004/poster_image/large-226bfa9e2bb2d77058802994345e1d7f.jpeg"
+  },
+  {
+    "id": "story-52",
+    "name": "Eminence in Shadow",
+    "medium": [
+      "anime",
+      "Novel",
+      "Manga"
+    ],
+    "genre": [
+      "Isekai",
+      "Action",
+      "Comedy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7PZKmuDsBo8EgvRBzqMyjifzaZeBiQm99_CrvuWo22HuxlwZwQlRzMTg&s=10"
+  },
+  {
+    "id": "story-53",
+    "name": "Horimiya",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Romance",
+      "Slice of Life",
+      "Comedy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/22352/large.jpg"
+  },
+  {
+    "id": "story-54",
+    "name": "The Water Magician",
+    "medium": [
+      "Manga",
+      "Novel"
+    ],
+    "genre": [
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/69142/poster_image/large-c5bd15dcfe1d69f5b03def3edcfddad8.jpeg"
+  },
+  {
+    "id": "story-55",
+    "name": "Wind Breaker",
+    "medium": [
+      "anime",
+      "Manga",
+      "Manhwa"
+    ],
+    "genre": [
+      "Action",
+      "Delinquent",
+      "Martial Arts"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx135083-TQbNFWKGJJHW.jpg"
+  },
+  {
+    "id": "story-56",
+    "name": "Spy x Family",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Comedy",
+      "Spy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/54448/poster_image/large-0ff02098a7d97a91d5e4cb8ec597165a.jpeg"
+  },
+  {
+    "id": "story-57",
+    "name": "Sakamoto Days",
+    "medium": [
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Comedy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/58159/poster_image/large-f812099474664e9aa9f7e8d2181c8011.jpeg"
+  },
+  {
+    "id": "story-58",
+    "name": "Suzume",
+    "medium": [
+      "movie"
+    ],
+    "genre": [
+      "Fantasy",
+      "Adventure"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/65130/poster_image/large-b164e0fe6b7aae2664ea1cd70d972033.jpeg"
+  },
+  {
+    "id": "story-59",
+    "name": "Your name",
+    "medium": [
+      "movie"
+    ],
+    "genre": [
+      "Romance",
+      "Fantasy",
+      "Drama"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/38482/large.jpg"
+  },
+  {
+    "id": "story-60",
+    "name": "A silent voice",
+    "medium": [
+      "movie",
+      "Manga"
+    ],
+    "genre": [
+      "Drama",
+      "Romance",
+      "Slice of Life"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/16554/large.jpg"
+  },
+  {
+    "id": "story-61",
+    "name": "Weathering with you",
+    "medium": [
+      "movie"
+    ],
+    "genre": [
+      "Romance",
+      "Fantasy",
+      "Drama"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/55885/large.jpg"
+  },
+  {
+    "id": "story-62",
+    "name": "Harry Potter",
+    "medium": [
+      "Book",
+      "movie"
+    ],
+    "genre": [
+      "Fantasy",
+      "Young Adult"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://bci.kinokuniya.com/ae/jsp/images/book-img/97814/97814088/9781408855652.JPG"
+  },
+  {
+    "id": "story-63",
+    "name": "Michael Vey",
+    "medium": [
+      "Book"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Young Adult"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/75/Michael_Vey_The_Prisoner_of_Cell_25_paperback_book_cover.jpg"
+  },
+  {
+    "id": "story-64",
+    "name": "The Terrible Two",
+    "medium": [
+      "Book"
+    ],
+    "genre": [
+      "Comedy",
+      "Children's Fiction"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/71Wo3cNBa7L._AC_UF1000,1000_QL80_AIweblab1381794,T1_.jpg"
+  },
+  {
+    "id": "story-65",
+    "name": "Marvel Cinematic Universe",
+    "medium": [
+      "movie",
+      "show"
+    ],
+    "genre": [
+      "Superhero",
+      "Action",
+      "Sci-Fi"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://www.boxofficepro.com/wp-content/uploads/2021/12/mcu-rewindFeb2023775x970-copy.png"
+  },
+  {
+    "id": "story-66",
+    "name": "DCU",
+    "medium": [
+      "movie",
+      "show"
+    ],
+    "genre": [
+      "Superhero",
+      "Action",
+      "Sci-Fi"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/DC_Comics_logo.svg/960px-DC_Comics_logo.svg.png"
+  },
+  {
+    "id": "story-67",
+    "name": "Return of the Mount Hua sect",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Martial Arts",
+      "Action",
+      "Comedy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132144-i5B4VnG9sRgh.png"
+  },
+  {
+    "id": "story-68",
+    "name": "Reincarnation of the suicidal battlegod",
+    "medium": [
+      "Manhwa"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Time Travel"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/60196/large.jpg"
+  },
+  {
+    "id": "story-69",
+    "name": "Pick Me Up, Infinite Gacha",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Isekai",
+      "Action",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159441-9W8201jAT9Yv.jpg"
+  },
+  {
+    "id": "story-70",
+    "name": "Solo Max-Level Newbie",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "LitRPG"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/solo-max-level-newbie.bac83f-400.webp"
+  },
+  {
+    "id": "story-71",
+    "name": "Damn Reincarnation",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Reincarnation"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx151512-q0Xddr1JNKNq.png"
+  },
+  {
+    "id": "story-72",
+    "name": "Nano Machine",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Martial Arts",
+      "Sci-Fi",
+      "Action"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx120980-RZ9WLd0o9hyo.jpg"
+  },
+  {
+    "id": "story-73",
+    "name": "Trash of the Count's Family",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Isekai",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx123573-LKoCKwRouEMW.png"
+  },
+  {
+    "id": "story-74",
+    "name": "Academy's Undercover Professor",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Fantasy",
+      "Mystery"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx150836-RbhplaCkc2dy.jpg"
+  },
+  {
+    "id": "story-75",
+    "name": "Warrior High School",
+    "medium": [
+      "Manhwa"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "School"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx155967-UYbp88lyVXfS.jpg"
+  },
+  {
+    "id": "story-76",
+    "name": "Return of the 8th class magician",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Time Travel"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx136331-cM7yJu8RtCoU.jpg"
+  },
+  {
+    "id": "story-77",
+    "name": "The Challenger",
+    "medium": [
+      "Manhwa"
+    ],
+    "genre": [
+      "Action",
+      "Sci-Fi",
+      "VR"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx139500-HXVjQRNB5Ds8.jpg"
+  },
+  {
+    "id": "story-78",
+    "name": "Superhuman Battlefield",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Sports"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx150744-oItNn4LvB2Pc.jpg"
+  },
+  {
+    "id": "story-79",
+    "name": "swordmaster’s youngest son",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Reincarnation"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/63282/poster_image/large-0353518b780d4f94d93006236c2b9361.jpeg"
+  },
+  {
+    "id": "story-80",
+    "name": "Star-Embracing Sword Master",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/69516/poster_image/large-aad39241dd00e02a4646f7e548056b40.jpeg"
+  },
+  {
+    "id": "story-81",
+    "name": "The Novel’s Extra",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Isekai",
+      "Fantasy",
+      "Action"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/63926/poster_image/large-c4607fd32903b27f98b909b9df86a4b2.jpeg"
+  },
+  {
+    "id": "story-82",
+    "name": "Revenge of the iron blooded sword hound",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Revenge"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx163824-KiablxybJD6i.jpg"
+  },
+  {
+    "id": "story-83",
+    "name": "Return of the Disaster Class Hero",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Revenge"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/return-of-the-disaster-class-hero.e23831-400.webp"
+  },
+  {
+    "id": "story-84",
+    "name": "Reformation of the Deadbeat Noble",
+    "medium": [
+      "Manhwa",
+      "Novel"
+    ],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Growth"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/reformation-of-the-deadbeat-noble.35b8e9-400.webp"
+  },
+  {
+    "id": "story-85",
+    "name": "Rick & Morty",
+    "medium": [
+      "show"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Comedy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "id": "story-86",
+    "name": "Ben 10",
+    "medium": [
+      "show"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Action",
+      "Superhero"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Ben_10_reboot_logo.png"
+  },
+  {
+    "id": "story-87",
+    "name": "John Wick",
+    "medium": [
+      "movie"
+    ],
+    "genre": [
+      "Action",
+      "Thriller"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_.jpg"
+  },
+  {
+    "id": "story-88",
+    "name": "Star Wars",
+    "medium": [
+      "movie",
+      "show"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Space Opera",
+      "Action"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/960px-Star_wars2.svg.png"
+  },
+  {
+    "id": "story-89",
+    "name": "Transformers",
+    "medium": [
+      "movie",
+      "show",
+      "comic"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Action"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2265-uGaMUjSpJVWa.png"
+  },
+  {
+    "id": "story-90",
+    "name": "I Got a New Skill Every Time I Was Exiled, and After 100 Different Worlds, I Was Unmatched",
+    "medium": [
+      "Manga"
+    ],
+    "genre": [
+      "Isekai",
+      "Fantasy",
+      "Action"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159212-WVbxqBQfdlU4.jpg"
+  },
+  {
+    "id": "story-91",
+    "name": "Attack on Titan",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Dark Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg"
+  },
+  {
+    "id": "story-92",
+    "name": "Hunter X Hunter",
+    "medium": [
+      "anime",
+      "Manga"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30026-uCvXMudMzmwI.jpg"
+  },
+  {
+    "id": "story-93",
+    "name": "Stormlight Archive",
+    "medium": [
+      "Book"
+    ],
+    "genre": [
+      "High Fantasy",
+      "Adventure"
+    ],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1659905828i/7235533.jpg"
+  },
+  {
+    "id": "story-94",
+    "name": "Lookism",
+    "medium": [
+      "show",
+      "comic"
+    ],
+    "genre": [],
+    "length": "",
+    "score": "",
+    "rankingPratyush": "",
+    "commentsPratyush": "",
+    "rankingKanav": "",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86848-4CSItSclJUvi.jpg"
+  }
+]

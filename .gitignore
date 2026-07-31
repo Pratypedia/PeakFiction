@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.venv/
+
+# Production output
+dist/
+dist-ssr/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment & OS files
+.env
+.env.local
+.DS_Store
