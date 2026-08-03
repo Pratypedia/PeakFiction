@@ -1,6 +1,6 @@
 [
   {
-    "id": "top25-1",
+    "id": "top-1",
     "rank": 1,
     "name": "The Beginning After the end",
     "medium": [
@@ -19,7 +19,7 @@
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/cc/The_Beginning_After_the_End_webtoon_volume_1_cover.jpg"
   },
   {
-    "id": "top25-2",
+    "id": "top-2",
     "rank": 2,
     "name": "Jujutsu Kaisen",
     "medium": [
@@ -38,7 +38,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-H3TdM3g5ZUe9.jpg"
   },
   {
-    "id": "top25-3",
+    "id": "top-3",
     "rank": 3,
     "name": "omniscient readers viewpoint",
     "medium": [
@@ -57,7 +57,7 @@
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/69/Omniscient_Reader%27s_Viewpoint_Volume_1_Cover.jpg"
   },
   {
-    "id": "top25-4",
+    "id": "top-4",
     "rank": 4,
     "name": "Avatar: ATLA",
     "medium": [
@@ -76,7 +76,7 @@
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar_The_Last_Airbender_The_Promise_Part_1_cover.jpg"
   },
   {
-    "id": "top25-5",
+    "id": "top-5",
     "rank": 5,
     "name": "Attack on Titan",
     "medium": [
@@ -94,7 +94,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg"
   },
   {
-    "id": "top25-6",
+    "id": "top-6",
     "rank": 6,
     "name": "Arcane",
     "medium": [
@@ -112,7 +112,7 @@
     "imageUrl": "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
   },
   {
-    "id": "top25-7",
+    "id": "top-7",
     "rank": 7,
     "name": "Cowboy Bebop",
     "medium": [
@@ -129,7 +129,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png"
   },
   {
-    "id": "top25-8",
+    "id": "top-8",
     "rank": 8,
     "name": "Fullmetal Alchemist Brotherhood",
     "medium": [
@@ -148,7 +148,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg"
   },
   {
-    "id": "top25-9",
+    "id": "top-9",
     "rank": 9,
     "name": "Death Note",
     "medium": [
@@ -166,7 +166,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
   },
   {
-    "id": "top25-10",
+    "id": "top-10",
     "rank": 10,
     "name": "Overgeared",
     "medium": [
@@ -185,7 +185,7 @@
     "imageUrl": "https://m.media-amazon.com/images/I/91j2VjH7jSL._AC_UF1000,1000_QL80_.jpg"
   },
   {
-    "id": "top25-11",
+    "id": "top-11",
     "rank": 11,
     "name": "Mistborn",
     "medium": [
@@ -202,7 +202,7 @@
     "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1617768316i/68428.jpg"
   },
   {
-    "id": "top25-12",
+    "id": "top-12",
     "rank": 12,
     "name": "Cyberpunk Edgerunners",
     "medium": [
@@ -220,7 +220,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg"
   },
   {
-    "id": "top25-13",
+    "id": "top-13",
     "rank": 13,
     "name": "Alice in Borderland",
     "medium": [
@@ -239,7 +239,7 @@
     "imageUrl": "https://m.media-amazon.com/images/M/MV5BZDdhMTAwMmQtOTVlYi00OTcwLTllZGMtMjc4NGU0NzFhODM3XkEyXkFqcGc@._V1_.jpg"
   },
   {
-    "id": "top25-14",
+    "id": "top-14",
     "rank": 14,
     "name": "Return of the Mount Hua sect",
     "medium": [
@@ -258,7 +258,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132144-i5B4VnG9sRgh.png"
   },
   {
-    "id": "top25-15",
+    "id": "top-15",
     "rank": 15,
     "name": "Frieren",
     "medium": [
@@ -276,7 +276,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg"
   },
   {
-    "id": "top25-16",
+    "id": "top-16",
     "rank": 16,
     "name": "Ember Knight",
     "medium": [
@@ -294,7 +294,7 @@
     "imageUrl": "https://static.wikia.nocookie.net/koreanwebtoons/images/3/30/The_Ember_Knight.jpg/revision/latest?cb=20210831104144"
   },
   {
-    "id": "top25-17",
+    "id": "top-17",
     "rank": 17,
     "name": "The Greatest Estate Developer",
     "medium": [
@@ -313,7 +313,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png"
   },
   {
-    "id": "top25-18",
+    "id": "top-18",
     "rank": 18,
     "name": "Odd Taxi",
     "medium": [
@@ -330,7 +330,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx128564-TOB0GlDMx2xe.jpg"
   },
   {
-    "id": "top25-19",
+    "id": "top-19",
     "rank": 19,
     "name": "Invincible",
     "medium": [
@@ -349,7 +349,7 @@
     "imageUrl": "https://m.media-amazon.com/images/I/61z68MpchzL._AC_UF894,1000_QL80_.jpg"
   },
   {
-    "id": "top25-20",
+    "id": "top-20",
     "rank": 20,
     "name": "Star-Embracing Sword Master",
     "medium": [
@@ -367,7 +367,7 @@
     "imageUrl": "https://media.kitsu.app/manga/69516/poster_image/large-aad39241dd00e02a4646f7e548056b40.jpeg"
   },
   {
-    "id": "top25-21",
+    "id": "top-21",
     "rank": 21,
     "name": "The Nebula's Civilization",
     "medium": [
@@ -381,11 +381,11 @@
     "length": "140 (S1: 55, S2: 55, S3: 30+) Ongoing",
     "hours": "5",
     "rankingPratyush": "Unseen",
-    "rankingKanav": "Unseen",
+    "rankingKanav": "S",
     "imageUrl": "https://cdn.wuxiaworld.com/images/covers/tnc.webp?v=98466158499b9b08199019f2f11638dd424c9a3b"
   },
   {
-    "id": "top25-22",
+    "id": "top-22",
     "rank": 22,
     "name": "Violet Evergarden",
     "medium": [
@@ -404,7 +404,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-ubzq619ZA2E9.png"
   },
   {
-    "id": "top25-23",
+    "id": "top-23",
     "rank": 23,
     "name": "Solo leveling",
     "medium": [
@@ -424,7 +424,7 @@
     "imageUrl": "https://m.media-amazon.com/images/I/81jS951SgDL.jpg"
   },
   {
-    "id": "top25-24",
+    "id": "top-24",
     "rank": 24,
     "name": "Death is the only ending for the villainess",
     "medium": [
@@ -443,7 +443,7 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118408-zZuOINqjBZYn.jpg"
   },
   {
-    "id": "top25-25",
+    "id": "top-25",
     "rank": 25,
     "name": "Six of Crows",
     "medium": [

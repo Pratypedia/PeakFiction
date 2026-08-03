@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from './lib/supabaseClient';
 import initialStories from './data/stories.json';
-import top25Stories from './data/top25.json';
+import initialTop25Stories from './data/top25.json';
+import { fetchLiveSheetData } from './lib/sheetsService';
 import CardView from './components/CardView';
 import MountainView from './components/MountainView';
 import ChartsView from './components/ChartsView';
@@ -10,6 +11,7 @@ import { Mountain, LayoutGrid, BarChart2, Info } from 'lucide-react';
 
 export default function App() {
   const [stories, setStories] = useState(initialStories);
+  const [topStories, setTopStories] = useState(initialTop25Stories);
   const [currentView, setCurrentView] = useState('mountain'); // 'mountain' or 'cards'
   const [socialData, setSocialData] = useState({});
   const [targetStory, setTargetStory] = useState(null);
@@ -23,6 +25,16 @@ export default function App() {
     if (supabase) {
       fetchGlobalSocialData();
     }
+
+    // Fetch live Google Sheets data
+    fetchLiveSheetData().then(({ stories: liveStories, topStories: liveTopStories }) => {
+      if (liveStories && liveStories.length > 0) {
+        setStories(liveStories);
+      }
+      if (liveTopStories && liveTopStories.length > 0) {
+        setTopStories(liveTopStories);
+      }
+    });
   }, []);
 
   const fetchGlobalSocialData = async () => {
@@ -77,7 +89,7 @@ export default function App() {
       
       {currentView === 'mountain' ? (
         <MountainView 
-          stories={top25Stories} 
+          stories={topStories} 
           socialData={socialData}
           onViewChange={handleViewChange} 
         />
