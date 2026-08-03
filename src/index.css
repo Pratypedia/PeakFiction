@@ -43,6 +43,11 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
+html {
+  font-size: 85%;
+  zoom: 0.85;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
