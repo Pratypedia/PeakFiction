@@ -1,11 +1,9 @@
 import React from 'react';
-import { Search, Filter, Flame, Users, Sparkles, RefreshCw } from 'lucide-react';
+import { Search, RefreshCw } from 'lucide-react';
 
 export default function FilterControls({
   searchQuery,
   setSearchQuery,
-  viewMode,
-  setViewMode,
   selectedMedium,
   setSelectedMedium,
   selectedTier,
@@ -20,48 +18,7 @@ export default function FilterControls({
 
   return (
     <div className="controls-card">
-      <div className="controls-row-top">
-        {/* View Mode Tabs */}
-        <div className="view-mode-tabs">
-          <button 
-            className={`view-tab ${viewMode === 'all' ? 'active' : ''}`}
-            onClick={() => setViewMode('all')}
-          >
-            <Users size={16} />
-            <span>Dual View</span>
-          </button>
-
-          <button 
-            className={`view-tab ${viewMode === 'pratyush' ? 'active' : ''}`}
-            onClick={() => setViewMode('pratyush')}
-          >
-            <span>👤 Pratyush</span>
-          </button>
-
-          <button 
-            className={`view-tab ${viewMode === 'kanav' ? 'active' : ''}`}
-            onClick={() => setViewMode('kanav')}
-          >
-            <span>👤 Kanav</span>
-          </button>
-
-          <button 
-            className={`view-tab ${viewMode === 'peak' ? 'active' : ''}`}
-            onClick={() => setViewMode('peak')}
-          >
-            <Flame size={16} color="#ff3b5c" />
-            <span>Peak Only</span>
-          </button>
-
-          <button 
-            className={`view-tab ${viewMode === 'debates' ? 'active' : ''}`}
-            onClick={() => setViewMode('debates')}
-          >
-            <Sparkles size={16} color="#c77dff" />
-            <span>Debates</span>
-          </button>
-        </div>
-
+      <div className="controls-row-top" style={{ justifyContent: 'flex-end' }}>
         {/* Search */}
         <div className="search-wrapper">
           <Search size={16} className="search-icon" />

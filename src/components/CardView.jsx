@@ -3,19 +3,16 @@ import Header from './Header';
 import StatsBar from './StatsBar';
 import FilterControls from './FilterControls';
 import StoryCard from './StoryCard';
-import TierLegendModal from './TierLegendModal';
 import EditModal from './EditModal';
 import StoryDetailModal from './StoryDetailModal';
-import { Flame, Mountain } from 'lucide-react';
+import { Mountain } from 'lucide-react';
 
 export default function CardView({ stories, socialData, setStories, onViewChange, targetStory, clearTargetStory }) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState('all'); 
   const [selectedMedium, setSelectedMedium] = useState('');
   const [selectedTier, setSelectedTier] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
   
-  const [isLegendOpen, setIsLegendOpen] = useState(false);
   const [editingStory, setEditingStory] = useState(null);
   const [detailStory, setDetailStory] = useState(null);
 
@@ -84,23 +81,9 @@ export default function CardView({ stories, socialData, setStories, onViewChange
         }
       }
 
-      if (viewMode === 'pratyush') {
-        if (!story.rankingPratyush && selectedTier) return false;
-      } else if (viewMode === 'kanav') {
-        if (!story.rankingKanav && selectedTier) return false;
-      } else if (viewMode === 'peak') {
-        if (story.rankingPratyush !== 'Peak' && story.rankingKanav !== 'Peak') {
-          return false;
-        }
-      } else if (viewMode === 'debates') {
-        if (!story.rankingPratyush || !story.rankingKanav || story.rankingPratyush === story.rankingKanav) {
-          return false;
-        }
-      }
-
       return true;
     });
-  }, [stories, searchQuery, viewMode, selectedMedium, selectedTier, selectedGenre]);
+  }, [stories, searchQuery, selectedMedium, selectedTier, selectedGenre]);
 
   const handleSaveStory = (updatedStory) => {
     setStories(prev => prev.map(s => s.id === updatedStory.id ? updatedStory : s));
@@ -111,7 +94,6 @@ export default function CardView({ stories, socialData, setStories, onViewChange
     setSelectedMedium('');
     setSelectedTier('');
     setSelectedGenre('');
-    setViewMode('all');
   };
 
   const getTierValue = (rank) => {
@@ -166,11 +148,7 @@ export default function CardView({ stories, socialData, setStories, onViewChange
 
   return (
     <div>
-      <Header 
-        onOpenLegend={() => setIsLegendOpen(true)}
-      />
-      
-
+      <Header totalStories={stories ? stories.length : 0} />
 
       <main className="container" style={{ paddingTop: '1rem' }}>
         <div className="hero-section">
@@ -185,8 +163,6 @@ export default function CardView({ stories, socialData, setStories, onViewChange
         <FilterControls
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
-          viewMode={viewMode}
-          setViewMode={setViewMode}
           selectedMedium={selectedMedium}
           setSelectedMedium={setSelectedMedium}
           selectedTier={selectedTier}
@@ -202,11 +178,6 @@ export default function CardView({ stories, socialData, setStories, onViewChange
           <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-main)' }}>
             Showing {filteredStories.length} {filteredStories.length === 1 ? 'Story' : 'Stories'}
           </h3>
-          {viewMode === 'peak' && (
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#ff6b8b', fontWeight: 600, fontSize: '0.875rem' }}>
-              <Flame size={16} /> Peak Tier Showcase
-            </span>
-          )}
         </div>
 
         {populatedTiers.length > 0 && (
@@ -269,11 +240,6 @@ export default function CardView({ stories, socialData, setStories, onViewChange
           </p>
         </div>
       </footer>
-
-      <TierLegendModal 
-        isOpen={isLegendOpen}
-        onClose={() => setIsLegendOpen(false)}
-      />
 
       <EditModal 
         story={editingStory}
