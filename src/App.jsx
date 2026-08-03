@@ -12,7 +12,7 @@ import { Mountain, LayoutGrid, BarChart2, Info } from 'lucide-react';
 export default function App() {
   const [stories, setStories] = useState(initialStories);
   const [topStories, setTopStories] = useState(initialTop25Stories);
-  const [currentView, setCurrentView] = useState('mountain'); // 'mountain' or 'cards'
+  const [currentView, setCurrentView] = useState('about'); // 'about', 'mountain', 'cards', 'charts'
   const [socialData, setSocialData] = useState({});
   const [targetStory, setTargetStory] = useState(null);
 
@@ -62,6 +62,12 @@ export default function App() {
     <>
       <div className="global-nav">
         <button 
+          className={`global-nav-btn ${currentView === 'about' ? 'active' : ''}`}
+          onClick={() => setCurrentView('about')}
+        >
+          <Info size={18} /> About
+        </button>
+        <button 
           className={`global-nav-btn ${currentView === 'mountain' ? 'active' : ''}`}
           onClick={() => setCurrentView('mountain')}
         >
@@ -78,12 +84,6 @@ export default function App() {
           onClick={() => setCurrentView('charts')}
         >
           <BarChart2 size={18} /> Charts
-        </button>
-        <button 
-          className={`global-nav-btn ${currentView === 'about' ? 'active' : ''}`}
-          onClick={() => setCurrentView('about')}
-        >
-          <Info size={18} /> About
         </button>
       </div>
       
