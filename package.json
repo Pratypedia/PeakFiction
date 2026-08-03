@@ -10,9 +10,12 @@
     "parse-csv": "node scripts/parse_csv.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.111.0",
     "lucide-react": "^0.344.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0",
+    "recharts": "^3.10.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

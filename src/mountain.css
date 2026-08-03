@@ -1,89 +1,170 @@
 .mountain-container {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: #0d1321;
-  position: relative;
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
-  /* Removed 3D perspective to use performant 2D JS-bound parallax */
-}
-
-.mountain-container::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-.scroll-spacer {
   position: relative;
   width: 100%;
-  height: 400vh; /* The actual scrollable canvas */
+  height: 400vh;
   overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background: #111;
+  zoom: 0.7;
 }
 
-.layer-segment {
+.mountain-sky {
   position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 120vh; /* Slightly taller for overlap */
-  background-size: cover;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  will-change: transform;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #0d1321 0%, /* Night */
+    #1d2d44 20%, /* Twilight */
+    #f07167 50%, /* Sunset / Evening */
+    #ffb703 70%, /* Golden Hour */
+    #8fbc8f 90%, /* Base green */
+    #2e8b57 100% /* Forest floor */
+  );
+  z-index: 0;
 }
 
-/* Base positions and parallax transforms */
-/* The transform uses a CSS variable --scroll-y updated via onScroll */
-
-.layer-peak {
-  top: 0vh;
-  z-index: 1;
-  background-image: url('./assets/layer-peak.jpg');
-  transform: translateY(calc(var(--scroll-y, 0px) * 0.7));
+/* Mountain Layers (Range) */
+.mountain-layer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform-origin: bottom center;
 }
 
-.layer-s {
-  top: 70vh;
-  z-index: 2;
-  background-image: url('./assets/layer-s.jpg');
-  -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
-  mask-image: linear-gradient(to top, black 80%, transparent 100%);
-  transform: translateY(calc(var(--scroll-y, 0px) * 0.5));
+/* Back Mountains with Snow Caps */
+.mountain-bg-main {
+  height: 85%; background: linear-gradient(to bottom, #ffffff 0%, #ffffff 15%, #4a5a80 18%, #2d3b5c 100%);
+  clip-path: polygon(10% 100%, 50% 5%, 90% 100%); z-index: 1; opacity: 0.95;
+}
+.mountain-bg-left {
+  height: 75%; background: linear-gradient(to bottom, #ffffff 0%, #ffffff 22%, #3a4b70 25%, #253354 100%);
+  clip-path: polygon(-10% 100%, 20% 15%, 55% 100%); z-index: 1; opacity: 0.9;
+}
+.mountain-bg-right {
+  height: 80%; background: linear-gradient(to bottom, #ffffff 0%, #ffffff 20%, #405275 23%, #283759 100%);
+  clip-path: polygon(45% 100%, 80% 12%, 115% 100%); z-index: 1; opacity: 0.95;
 }
 
-.layer-clouds {
-  top: 140vh;
-  z-index: 3;
-  background-image: url('./assets/layer-clouds.jpg');
-  -webkit-mask-image: linear-gradient(to top, black 70%, transparent 100%);
-  mask-image: linear-gradient(to top, black 70%, transparent 100%);
-  transform: translateY(calc(var(--scroll-y, 0px) * 0.35));
+/* Mid Mountains */
+.mountain-mid-1 {
+  height: 70%; background: linear-gradient(to bottom, #3a5469, #496a81);
+  clip-path: polygon(-5% 100%, 15% 30%, 45% 65%, 70% 20%, 105% 100%); z-index: 2;
+}
+.mountain-mid-2 {
+  height: 62%; background: linear-gradient(to bottom, #30465a, #405c73);
+  clip-path: polygon(20% 100%, 50% 25%, 85% 100%); z-index: 2; opacity: 0.95;
 }
 
-.layer-a {
-  top: 210vh;
+/* Front Mountains */
+.mountain-front-1 {
+  height: 45%; background: linear-gradient(to bottom, #527d7f, #66999b);
+  clip-path: polygon(-10% 100%, 25% 35%, 45% 70%, 75% 30%, 110% 100%); z-index: 3;
+}
+.mountain-front-2 {
+  height: 38%; background: linear-gradient(to bottom, #497173, #5a8a8c);
+  clip-path: polygon(10% 100%, 35% 25%, 70% 100%); z-index: 3; opacity: 0.9;
+}
+
+/* Scenery Overlays */
+.stars-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 35%;
+  background-image: 
+    radial-gradient(2px 2px at 15% 25%, white, transparent),
+    radial-gradient(2px 2px at 35% 45%, #e0e0e0, transparent),
+    radial-gradient(2px 2px at 55% 15%, white, transparent),
+    radial-gradient(2px 2px at 75% 35%, #f0f0f0, transparent),
+    radial-gradient(2px 2px at 95% 20%, white, transparent),
+    radial-gradient(3px 3px at 25% 55%, #fff, transparent),
+    radial-gradient(3px 3px at 85% 50%, #e6e6e6, transparent);
+  background-size: 250px 250px; background-repeat: repeat; z-index: 0; opacity: 0.7;
+}
+
+.clouds-overlay {
+  position: absolute; top: 10%; left: 0; width: 100%; height: 50%;
+  z-index: 2; pointer-events: none; overflow: hidden;
+}
+
+.cloud {
+  position: absolute; background: rgba(255, 255, 255, 0.25);
+  border-radius: 50px; filter: blur(4px);
+  animation: drift linear infinite;
+}
+.cloud:before, .cloud:after {
+  content: ''; position: absolute; background: inherit; border-radius: 50%;
+}
+.cloud-1 { width: 220px; height: 60px; top: 15%; left: -250px; animation-duration: 70s; }
+.cloud-1:before { width: 100px; height: 100px; top: -40px; left: 20px; }
+.cloud-1:after { width: 120px; height: 120px; top: -50px; left: 70px; }
+
+.cloud-2 { width: 300px; height: 80px; top: 35%; left: -350px; animation-duration: 90s; animation-delay: -30s; opacity: 0.8; }
+.cloud-2:before { width: 150px; height: 150px; top: -70px; left: 30px; }
+.cloud-2:after { width: 130px; height: 130px; top: -50px; left: 120px; }
+
+.cloud-3 { width: 180px; height: 50px; top: 65%; left: -200px; animation-duration: 55s; animation-delay: -15s; }
+.cloud-3:before { width: 80px; height: 80px; top: -30px; left: 15px; }
+.cloud-3:after { width: 90px; height: 90px; top: -40px; left: 50px; }
+
+@keyframes drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(120vw); }
+}
+
+.trees-back {
+  position: absolute; bottom: calc(40vh - 12px); left: 0; width: 100%; height: 250px; z-index: 3; pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L85 65 L70 65 L95 100 L5 100 L30 65 L15 65 Z" fill="%232d6a4f" opacity="0.9"/></svg>');
+  background-size: 100px 150px; background-repeat: repeat-x; background-position: bottom;
+}
+.trees-front {
+  position: absolute; bottom: calc(40vh - 20px); left: 0; width: 100%; height: 180px; z-index: 4; pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L85 65 L70 65 L95 100 L5 100 L30 65 L15 65 Z" fill="%231b4332"/></svg>');
+  background-size: 75px 120px; background-repeat: repeat-x; background-position: 40px bottom;
+}
+
+.soil-base {
+  position: absolute; bottom: 0; left: 0; width: 100%; height: calc(40vh + 4px); z-index: 5;
+  background: linear-gradient(to bottom, #2d1a11, #1a0f0a);
+  border-top: 4px solid #1b4332;
+}
+
+.trail-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   z-index: 4;
-  background-image: url('./assets/layer-a.jpg');
-  -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
-  mask-image: linear-gradient(to top, black 80%, transparent 100%);
-  transform: translateY(calc(var(--scroll-y, 0px) * 0.2));
 }
 
-.layer-b {
-  top: 280vh;
-  z-index: 5;
-  background-image: url('./assets/layer-b.jpg');
-  -webkit-mask-image: linear-gradient(to top, black 85%, transparent 100%);
-  mask-image: linear-gradient(to top, black 85%, transparent 100%);
-  transform: translateY(calc(var(--scroll-y, 0px) * 0));
+.mountain-title {
+  position: absolute;
+  top: calc(6vh + 180px);
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 6.5rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  z-index: 10;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.2);
 }
 
-
-.nav-btn-cards {
+.nav-actions {
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  zoom: 2.0;
+}
+
+.nav-btn-cards {
   background: rgba(0, 0, 0, 0.6);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -102,15 +183,48 @@
   background: rgba(0, 0, 0, 0.9);
 }
 
+.scroll-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn-scroll {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.nav-btn-scroll:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.flags-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
 .flag-marker {
   position: absolute;
   transform: translate(-50%, -100%);
-  width: 45px;
-  height: 60px;
+  width: 67px;
+  height: 90px;
   pointer-events: auto;
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
-  z-index: 10;
 }
 
 .flag-marker:hover {
@@ -121,43 +235,44 @@
 
 .flag-pole {
   position: absolute;
-  bottom: 0;
+  bottom: -6px;
   left: 50%;
-  width: 2px;
-  height: 100%;
+  width: 3px;
+  height: calc(100% + 6px);
   background: #ccc;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
-.flags-container {
+.flag-base-zigzag {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 10px;
+  z-index: 2;
 }
 
 .flag-banner {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 30px;
-  height: 23px;
+  width: 45px;
+  height: 35px;
   background: #ff4757;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 6px 6px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 21px;
 }
 
 .flag-peak .flag-banner {
   background: #ffd32a;
-  width: 38px;
-  height: 30px;
-  font-size: 20px;
+  width: 57px;
+  height: 45px;
+  font-size: 30px;
 }
 
 .flag-b-empty {
@@ -167,17 +282,17 @@
 
 .flag-label {
   position: absolute;
-  top: 100%; 
+  top: 100%; /* Base of the flag marker */
   left: 50%;
   background: rgba(0, 0, 0, 0.65);
   color: white;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 20px;
   white-space: nowrap;
   pointer-events: none;
   font-weight: 600;
-  transform: translateX(-50%) translateY(5px);
+  transform: translateX(-50%) translateY(10px);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255,255,255,0.1);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -185,12 +300,11 @@
 
 .story-tooltip {
   position: absolute;
-  transform: translate(20px, -50%);
-  width: 250px;
+  width: 375px;
   background: rgba(20, 20, 30, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 15px;
+  border-radius: 12px;
+  padding: 24px;
   color: white;
   z-index: 100;
   backdrop-filter: blur(10px);
@@ -199,8 +313,8 @@
 }
 
 .story-tooltip h4 {
-  margin: 0 0 10px 0;
-  font-size: 1.1rem;
+  margin: 0 0 15px 0;
+  font-size: 2.0rem;
   color: #fff;
 }
 
@@ -216,22 +330,28 @@
 
 .tooltip-meta {
   display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 .tier-badge, .score-badge {
   background: rgba(255, 255, 255, 0.1);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 6px;
   font-weight: bold;
 }
 
-.tier-badge { color: #ffa502; }
+.tier-badge {
+  color: #ffa502;
+  font-size: 3.2rem;
+}
+
+.score-badge {
+  font-size: 1.4rem;
+}
 
 .tooltip-comments {
-  font-size: 0.9rem;
+  font-size: 1.6rem;
   color: #ccc;
   margin: 0;
   line-height: 1.4;

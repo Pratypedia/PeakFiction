@@ -1,7 +1,7 @@
 import React from 'react';
-import { Edit3, Star, Award } from 'lucide-react';
+import { Edit3, Star, MessageSquare, Heart } from 'lucide-react';
 
-export default function StoryCard({ story, onEdit }) {
+export default function StoryCard({ story, social, onEdit, onCardClick }) {
   const getBadgeClass = (rank) => {
     if (!rank) return 'Pending';
     const cleanRank = rank.trim();
@@ -9,11 +9,16 @@ export default function StoryCard({ story, onEdit }) {
     if (cleanRank.toUpperCase() === 'S') return 'S';
     if (cleanRank.toUpperCase() === 'A') return 'A';
     if (cleanRank.toUpperCase() === 'B') return 'B';
+    if (cleanRank.toUpperCase() === 'C') return 'C';
+    if (cleanRank.toUpperCase() === 'D') return 'D';
+    if (cleanRank.toUpperCase() === 'F') return 'F';
     return 'Pending';
   };
 
+  const commentsCount = (story.commentsPratyush ? 1 : 0) + (story.commentsKanav ? 1 : 0);
+
   return (
-    <div className="story-card">
+    <div className="story-card" onClick={() => onCardClick && onCardClick(story)}>
       <div>
         {story.imageUrl && (
           <div style={{ margin: '-1.25rem -1.25rem 1rem -1.25rem', overflow: 'hidden', background: 'rgba(0,0,0,0.3)' }}>
@@ -23,7 +28,7 @@ export default function StoryCard({ story, onEdit }) {
         <div className="card-header">
           <h3 className="card-title">{story.name}</h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            {story.score && (
+            {story.hours && (
               <span 
                 style={{
                   background: 'rgba(255, 183, 3, 0.15)',
@@ -38,9 +43,9 @@ export default function StoryCard({ story, onEdit }) {
                   alignItems: 'center',
                   gap: '0.25rem'
                 }}
-                title="Granular Score out of 10"
+                title="Hours to Consume"
               >
-                ★ {story.score}
+                ⏳ {story.hours}h
               </span>
             )}
             <button 
@@ -53,7 +58,10 @@ export default function StoryCard({ story, onEdit }) {
                 borderRadius: '4px',
                 transition: 'color 0.2s'
               }}
-              onClick={() => onEdit(story)}
+              onClick={(e) => {
+                e.stopPropagation();
+                onEdit(story);
+              }}
               title="Edit story rating, score & comments"
             >
               <Edit3 size={16} />
@@ -87,11 +95,6 @@ export default function StoryCard({ story, onEdit }) {
               {story.rankingPratyush || 'Pending'}
             </span>
           </div>
-          {story.commentsPratyush && (
-            <div className="comment-snippet">
-              "{story.commentsPratyush}"
-            </div>
-          )}
 
           <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.05)', margin: '0.25rem 0' }} />
 
@@ -105,17 +108,38 @@ export default function StoryCard({ story, onEdit }) {
               {story.rankingKanav || 'Pending'}
             </span>
           </div>
-          {story.commentsKanav && (
-            <div className="comment-snippet">
-              "{story.commentsKanav}"
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          {story.favoriteCharacters ? (
+            <div className="fav-character" style={{ borderTop: 'none', paddingTop: 0, marginTop: 0 }}>
+              <Star size={14} className="fav-icon" />
+              <span>Favs: <strong>{story.favoriteCharacters}</strong></span>
+            </div>
+          ) : <div />}
+
+          {commentsCount > 0 && (
+            <div style={{ display: 'flex', gap: '0.2rem', color: 'var(--text-muted)' }}>
+              {[...Array(commentsCount)].map((_, i) => (
+                <MessageSquare key={i} size={14} />
+              ))}
             </div>
           )}
         </div>
 
-        {story.favoriteCharacters && (
-          <div className="fav-character">
-            <Star size={14} className="fav-icon" />
-            <span>Favs: <strong>{story.favoriteCharacters}</strong></span>
+        {/* Dynamic Social Stats */}
+        {social && (social.likes > 0 || social.comments > 0) && (
+          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+            {social.likes > 0 && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#ff6b8b' }}>
+                <Heart size={14} fill="currentColor" /> {social.likes}
+              </div>
+            )}
+            {social.comments > 0 && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#60a5fa' }}>
+                <MessageSquare size={14} fill="currentColor" /> {social.comments}
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -21,10 +21,6 @@ export default function Header({ onOpenLegend, onExportCSV }) {
             <HelpCircle size={16} />
             <span>Tier Meanings</span>
           </button>
-          <button className="btn btn-primary" onClick={onExportCSV}>
-            <Download size={16} />
-            <span>Export CSV</span>
-          </button>
         </div>
       </div>
     </header>

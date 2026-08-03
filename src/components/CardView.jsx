@@ -5,9 +5,10 @@ import FilterControls from './FilterControls';
 import StoryCard from './StoryCard';
 import TierLegendModal from './TierLegendModal';
 import EditModal from './EditModal';
+import StoryDetailModal from './StoryDetailModal';
 import { Flame, Mountain } from 'lucide-react';
 
-export default function CardView({ stories, setStories, onViewChange }) {
+export default function CardView({ stories, socialData, setStories, onViewChange, targetStory, clearTargetStory }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState('all'); 
   const [selectedMedium, setSelectedMedium] = useState('');
@@ -16,6 +17,21 @@ export default function CardView({ stories, setStories, onViewChange }) {
   
   const [isLegendOpen, setIsLegendOpen] = useState(false);
   const [editingStory, setEditingStory] = useState(null);
+  const [detailStory, setDetailStory] = useState(null);
+
+  React.useEffect(() => {
+    if (targetStory) {
+      const story = stories.find(s => s.name === targetStory.name);
+      if (story) {
+        setDetailStory(story);
+        setTimeout(() => {
+          const el = document.getElementById(`story-card-${story.id}`);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+      }
+      if (clearTargetStory) clearTargetStory();
+    }
+  }, [targetStory, stories, clearTargetStory]);
 
   // Extract unique mediums
   const allMediums = useMemo(() => {
@@ -48,8 +64,8 @@ export default function CardView({ stories, setStories, onViewChange }) {
         const matchesMedium = story.medium.some(m => m.toLowerCase().includes(query));
         const matchesGenre = story.genre.some(g => g.toLowerCase().includes(query));
         const matchesFav = story.favoriteCharacters.toLowerCase().includes(query);
-        const matchesScore = story.score && story.score.toString().includes(query);
-        if (!matchesName && !matchesMedium && !matchesGenre && !matchesFav && !matchesScore) {
+        const matchesHours = story.hours && story.hours.toString().includes(query);
+        if (!matchesName && !matchesMedium && !matchesGenre && !matchesFav && !matchesHours) {
           return false;
         }
       }
@@ -90,44 +106,6 @@ export default function CardView({ stories, setStories, onViewChange }) {
     setStories(prev => prev.map(s => s.id === updatedStory.id ? updatedStory : s));
   };
 
-  const handleExportCSV = () => {
-    const headers = [
-      'Name',
-      'Medium',
-      'Genre',
-      'Length',
-      'Score/10',
-      'Ranking - Pratyush',
-      'Comments - Pratyush',
-      'Ranking - Kanav',
-      'Comments - Kanav',
-      'Favorite Character(s)'
-    ];
-
-    const rows = stories.map(s => [
-      `"${s.name.replace(/"/g, '""')}"`,
-      `"${s.medium.join(', ')}"`,
-      `"${s.genre.join(', ')}"`,
-      `"${(s.length || '').replace(/"/g, '""')}"`,
-      `"${(s.score || '').replace(/"/g, '""')}"`,
-      `"${s.rankingPratyush || '-'}"`,
-      `"${(s.commentsPratyush || '').replace(/"/g, '""')}"`,
-      `"${s.rankingKanav || '-'}"`,
-      `"${(s.commentsKanav || '').replace(/"/g, '""')}"`,
-      `"${(s.favoriteCharacters || '').replace(/"/g, '""')}"`
-    ]);
-
-    const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', 'Peak_Fiction_Updated.csv');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const handleResetFilters = () => {
     setSearchQuery('');
     setSelectedMedium('');
@@ -136,23 +114,63 @@ export default function CardView({ stories, setStories, onViewChange }) {
     setViewMode('all');
   };
 
+  const getTierValue = (rank) => {
+    if (!rank) return 0;
+    const cleanRank = rank.trim().toUpperCase();
+    if (cleanRank === 'PEAK') return 10;
+    if (cleanRank === 'S') return 9;
+    if (cleanRank === 'A') return 8;
+    if (cleanRank === 'B') return 7;
+    if (cleanRank === 'C') return 6;
+    if (cleanRank === 'D') return 5;
+    if (cleanRank === 'F') return 3;
+    return 0; // Pending
+  };
+
+  const getTierLabel = (val) => {
+    switch(val) {
+      case 10: return 'Peak';
+      case 9: return 'S';
+      case 8: return 'A';
+      case 7: return 'B';
+      case 6: return 'C';
+      case 5: return 'D';
+      case 3: return 'F';
+      default: return 'Pending';
+    }
+  };
+
+  const groupedStories = useMemo(() => {
+    const groups = {};
+    filteredStories.forEach(story => {
+      const pVal = getTierValue(story.rankingPratyush);
+      const kVal = getTierValue(story.rankingKanav);
+      const highest = Math.max(pVal, kVal);
+      const label = getTierLabel(highest);
+      
+      if (!groups[label]) groups[label] = [];
+      groups[label].push(story);
+    });
+    return groups;
+  }, [filteredStories]);
+
+  const orderedTiers = ['Peak', 'S', 'A', 'B', 'C', 'D', 'F', 'Pending'];
+  const populatedTiers = orderedTiers.filter(t => groupedStories[t] && groupedStories[t].length > 0);
+
+  const scrollToTier = (tier) => {
+    const el = document.getElementById(`tier-${tier}`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
       <Header 
         onOpenLegend={() => setIsLegendOpen(true)}
-        onExportCSV={handleExportCSV}
       />
       
-      {/* View Switcher Bar */}
-      <div className="container" style={{ padding: '1rem 0' }}>
-        <button 
-          onClick={() => onViewChange('mountain')}
-          className="btn btn-primary"
-          style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: '0 auto', fontSize: '1.1rem', padding: '0.75rem 1.5rem', background: 'linear-gradient(135deg, #00c6ff, #0072ff)', border: 'none' }}
-        >
-          <Mountain size={20} /> View Interactive Mountain
-        </button>
-      </div>
+
 
       <main className="container" style={{ paddingTop: '1rem' }}>
         <div className="hero-section">
@@ -191,14 +209,42 @@ export default function CardView({ stories, setStories, onViewChange }) {
           )}
         </div>
 
+        {populatedTiers.length > 0 && (
+          <div className="elevator-nav">
+            {populatedTiers.map(tier => (
+              <button 
+                key={tier} 
+                className={`elevator-btn ${tier}`} 
+                onClick={() => scrollToTier(tier)}
+                title={`Scroll to ${tier} Tier`}
+              >
+                {tier === 'Pending' ? '?' : tier[0]}
+              </button>
+            ))}
+          </div>
+        )}
+
         {filteredStories.length > 0 ? (
-          <div className="cards-grid">
-            {filteredStories.map(story => (
-              <StoryCard 
-                key={story.id}
-                story={story}
-                onEdit={(s) => setEditingStory(s)}
-              />
+          <div>
+            {populatedTiers.map(tier => (
+              <div key={tier} id={`tier-${tier}`} className="tier-section">
+                <div className={`tier-divider ${tier}`}>
+                  <h2>{tier === 'Pending' ? 'Unrated / Pending' : `${tier} Tier`}</h2>
+                  <div className="tier-divider-line"></div>
+                </div>
+                <div className="cards-grid">
+                  {groupedStories[tier].map(story => (
+                    <div key={story.id} id={`story-card-${story.id}`}>
+                      <StoryCard 
+                        story={story}
+                        social={socialData[story.name] || { likes: 0, comments: 0 }}
+                        onEdit={(s) => setEditingStory(s)}
+                        onCardClick={(s) => setDetailStory(s)}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         ) : (
@@ -234,6 +280,12 @@ export default function CardView({ stories, setStories, onViewChange }) {
         isOpen={Boolean(editingStory)}
         onClose={() => setEditingStory(null)}
         onSave={handleSaveStory}
+      />
+
+      <StoryDetailModal 
+        story={detailStory}
+        isOpen={Boolean(detailStory)}
+        onClose={() => setDetailStory(null)}
       />
     </div>
   );

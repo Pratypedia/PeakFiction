@@ -5,7 +5,7 @@ export default function EditModal({ story, isOpen, onClose, onSave }) {
   if (!isOpen || !story) return null;
 
   const [formData, setFormData] = useState({
-    score: story.score || '',
+    hours: story.hours || '',
     rankingPratyush: story.rankingPratyush || '',
     commentsPratyush: story.commentsPratyush || '',
     rankingKanav: story.rankingKanav || '',
@@ -36,16 +36,16 @@ export default function EditModal({ story, isOpen, onClose, onSave }) {
         </div>
 
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          {/* Granular Score Input */}
+          {/* Hours Input */}
           <div style={{ background: 'rgba(255, 183, 3, 0.08)', padding: '1rem', borderRadius: '12px', border: '1px solid rgba(255, 183, 3, 0.25)' }}>
             <label style={{ fontSize: '0.85rem', fontWeight: 700, display: 'block', marginBottom: '0.3rem', color: '#ffb703' }}>
-              ★ Granular Score (0 - 10)
+              ⏳ Hours to Consume
             </label>
             <input 
               type="text"
-              value={formData.score}
-              onChange={(e) => setFormData({ ...formData, score: e.target.value })}
-              placeholder="e.g. 9.8, 8.5, 7.2"
+              value={formData.hours}
+              onChange={(e) => setFormData({ ...formData, hours: e.target.value })}
+              placeholder="e.g. 50, 120"
               style={{
                 width: '100%',
                 padding: '0.5rem',
@@ -57,9 +57,6 @@ export default function EditModal({ story, isOpen, onClose, onSave }) {
                 fontFamily: 'var(--font-mono)'
               }}
             />
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '0.2rem', display: 'block' }}>
-              Score logic: 9+ = Peak | 7.5-9 = S | 5-7.5 = A | 0-5 = B
-            </span>
           </div>
 
           {/* Pratyush Section */}

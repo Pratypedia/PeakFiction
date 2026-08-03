@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const csvFilePath = path.join(__dirname, '..', 'Peak Fiction - Sheet1.csv');
+const csvFilePath = path.join(__dirname, '..', 'Peak Fiction - All.csv');
 const jsonOutputPath = path.join(__dirname, '..', 'src', 'data', 'stories.json');
 
 function parseCSVLine(line) {
@@ -28,15 +28,6 @@ function parseCSVLine(line) {
   return result;
 }
 
-function deriveTierFromScore(scoreVal) {
-  if (!scoreVal || isNaN(scoreVal)) return null;
-  const num = parseFloat(scoreVal);
-  if (num >= 9.0) return 'Peak';
-  if (num >= 7.5) return 'S';
-  if (num >= 5.0) return 'A';
-  return 'B';
-}
-
 function processCSV() {
   const fileContent = fs.readFileSync(csvFilePath, 'utf8');
   const lines = fileContent.split(/\r?\n/).filter(line => line.trim().length > 0);
@@ -51,7 +42,7 @@ function processCSV() {
   const mediumIdx = headers.findIndex(h => h.toLowerCase() === 'medium');
   const genreIdx = headers.findIndex(h => h.toLowerCase() === 'genre');
   const lengthIdx = headers.findIndex(h => h.toLowerCase() === 'length');
-  const scoreIdx = headers.findIndex(h => h.toLowerCase().includes('score'));
+  const hoursIdx = headers.findIndex(h => h.toLowerCase().includes('hours'));
   const pratyushRankIdx = headers.findIndex(h => h.toLowerCase().includes('ranking - pratyush'));
   const pratyushCommentIdx = headers.findIndex(h => h.toLowerCase().includes('comments - pratyush'));
   const kanavRankIdx = headers.findIndex(h => h.toLowerCase().includes('ranking - kanav'));
@@ -69,19 +60,14 @@ function processCSV() {
     const medium = (mediumIdx !== -1 ? row[mediumIdx] || '' : row[1] || '').split(',').map(m => m.trim()).filter(Boolean);
     const genre = (genreIdx !== -1 ? row[genreIdx] || '' : row[2] || '').split(',').map(g => g.trim()).filter(Boolean);
     const length = lengthIdx !== -1 ? row[lengthIdx] || '' : row[3] || '';
-    const score = scoreIdx !== -1 ? (row[scoreIdx] && row[scoreIdx] !== '-' ? row[scoreIdx] : '') : '';
+    const hours = hoursIdx !== -1 ? row[hoursIdx] || '' : row[4] || '';
     
-    let rankingPratyush = pratyushRankIdx !== -1 ? (row[pratyushRankIdx] && row[pratyushRankIdx] !== '-' ? row[pratyushRankIdx] : '') : '';
-    if (!rankingPratyush && score) {
-      const derived = deriveTierFromScore(score);
-      if (derived) rankingPratyush = derived;
-    }
-
+    const rankingPratyush = pratyushRankIdx !== -1 ? (row[pratyushRankIdx] && row[pratyushRankIdx] !== '-' ? row[pratyushRankIdx] : '') : '';
     const commentsPratyush = pratyushCommentIdx !== -1 ? row[pratyushCommentIdx] || '' : '';
     const rankingKanav = kanavRankIdx !== -1 ? (row[kanavRankIdx] && row[kanavRankIdx] !== '-' ? row[kanavRankIdx] : '') : '';
     const commentsKanav = kanavCommentIdx !== -1 ? row[kanavCommentIdx] || '' : '';
-    const favoriteCharacters = row[9] || '';
-    const imageUrl = row[10] || '';
+    const favoriteCharacters = favIdx !== -1 ? row[favIdx] || '' : '';
+    const imageUrl = imageIdx !== -1 ? row[imageIdx] || '' : '';
 
     stories.push({
       id: `story-${i}`,
@@ -89,7 +75,7 @@ function processCSV() {
       medium,
       genre,
       length,
-      score,
+      hours,
       rankingPratyush,
       commentsPratyush,
       rankingKanav,
@@ -109,3 +95,4 @@ function processCSV() {
 }
 
 processCSV();
+
