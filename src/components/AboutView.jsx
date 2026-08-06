@@ -32,6 +32,7 @@ export default function AboutView({ onViewChange }) {
         <div className="mountain-layer mountain-front-2"></div>
         <div className="about-trees-back"></div>
         <div className="about-trees-front"></div>
+        <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '30px', background: '#4a2f26', zIndex: 10 }}></div>
       </div>
 
       <div className="about-content-layer">
