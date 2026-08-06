@@ -1,7 +1,7 @@
 import React from 'react';
-import { Edit3, Star, MessageSquare, Heart } from 'lucide-react';
+import { Star, MessageSquare, Heart } from 'lucide-react';
 
-export default function StoryCard({ story, social, onEdit, onCardClick }) {
+export default function StoryCard({ story, social, onCardClick }) {
   const getBadgeClass = (rank) => {
     if (!rank) return 'Pending';
     const cleanRank = rank.trim();
@@ -34,9 +34,9 @@ export default function StoryCard({ story, social, onEdit, onCardClick }) {
                   background: 'rgba(255, 183, 3, 0.15)',
                   border: '1px solid rgba(255, 183, 3, 0.4)',
                   color: '#ffb703',
-                  fontSize: '0.8rem',
+                  fontSize: '0.95rem',
                   fontWeight: 800,
-                  padding: '0.2rem 0.5rem',
+                  padding: '0.3rem 0.6rem',
                   borderRadius: '6px',
                   fontFamily: 'var(--font-mono)',
                   display: 'inline-flex',
@@ -48,24 +48,7 @@ export default function StoryCard({ story, social, onEdit, onCardClick }) {
                 ⏳ {story.hours}h
               </span>
             )}
-            <button 
-              style={{
-                background: 'transparent',
-                border: 'none',
-                color: 'var(--text-dim)',
-                cursor: 'pointer',
-                padding: '0.2rem',
-                borderRadius: '4px',
-                transition: 'color 0.2s'
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                onEdit(story);
-              }}
-              title="Edit story rating, score & comments"
-            >
-              <Edit3 size={16} />
-            </button>
+
           </div>
         </div>
 
@@ -92,7 +75,7 @@ export default function StoryCard({ story, social, onEdit, onCardClick }) {
               <span className="brother-name">Pratyush</span>
             </div>
             <span className={`tier-badge ${getBadgeClass(story.rankingPratyush)}`}>
-              {story.rankingPratyush || 'Pending'}
+              {story.rankingPratyush || '-'}
             </span>
           </div>
 
@@ -105,7 +88,7 @@ export default function StoryCard({ story, social, onEdit, onCardClick }) {
               <span className="brother-name">Kanav</span>
             </div>
             <span className={`tier-badge ${getBadgeClass(story.rankingKanav)}`}>
-              {story.rankingKanav || 'Pending'}
+              {story.rankingKanav || '-'}
             </span>
           </div>
         </div>
@@ -129,15 +112,15 @@ export default function StoryCard({ story, social, onEdit, onCardClick }) {
 
         {/* Dynamic Social Stats */}
         {social && (social.likes > 0 || social.comments > 0) && (
-          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
+          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-muted)', fontSize: '1rem' }}>
             {social.likes > 0 && (
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#ff6b8b' }}>
-                <Heart size={14} fill="currentColor" /> {social.likes}
+                <Heart size={16} fill="currentColor" /> {social.likes}
               </div>
             )}
             {social.comments > 0 && (
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#60a5fa' }}>
-                <MessageSquare size={14} fill="currentColor" /> {social.comments}
+                <MessageSquare size={16} fill="currentColor" /> {social.comments}
               </div>
             )}
           </div>

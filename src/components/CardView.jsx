@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react';
-import Header from './Header';
+
 import StatsBar from './StatsBar';
 import FilterControls from './FilterControls';
 import StoryCard from './StoryCard';
-import EditModal from './EditModal';
 import StoryDetailModal from './StoryDetailModal';
 import { Mountain } from 'lucide-react';
+import { playElevatorDing } from '../lib/audio';
 
 export default function CardView({ stories, socialData, setStories, onViewChange, targetStory, clearTargetStory }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -13,8 +13,10 @@ export default function CardView({ stories, socialData, setStories, onViewChange
   const [selectedTier, setSelectedTier] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
   
-  const [editingStory, setEditingStory] = useState(null);
   const [detailStory, setDetailStory] = useState(null);
+  
+  const [isElevatorMoving, setIsElevatorMoving] = useState(false);
+  const [floorDisplay, setFloorDisplay] = useState('Floor Peak');
 
   React.useEffect(() => {
     if (targetStory) {
@@ -85,10 +87,6 @@ export default function CardView({ stories, socialData, setStories, onViewChange
     });
   }, [stories, searchQuery, selectedMedium, selectedTier, selectedGenre]);
 
-  const handleSaveStory = (updatedStory) => {
-    setStories(prev => prev.map(s => s.id === updatedStory.id ? updatedStory : s));
-  };
-
   const handleResetFilters = () => {
     setSearchQuery('');
     setSelectedMedium('');
@@ -140,58 +138,68 @@ export default function CardView({ stories, socialData, setStories, onViewChange
   const populatedTiers = orderedTiers.filter(t => groupedStories[t] && groupedStories[t].length > 0);
 
   const scrollToTier = (tier) => {
-    const el = document.getElementById(`tier-${tier}`);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (isElevatorMoving) return;
+    setIsElevatorMoving(true);
+    setFloorDisplay(`Moving to ${tier}...`);
+
+    setTimeout(() => {
+      const el = document.getElementById(`tier-${tier}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'instant' });
+      }
+      playElevatorDing();
+      setFloorDisplay(`Floor ${tier}`);
+      
+      setTimeout(() => {
+        setIsElevatorMoving(false);
+      }, 800);
+    }, 1000);
   };
 
   return (
-    <div>
-      <Header totalStories={stories ? stories.length : 0} />
+    <div className="cards-page-wrapper">
+      <main className="container building-wrapper">
+        <div className="building-roof"></div>
+        <div className="building-container">
+          <div className="top-dashboard-panel penthouse-section">
+          <div className="hero-section" style={{ marginBottom: 0 }}>
+            <h2 className="hero-title" style={{ color: 'white' }}>All stories</h2>
+          </div>
 
-      <main className="container" style={{ paddingTop: '1rem' }}>
-        <div className="hero-section">
-          <h2 className="hero-title gradient-text">Fictional Universes & Rankings</h2>
-          <p className="hero-subtitle">
-            Every story, anime, manhwa, novel, book, comic, and movie we've experienced.
-          </p>
+          <StatsBar stories={stories} />
+
+          <FilterControls
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            selectedMedium={selectedMedium}
+            setSelectedMedium={setSelectedMedium}
+            selectedTier={selectedTier}
+            setSelectedTier={setSelectedTier}
+            selectedGenre={selectedGenre}
+            setSelectedGenre={setSelectedGenre}
+            allMediums={allMediums}
+            allGenres={allGenres}
+            onResetFilters={handleResetFilters}
+          />
         </div>
 
-        <StatsBar stories={stories} />
 
-        <FilterControls
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          selectedMedium={selectedMedium}
-          setSelectedMedium={setSelectedMedium}
-          selectedTier={selectedTier}
-          setSelectedTier={setSelectedTier}
-          selectedGenre={selectedGenre}
-          setSelectedGenre={setSelectedGenre}
-          allMediums={allMediums}
-          allGenres={allGenres}
-          onResetFilters={handleResetFilters}
-        />
-
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
-          <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-main)' }}>
-            Showing {filteredStories.length} {filteredStories.length === 1 ? 'Story' : 'Stories'}
-          </h3>
-        </div>
 
         {populatedTiers.length > 0 && (
-          <div className="elevator-nav">
-            {populatedTiers.map(tier => (
-              <button 
-                key={tier} 
-                className={`elevator-btn ${tier}`} 
-                onClick={() => scrollToTier(tier)}
-                title={`Scroll to ${tier} Tier`}
-              >
-                {tier === 'Pending' ? '?' : tier[0]}
-              </button>
-            ))}
+          <div className="elevator-panel">
+            <div className="elevator-display-small">{isElevatorMoving ? 'MOVING...' : floorDisplay}</div>
+            <div className="elevator-nav">
+              {populatedTiers.map(tier => (
+                <button 
+                  key={tier} 
+                  className={`elevator-btn ${tier}`} 
+                  onClick={() => scrollToTier(tier)}
+                  title={`Go to ${tier} Floor`}
+                >
+                  <span className="btn-inner">{tier === 'Pending' ? '?' : tier[0]}</span>
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
@@ -200,7 +208,7 @@ export default function CardView({ stories, socialData, setStories, onViewChange
             {populatedTiers.map(tier => (
               <div key={tier} id={`tier-${tier}`} className="tier-section">
                 <div className={`tier-divider ${tier}`}>
-                  <h2>{tier === 'Pending' ? 'Unrated / Pending' : `${tier} Tier`}</h2>
+                  <h2 className="tier-title">{tier === 'Pending' ? 'Unrated / Pending' : `${tier} Tier`}</h2>
                   <div className="tier-divider-line"></div>
                 </div>
                 <div className="cards-grid">
@@ -209,11 +217,17 @@ export default function CardView({ stories, socialData, setStories, onViewChange
                       <StoryCard 
                         story={story}
                         social={socialData[story.name] || { likes: 0, comments: 0 }}
-                        onEdit={(s) => setEditingStory(s)}
                         onCardClick={(s) => setDetailStory(s)}
                       />
                     </div>
                   ))}
+                  {groupedStories[tier].length % 5 !== 0 && 
+                    Array.from({ length: 5 - (groupedStories[tier].length % 5) }).map((_, i) => (
+                      <div key={`mirror-${i}`} className="window-mirror">
+                        <div className="window-glass"></div>
+                      </div>
+                    ))
+                  }
                 </div>
               </div>
             ))}
@@ -230,9 +244,10 @@ export default function CardView({ stories, socialData, setStories, onViewChange
             </button>
           </div>
         )}
+        </div>
       </main>
 
-      <footer className="app-footer">
+      <footer className="app-footer building-ground">
         <div className="container">
           <p>🌌 <strong>Peak Fiction Vault</strong> — Maintained by Pratyush & Kanav</p>
           <p style={{ fontSize: '0.8rem', marginTop: '0.4rem' }}>
@@ -241,18 +256,23 @@ export default function CardView({ stories, socialData, setStories, onViewChange
         </div>
       </footer>
 
-      <EditModal 
-        story={editingStory}
-        isOpen={Boolean(editingStory)}
-        onClose={() => setEditingStory(null)}
-        onSave={handleSaveStory}
-      />
+
 
       <StoryDetailModal 
         story={detailStory}
         isOpen={Boolean(detailStory)}
         onClose={() => setDetailStory(null)}
       />
+
+      <div className={`elevator-doors ${isElevatorMoving ? 'closed' : 'open'}`}>
+        <div className="elevator-door left"></div>
+        <div className="elevator-door right"></div>
+        {isElevatorMoving && (
+          <div className="elevator-display-center">
+            {floorDisplay}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

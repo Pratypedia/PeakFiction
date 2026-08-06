@@ -93,6 +93,16 @@ export default function MountainView({ stories, socialData, onViewChange }) {
     return d;
   }, [N]);
 
+  // Scroll to bottom on mount so user starts at the base
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'instant'
+      });
+    }, 0);
+  }, []);
+
   // Track scrolling for minimap
   useEffect(() => {
     const handleScroll = () => {
@@ -252,7 +262,7 @@ export default function MountainView({ stories, socialData, onViewChange }) {
           )}
           <h4>{hoveredStory.name}</h4>
           <div className="tooltip-meta">
-            <span className="tier-badge">#{hoveredStory.rank}</span>
+            <span className="tier-badge" style={{ fontSize: '1.6rem', padding: '4px 10px', fontWeight: 'bold' }}>{hoveredStory.rank}</span>
             <span className="score-badge">{hoveredStory.medium.join(', ')}</span>
           </div>
           <p className="tooltip-comments" style={{ color: '#fff', fontWeight: 'bold' }}>

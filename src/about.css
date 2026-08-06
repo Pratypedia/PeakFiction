@@ -1,0 +1,260 @@
+.about-scene {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Fixed background elements */
+.about-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    #0d1321 0%,
+    #1d2d44 20%,
+    #f07167 50%,
+    #ffb703 70%,
+    #8fbc8f 90%,
+    #2e8b57 100%
+  );
+  pointer-events: none;
+}
+
+.about-sky-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(2px 2px at 15% 25%, white, transparent),
+    radial-gradient(2px 2px at 35% 45%, #e0e0e0, transparent),
+    radial-gradient(2px 2px at 55% 15%, white, transparent),
+    radial-gradient(3px 3px at 25% 55%, #fff, transparent);
+  background-size: 250px 250px;
+  background-repeat: repeat;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+
+
+/* Base Trees - Fixed Background */
+.about-trees-back {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 4;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L85 65 L70 65 L95 100 L5 100 L30 65 L15 65 Z" fill="%232d6a4f" opacity="0.9"/></svg>');
+  background-size: 100px 150px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  pointer-events: none;
+}
+
+.about-trees-front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 5;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L85 65 L70 65 L95 100 L5 100 L30 65 L15 65 Z" fill="%231b4332"/></svg>');
+  background-size: 75px 120px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  pointer-events: none;
+}
+
+/* Content layer on top of fixed background */
+.about-content-layer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+}
+
+/* Wooden Sign on Left 2/3 */
+.sign-container {
+  position: relative;
+  width: 66.66%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wooden-pole {
+  position: absolute;
+  top: 5vh;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  background: linear-gradient(90deg, #3e2723, #5d4037, #3e2723);
+  box-shadow: inset -5px 0 10px rgba(0,0,0,0.5), 5px 0 10px rgba(0,0,0,0.4);
+  border-radius: 4px 4px 0 0;
+  z-index: 1;
+}
+
+.planks-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  gap: 25px;
+  padding-bottom: 50px;
+}
+
+.wooden-plank {
+  background: #5d4037; /* Darkened from #8d6e63 */
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.1) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0,0,0,0.1) 2px, transparent 2px);
+  background-size: 100px 20px;
+  border: 4px solid #4e342e;
+  border-radius: 8px;
+  padding: 28px 32px; /* Increased top/bottom padding to make room for screws */
+  color: #fff;
+  position: relative;
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.wooden-plank:hover {
+  transform: scale(1.02) !important;
+}
+
+.wooden-plank::before, .wooden-plank::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #111;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 4px rgba(255,255,255,0.2);
+}
+
+/* Centered screw at top */
+.wooden-plank::before { top: 8px; left: 50%; transform: translateX(-50%); }
+/* Centered screw at bottom */
+.wooden-plank::after { bottom: 8px; left: 50%; transform: translateX(-50%); }
+
+/* Rotating planks for cartoon feel - reduced tilt */
+.wooden-plank:nth-child(odd) { transform: rotate(-0.6deg); }
+.wooden-plank:nth-child(even) { transform: rotate(0.6deg); }
+
+/* Content within Planks */
+.wooden-plank h1, .wooden-plank h2 {
+  font-family: var(--font-heading);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 15px;
+  color: #fff;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.wooden-plank p, .wooden-plank ul {
+  font-size: 1.4rem; /* Increased size */
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  margin-bottom: 15px;
+}
+
+.about-stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 25px auto;
+  max-width: 650px; /* Forces wrap after 3 items assuming ~200px per item */
+}
+
+.about-stat-item {
+  background: rgba(0,0,0,0.3);
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  flex: 0 0 auto;
+}
+
+.about-link {
+  color: #60a5fa; /* Light Blue */
+  font-weight: 800;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.about-link:hover {
+  color: #93c5fd;
+}
+
+/* Arrows Section on Right 1/3 */
+.arrows-container {
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-end;
+}
+
+.nav-arrow-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 35px; /* Expanded space between arrow SVG and button text */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+}
+
+.nav-arrow-btn:hover {
+  transform: translateX(-10px) scale(1.05);
+  filter: drop-shadow(0 0 25px var(--hover-color, rgba(255,255,255,0.5)));
+}
+
+.nav-arrow-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 15px var(--hover-color, rgba(255,255,255,0.5));
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.4);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+}
+
+.nav-arrow-svg {
+  width: 120px;
+  height: 80px;
+}
+
+/* Specific Arrow Colors */
+.nav-arrow-peak { --hover-color: #ff3b5c; }
+.nav-arrow-cards { --hover-color: #06b6d4; }
+.nav-arrow-charts { --hover-color: #a855f7; }

@@ -105,9 +105,10 @@ export default function App() {
       ) : currentView === 'charts' ? (
         <ChartsView 
           stories={stories}
+          onViewChange={handleViewChange}
         />
       ) : (
-        <AboutView />
+        <AboutView onViewChange={handleViewChange} />
       )}
     </>
   );

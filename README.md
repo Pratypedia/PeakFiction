@@ -97,5 +97,5 @@ npm run build
 - **Data Visualizations**: Recharts
 - **Content Rendering**: React Markdown
 - **Icons**: Lucide React
-- **Styling**: Modern Dark Theme with Glassmorphism, Custom Glowing Tier Dividers, Elevator Navigation, and Responsive Charts
+- **Styling**: Custom Glowing Tier Dividers, Elevator Navigation, and Responsive Charts
 - **Data Engine**: Automated CSV Ingestion Pipeline (`scripts/parse_csv.js`)

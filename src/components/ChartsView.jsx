@@ -4,7 +4,16 @@ import {
   BarChart, Bar
 } from 'recharts';
 import Header from './Header';
-import StoryDetailModal from './StoryDetailModal';
+
+// Helper to truncate long story names
+const truncateName = (name) => {
+  if (!name) return '';
+  const words = name.split(' ');
+  if (words.length > 3) {
+    return words.slice(0, 3).join(' ') + '...';
+  }
+  return name;
+};
 
 // Helper to convert tier strings to numerical values (0 to 10)
 const getTierValue = (rank) => {
@@ -16,7 +25,7 @@ const getTierValue = (rank) => {
   if (cleanRank === 'B') return 7;
   if (cleanRank === 'C') return 6;
   if (cleanRank === 'D') return 5;
-  if (cleanRank === 'F') return 3;
+  if (cleanRank === 'F') return 4;
   return null;
 };
 
@@ -28,7 +37,7 @@ const formatTierLabel = (val) => {
   if (val >= 7) return 'B';
   if (val >= 6) return 'C';
   if (val >= 5) return 'D';
-  if (val >= 3) return 'F';
+  if (val >= 4) return 'F';
   return '';
 };
 
@@ -37,36 +46,35 @@ const CustomTooltip = ({ active, payload, isBubbleChart }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
-      <div className="story-tooltip chart-tooltip" style={{ position: 'relative', transform: 'none', top: 0, left: 0, width: '250px', padding: '16px', zIndex: 1000 }}>
+      <div className="polaroid-card" style={{ width: '250px', zIndex: 1000, transform: 'rotate(2deg)' }}>
         {data.imageUrl && (
-          <img src={data.imageUrl} alt={data.name} className="tooltip-image" />
+          <img src={data.imageUrl} alt={data.name} className="polaroid-img" />
         )}
-        <h4 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>{data.name}</h4>
-        <div className="tooltip-meta" style={{ marginBottom: '8px' }}>
-          <span className="score-badge" style={{ fontSize: '1rem', padding: '4px 8px' }}>{data.medium.join(', ')}</span>
-        </div>
-        <div style={{ fontSize: '1rem', color: '#ccc', marginTop: '10px' }}>
-          <div><strong>Hours:</strong> {data.parsedHours}</div>
+        <div style={{ marginTop: '10px' }}>
+          <span style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>{truncateName(data.name)}</span>
+          <div style={{ fontSize: '1.2rem', color: '#2563eb', marginTop: '4px' }}>
+            Hours: {data.parsedHours} | {data.medium.join(', ')}
+          </div>
           {isBubbleChart ? (
-            <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-              <div><span style={{ color: '#a855f7', fontWeight: 'bold' }}>Pratyush:</span> {data.rankingPratyush || 'None'}</div>
-              <div><span style={{ color: '#06b6d4', fontWeight: 'bold' }}>Kanav:</span> {data.rankingKanav || 'None'}</div>
+            <div style={{ fontSize: '1.1rem', marginTop: '4px', borderTop: '1px dashed #ccc', paddingTop: '4px' }}>
+              <div style={{ color: '#2563eb' }}>P: {data.rankingPratyush || '-'}</div>
+              <div style={{ color: '#d97706' }}>K: {data.rankingKanav || '-'}</div>
             </div>
           ) : (
-            <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-              <div><strong>Rating:</strong> {data.yAxisValue.toFixed(1)}</div>
+            <div style={{ fontSize: '1.1rem', marginTop: '4px', borderTop: '1px dashed #ccc', paddingTop: '4px' }}>
+              Rating: {data.yAxisValue.toFixed(1)}
             </div>
           )}
         </div>
+        <div className="red-pin" style={{ top: '-10px' }}></div>
       </div>
     );
   }
   return null;
 };
 
-export default function ChartsView({ stories }) {
+export default function ChartsView({ stories, onViewChange }) {
   const [scatterFilter, setScatterFilter] = useState('average'); // 'average', 'pratyush', 'kanav'
-  const [detailStory, setDetailStory] = useState(null);
 
   // Parse stories to ensure they have valid hours
   const validStories = useMemo(() => {
@@ -141,8 +149,8 @@ export default function ChartsView({ stories }) {
           const radius = 0.24 + ringIndex * 0.20;
           const angle = (posInRing / itemsInRing) * 2 * Math.PI + (ringIndex * 0.3);
 
-          const plotKVal = Math.min(10.3, Math.max(2.2, story.kVal + radius * Math.cos(angle)));
-          const plotPVal = Math.min(10.3, Math.max(2.2, story.pVal + radius * Math.sin(angle)));
+          const plotKVal = Math.min(10.3, Math.max(3.2, story.kVal + radius * Math.cos(angle)));
+          const plotPVal = Math.min(10.3, Math.max(3.2, story.pVal + radius * Math.sin(angle)));
 
           result.push({
             ...story,
@@ -208,7 +216,7 @@ export default function ChartsView({ stories }) {
     return { topGenres, topMediums };
   }, [stories]);
 
-  // Agreement Rate & Top 3 Hot Takes calculation
+  // Collaborative Synergy & Top 3 Contested Cases calculation
   const agreementStats = useMemo(() => {
     const dualRated = stories.filter(s => {
       const p = getTierValue(s.rankingPratyush);
@@ -282,69 +290,76 @@ export default function ChartsView({ stories }) {
   const kanavStats = useMemo(() => getBrotherStats(stories, false), [stories]);
 
   return (
-    <div style={{ minHeight: '100vh' }}>
-      <div className="container" style={{ paddingTop: '6rem', paddingBottom: '3rem' }}>
-        <div className="hero-section" style={{ paddingBottom: '1.5rem' }}>
-          <h2 className="hero-title gradient-text">Data & Analysis</h2>
+    <div className="charts-page-wrapper">
+      <div className="container" style={{ paddingTop: '8.1rem', paddingBottom: '4.05rem', position: 'relative' }}>
+        
+        <div className="hero-section" style={{ paddingBottom: '2.03rem' }}>
+          <h2 className="hero-title">
+            The Investigation Board
+          </h2>
           <p className="hero-subtitle">
-            Explore the relationship between time investment and our enjoyment.
+            Here are the secrets the data hides
           </p>
         </div>
 
         {/* Scatter Plot */}
-        <div className="controls-card" style={{ position: 'relative', zIndex: 20, marginBottom: '2rem' }}>
-          <div className="controls-row-top" style={{ marginBottom: '1rem' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 700 }}>Length vs. Rating</h3>
+        <div className="controls-card" style={{ position: 'relative', zIndex: 20, marginBottom: '2.7rem' }}>
+          <div className="controls-row-top" style={{ marginBottom: '1.35rem' }}>
+            <h3 style={{ fontSize: '2.03rem', fontWeight: 700 }}>Case File Length vs. Satisfaction</h3>
             <div className="view-mode-tabs">
               <button 
                 className={`view-tab ${scatterFilter === 'average' ? 'active' : ''}`}
                 onClick={() => setScatterFilter('average')}
               >
-                Average Rating
+                Consensus Score
               </button>
               <button 
                 className={`view-tab ${scatterFilter === 'pratyush' ? 'active' : ''}`}
                 onClick={() => setScatterFilter('pratyush')}
               >
-                Pratyush's Rating
+                Subject Pratyush's Ratings
               </button>
               <button 
                 className={`view-tab ${scatterFilter === 'kanav' ? 'active' : ''}`}
                 onClick={() => setScatterFilter('kanav')}
               >
-                Kanav's Rating
+                Subject Kanav's Ratings
               </button>
             </div>
           </div>
-          <div style={{ background: 'rgba(0,0,0,0.4)', borderRadius: '12px', padding: '1rem' }}>
+          <div style={{ background: '#f3e5ab', border: '1px solid #d4c284', padding: '1rem', position: 'relative' }}>
             <ResponsiveContainer width="100%" height={450}>
               <ScatterChart margin={{ top: 20, right: 30, bottom: 20, left: 10 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(220, 38, 38, 0.2)" />
                 <XAxis 
                   type="number" 
                   dataKey="parsedHours" 
                   name="Hours" 
-                  stroke="#94a3b8"
-                  label={{ value: 'Hours of Life', position: 'insideBottomRight', offset: -10, fill: '#94a3b8' }} 
+                  scale="log"
+                  domain={['dataMin', 'dataMax']}
+                  ticks={[2, 5, 10, 20, 40, 100, 200, 600]}
+                  stroke="#1f2937"
+                  label={{ value: 'Hours of Investigation (Log Scale)', position: 'insideBottomRight', offset: -10, fill: '#1f2937' }} 
                 />
                 <YAxis 
                   type="number" 
                   dataKey="yAxisValue" 
                   name="Rating" 
-                  domain={[2, 10.5]} 
-                  stroke="#94a3b8"
+                  domain={[3.5, 10.5]} 
+                  stroke="#1f2937"
+                  ticks={[4, 5, 6, 7, 8, 9, 10]}
                   tickFormatter={formatTierLabel}
-                  label={{ value: 'Tier Rating', angle: -90, position: 'insideLeft', fill: '#94a3b8' }} 
+                  label={{ value: 'Tier Rating', angle: -90, position: 'insideLeft', fill: '#1f2937' }} 
                 />
                 <RechartsTooltip cursor={{ strokeDasharray: '3 3' }} content={<CustomTooltip isBubbleChart={false} />} wrapperStyle={{ zIndex: 1000 }} />
                 <Scatter 
                   name="Stories" 
                   data={scatterData} 
-                  onClick={(data) => setDetailStory(data)}
+                  onClick={(data) => onViewChange('cards', data.payload || data)}
                   style={{ cursor: 'pointer' }}
                 >
                   {scatterData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill="rgba(168, 85, 247, 0.8)" className="chart-node-hover" />
+                    <Cell key={`cell-${index}`} fill="#dc2626" className="chart-node-hover" />
                   ))}
                 </Scatter>
               </ScatterChart>
@@ -353,117 +368,83 @@ export default function ChartsView({ stories }) {
         </div>
 
         {/* KPI Insights under Chart 1 */}
-        <div style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: '1.5rem', marginBottom: '2rem', position: 'relative', zIndex: 10 }}>
-          <div className="controls-card" style={{ marginBottom: 0, padding: '1.25rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '0.5rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <div style={{ fontSize: '1.8rem', background: 'rgba(52, 211, 153, 0.1)', padding: '0.4rem 0.6rem', borderRadius: '10px', lineHeight: 1 }}>
-                🤝
-              </div>
-              <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Agreement Rate
-              </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.7rem', marginBottom: '2.7rem', position: 'relative', zIndex: 10 }}>
+          <div className="note-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+            <div className="red-pin" style={{ top: '10px', left: 'auto', right: '10px' }}></div>
+            <h3 style={{ fontFamily: 'Special Elite', color: '#111', fontSize: '1.4rem' }}>Collaborative Synergy</h3>
+            <div className="stamp sepia" style={{ marginTop: '1rem', display: 'inline-block' }}>
+              {agreementStats.rate} SYNERGY
             </div>
-            <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#34d399', margin: '0.2rem 0' }}>
-              {agreementStats.rate} <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 400 }}>Synergy</span>
-            </div>
-            <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
-              Rated within 1 tier across {agreementStats.totalBoth} shared stories.
-            </div>
+            <p style={{ marginTop: '1rem', color: '#111', fontSize: '1.5rem' }}>
+              Rated within 1 tier across {agreementStats.totalBoth} shared cases.
+            </p>
           </div>
 
-          <div className="controls-card" style={{ marginBottom: 0, padding: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <div style={{ fontSize: '1.8rem', background: 'rgba(239, 68, 68, 0.1)', padding: '0.4rem 0.6rem', borderRadius: '10px', lineHeight: 1 }}>
-                🥊
-              </div>
-              <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Top 3 Hot Takes (Disagreements)
+          <div className="note-card" style={{ transform: 'rotate(1deg)', display: 'flex', flexDirection: 'column' }}>
+            <div className="red-pin" style={{ top: '10px', left: 'auto', right: '10px' }}></div>
+            <div style={{ textAlign: 'center' }}>
+              <div className="stamp red" style={{ marginTop: '0.5rem', marginBottom: '1.5rem', display: 'inline-block' }}>
+                CONTRADICTION DETECTED
               </div>
             </div>
-
+            
             {agreementStats.topDisagreements.length > 0 ? (
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '0.5rem' }}>
                 {agreementStats.topDisagreements.map((story, i) => (
-                  <div 
-                    key={story.id} 
-                    onClick={() => setDetailStory(story)}
-                    style={{ 
-                      background: 'rgba(0, 0, 0, 0.3)', 
-                      border: '1px solid rgba(255, 255, 255, 0.08)', 
-                      borderRadius: '10px', 
-                      padding: '0.85rem', 
-                      cursor: 'pointer',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justify: 'space-between',
-                      gap: '0.5rem'
-                    }}
-                    className="chart-node-hover"
-                  >
-                    <div>
-                      <div style={{ fontSize: '0.75rem', color: '#f87171', fontWeight: 800, textTransform: 'uppercase' }}>
-                        #{i + 1} Hot Take
-                      </div>
-                      <div style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-main)', marginTop: '0.2rem', lineHeight: 1.3, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                        {story.name}
-                      </div>
-                    </div>
-                    <div style={{ fontSize: '0.85rem', color: '#94a3b8', background: 'rgba(255,255,255,0.04)', padding: '0.3rem 0.5rem', borderRadius: '6px', textAlign: 'center' }}>
-                      <span style={{ color: '#a855f7', fontWeight: 700 }}>Pratyush: {story.rankingPratyush}</span>
-                      <span style={{ color: '#64748b', margin: '0 0.3rem' }}>vs</span>
-                      <span style={{ color: '#06b6d4', fontWeight: 700 }}>Kanav: {story.rankingKanav}</span>
-                    </div>
+                  <div key={story.id} style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed #ccc', paddingBottom: '4px' }}>
+                    <span style={{ color: '#111', fontFamily: 'Special Elite', cursor: 'pointer' }} onClick={() => onViewChange('cards', story)}>{truncateName(story.name)}</span>
+                    <span style={{ color: '#dc2626', fontFamily: 'Caveat', fontSize: '1.2rem' }}>Pratyush: {story.rankingPratyush} vs Kanav: {story.rankingKanav}</span>
                   </div>
                 ))}
               </div>
             ) : (
-              <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>No debates found</div>
+              <div>No contested cases found</div>
             )}
           </div>
         </div>
 
         {/* Bubble Chart */}
         <div className="controls-card">
-          <div className="controls-row-top" style={{ marginBottom: '0.5rem' }}>
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 700 }}>Versus & Vibe Interactive Matrix</h3>
+          <div className="controls-row-top" style={{ marginBottom: '0.68rem' }}>
+            <h3 style={{ fontSize: '2.03rem', fontWeight: 700 }}>The Cross-Examination Matrix</h3>
           </div>
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
-            Bubble size represents hours spent. Plotting Kanav's Rating against Pratyush's Rating. Hover or click to explore.
+          <p style={{ fontFamily: 'Caveat', fontSize: '1.8rem', color: '#111', marginBottom: '1.35rem' }}>
+            Bubble size represents hours spent. Plotting Subject Kanav's Ratings against Subject Pratyush's Ratings. Hover or click to explore.
           </p>
-          <div style={{ background: 'rgba(0,0,0,0.4)', borderRadius: '12px', padding: '1rem' }}>
+          <div style={{ background: '#f3e5ab', border: '1px solid #d4c284', padding: '1rem', position: 'relative' }}>
             <ResponsiveContainer width="100%" height={550}>
               <ScatterChart margin={{ top: 20, right: 30, bottom: 20, left: 20 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
                 <XAxis 
                   type="number" 
                   dataKey="plotKVal" 
-                  name="Kanav's Rating" 
-                  domain={[2, 10.5]} 
-                  stroke="#06b6d4"
-                  ticks={[3, 5, 6, 7, 8, 9, 10]}
+                  name="Subject Kanav's Ratings" 
+                  domain={[3.5, 10.5]} 
+                  stroke="#1f2937"
+                  ticks={[4, 5, 6, 7, 8, 9, 10]}
                   tickFormatter={formatTierLabel}
-                  label={{ value: "Kanav's Rating", position: 'insideBottom', offset: -10, fill: '#06b6d4' }} 
+                  label={{ value: "Subject Kanav's Ratings", position: 'insideBottom', offset: -10, fill: '#1f2937' }} 
                 />
                 <YAxis 
                   type="number" 
                   dataKey="plotPVal" 
-                  name="Pratyush's Rating" 
-                  domain={[2, 10.5]} 
-                  stroke="#a855f7"
-                  ticks={[3, 5, 6, 7, 8, 9, 10]}
+                  name="Subject Pratyush's Ratings" 
+                  domain={[3.5, 10.5]} 
+                  stroke="#1f2937"
+                  ticks={[4, 5, 6, 7, 8, 9, 10]}
                   tickFormatter={formatTierLabel}
-                  label={{ value: "Pratyush's Rating", angle: -90, position: 'insideLeft', fill: '#a855f7' }} 
+                  label={{ value: "Subject Pratyush's Ratings", angle: -90, position: 'insideLeft', fill: '#1f2937' }} 
                 />
                 <ZAxis type="number" dataKey="parsedHours" range={[60, 2500]} name="Hours" />
                 <RechartsTooltip cursor={{ strokeDasharray: '3 3' }} content={<CustomTooltip isBubbleChart={true} />} wrapperStyle={{ zIndex: 1000 }} />
                 <Scatter 
                   name="Versus" 
                   data={bubbleData} 
-                  onClick={(data) => setDetailStory(data)}
+                  onClick={(data) => onViewChange('cards', data.payload || data)}
                   style={{ cursor: 'pointer' }}
                 >
                   {bubbleData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill="rgba(236, 72, 153, 0.7)" stroke="rgba(255, 255, 255, 0.4)" strokeWidth={2} className="chart-node-hover" />
+                    <Cell key={`cell-${index}`} fill="rgba(185, 28, 28, 0.5)" stroke="#7f1d1d" strokeWidth={2} className="chart-node-hover" />
                   ))}
                 </Scatter>
               </ScatterChart>
@@ -472,21 +453,21 @@ export default function ChartsView({ stories }) {
         </div>
 
         {/* Leaderboards */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.7rem', marginBottom: '2.7rem' }}>
           <div className="controls-card" style={{ marginBottom: 0 }}>
-            <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: '#ffb703' }}>🏆 Highest Rated Genres</h3>
+            <h3 style={{ fontSize: '1.69rem', marginBottom: '1.35rem' }}>📋 Most Fruitful Categories</h3>
             {leaderboards.topGenres.map((g, i) => (
-              <div key={g.name} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <span><strong style={{ opacity: 0.5 }}>#{i+1}</strong> {g.name}</span>
+              <div key={g.name} style={{ display: 'flex', justifyContent: 'space-between', padding: '1.01rem 0', borderBottom: '1px solid rgba(139, 69, 19, 0.2)' }}>
+                <span><strong style={{ opacity: 0.7 }}>#{i+1}</strong> {g.name}</span>
                 <span className="score-badge">{g.avg.toFixed(1)}</span>
               </div>
             ))}
           </div>
           <div className="controls-card" style={{ marginBottom: 0 }}>
-            <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: '#06b6d4' }}>🏆 Highest Rated Mediums</h3>
+            <h3 style={{ fontSize: '1.69rem', marginBottom: '1.35rem' }}>📂 Preferred Evidence Formats</h3>
             {leaderboards.topMediums.map((m, i) => (
-              <div key={m.name} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.75rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <span><strong style={{ opacity: 0.5 }}>#{i+1}</strong> {m.name}</span>
+              <div key={m.name} style={{ display: 'flex', justifyContent: 'space-between', padding: '1.01rem 0', borderBottom: '1px solid rgba(139, 69, 19, 0.2)' }}>
+                <span><strong style={{ opacity: 0.7 }}>#{i+1}</strong> {m.name}</span>
                 <span className="score-badge">{m.avg.toFixed(1)}</span>
               </div>
             ))}
@@ -494,132 +475,130 @@ export default function ChartsView({ stories }) {
         </div>
 
         {/* Brother Split View */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.7rem', marginBottom: '2.7rem' }}>
           {/* Pratyush Column */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            <div style={{ textAlign: 'center', padding: '1rem', background: 'rgba(168, 85, 247, 0.1)', border: '1px solid rgba(168, 85, 247, 0.3)', borderRadius: '12px' }}>
-              <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#c084fc', margin: 0 }}>Pratyush</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2.7rem' }}>
+            <div className="note-card" style={{ textAlign: 'center', padding: '1.35rem' }}>
+              <div className="red-pin" style={{ top: '10px' }}></div>
+              <h3 style={{ fontSize: '2.43rem', fontFamily: 'Special Elite', color: '#2563eb', margin: 0 }}>Detective Pratyush's Profile</h3>
             </div>
 
             <div className="controls-card" style={{ marginBottom: 0 }}>
-              <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem', color: '#c084fc', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                ⭐ Favorite Characters
+              <h4 style={{ marginBottom: '1.35rem', fontSize: '1.49rem', display: 'flex', alignItems: 'center', gap: '0.68rem' }}>
+                👤 Persons of Interest
               </h4>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'flex-start' }}>
                 {['Arthur Leywin', 'Kim Dokja', 'Spider-Man'].map(char => (
-                  <span key={char} className="chip active" style={{ fontSize: '0.9rem', padding: '0.4rem 0.85rem', background: 'rgba(168, 85, 247, 0.15)', borderColor: 'rgba(168, 85, 247, 0.4)', color: '#e9d5ff' }}>
-                    {char}
-                  </span>
+                  <div key={char} className="polaroid-card" style={{ width: '100px', height: '120px', padding: '10px 10px 40px 10px', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ flex: 1, background: '#222', width: '100%' }}></div>
+                    <span style={{ bottom: '10px', left: '0', right: '0', textAlign: 'center', fontSize: '1.2rem' }}>{char}</span>
+                  </div>
                 ))}
               </div>
             </div>
 
             <div className="controls-card" style={{ marginBottom: 0 }}>
-              <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Ratings Distribution</h4>
+              <h4 style={{ marginBottom: '1.35rem', fontSize: '1.49rem' }}>Verdict Distribution</h4>
               <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={pratyushStats.ratingData} margin={{ top: 20, right: 10, left: -20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                  <XAxis dataKey="tier" stroke="#94a3b8" />
-                  <YAxis stroke="#94a3b8" />
-                  <RechartsTooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} contentStyle={{ backgroundColor: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }} />
-                  <Bar dataKey="count" fill="#a855f7" radius={[4, 4, 0, 0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
+                  <XAxis dataKey="tier" stroke="#1f2937" />
+                  <YAxis stroke="#1f2937" />
+                  <RechartsTooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} contentStyle={{ backgroundColor: '#f4ebd0', color: '#2c1e16', border: '1px solid #5d4037', borderRadius: '4px' }} />
+                  <Bar dataKey="count" fill="#0369a1" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
 
             <div className="controls-card" style={{ marginBottom: 0 }}>
-              <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Stories by Medium</h4>
+              <h4 style={{ marginBottom: '1.35rem', fontSize: '1.49rem' }}>Cases by Medium</h4>
               <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={pratyushStats.mediumData} margin={{ top: 20, right: 10, left: -20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                  <XAxis dataKey="name" stroke="#94a3b8" tick={{ fontSize: 11 }} interval={0} />
-                  <YAxis stroke="#94a3b8" />
-                  <RechartsTooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} contentStyle={{ backgroundColor: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }} />
-                  <Bar dataKey="count" fill="#ec4899" radius={[4, 4, 0, 0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
+                  <XAxis dataKey="name" stroke="#1f2937" tick={{ fontSize: 11 }} interval={0} />
+                  <YAxis stroke="#1f2937" />
+                  <RechartsTooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} contentStyle={{ backgroundColor: '#f4ebd0', color: '#2c1e16', border: '1px solid #5d4037', borderRadius: '4px' }} />
+                  <Bar dataKey="count" fill="#b91c1c" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
 
             <div className="controls-card" style={{ marginBottom: 0 }}>
-              <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Top Genres Consumed</h4>
+              <h4 style={{ marginBottom: '1.35rem', fontSize: '1.49rem' }}>Primary Investigative Genres</h4>
               <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={pratyushStats.genreData} margin={{ top: 20, right: 10, left: -20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                  <XAxis dataKey="name" stroke="#94a3b8" tick={{ fontSize: 10 }} interval={0} />
-                  <YAxis stroke="#94a3b8" />
-                  <RechartsTooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} contentStyle={{ backgroundColor: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }} />
-                  <Bar dataKey="count" fill="#8b5cf6" radius={[4, 4, 0, 0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
+                  <XAxis dataKey="name" stroke="#1f2937" tick={{ fontSize: 10 }} interval={0} />
+                  <YAxis stroke="#1f2937" />
+                  <RechartsTooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} contentStyle={{ backgroundColor: '#f4ebd0', color: '#2c1e16', border: '1px solid #5d4037', borderRadius: '4px' }} />
+                  <Bar dataKey="count" fill="#4338ca" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
 
           {/* Kanav Column */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            <div style={{ textAlign: 'center', padding: '1rem', background: 'rgba(6, 182, 212, 0.1)', border: '1px solid rgba(6, 182, 212, 0.3)', borderRadius: '12px' }}>
-              <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#67e8f9', margin: 0 }}>Kanav</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2.7rem' }}>
+            <div className="note-card" style={{ textAlign: 'center', padding: '1.35rem', transform: 'rotate(-1deg)' }}>
+              <div className="red-pin" style={{ top: '10px' }}></div>
+              <h3 style={{ fontSize: '2.43rem', fontFamily: 'Special Elite', color: '#d97706', margin: 0 }}>Detective Kanav's Profile</h3>
             </div>
 
             <div className="controls-card" style={{ marginBottom: 0 }}>
-              <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem', color: '#67e8f9', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                ⭐ Favorite Characters
+              <h4 style={{ marginBottom: '1.35rem', fontSize: '1.49rem', display: 'flex', alignItems: 'center', gap: '0.68rem' }}>
+                👤 Persons of Interest
               </h4>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'flex-start' }}>
                 {['Regis', 'Reiner', 'Levi'].map(char => (
-                  <span key={char} className="chip active" style={{ fontSize: '0.9rem', padding: '0.4rem 0.85rem', background: 'rgba(6, 182, 212, 0.15)', borderColor: 'rgba(6, 182, 212, 0.4)', color: '#c7d2fe' }}>
-                    {char}
-                  </span>
+                  <div key={char} className="polaroid-card" style={{ width: '100px', height: '120px', padding: '10px 10px 40px 10px', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ flex: 1, background: '#222', width: '100%' }}></div>
+                    <span style={{ bottom: '10px', left: '0', right: '0', textAlign: 'center', fontSize: '1.2rem' }}>{char}</span>
+                  </div>
                 ))}
               </div>
             </div>
 
             <div className="controls-card" style={{ marginBottom: 0 }}>
-              <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Ratings Distribution</h4>
+              <h4 style={{ marginBottom: '1.35rem', fontSize: '1.49rem' }}>Verdict Distribution</h4>
               <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={kanavStats.ratingData} margin={{ top: 20, right: 10, left: -20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                  <XAxis dataKey="tier" stroke="#94a3b8" />
-                  <YAxis stroke="#94a3b8" />
-                  <RechartsTooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} contentStyle={{ backgroundColor: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }} />
-                  <Bar dataKey="count" fill="#06b6d4" radius={[4, 4, 0, 0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
+                  <XAxis dataKey="tier" stroke="#1f2937" />
+                  <YAxis stroke="#1f2937" />
+                  <RechartsTooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} contentStyle={{ backgroundColor: '#f4ebd0', color: '#2c1e16', border: '1px solid #5d4037', borderRadius: '4px' }} />
+                  <Bar dataKey="count" fill="#0f766e" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
 
             <div className="controls-card" style={{ marginBottom: 0 }}>
-              <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Stories by Medium</h4>
+              <h4 style={{ marginBottom: '1.35rem', fontSize: '1.49rem' }}>Cases by Medium</h4>
               <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={kanavStats.mediumData} margin={{ top: 20, right: 10, left: -20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                  <XAxis dataKey="name" stroke="#94a3b8" tick={{ fontSize: 11 }} interval={0} />
-                  <YAxis stroke="#94a3b8" />
-                  <RechartsTooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} contentStyle={{ backgroundColor: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }} />
-                  <Bar dataKey="count" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
+                  <XAxis dataKey="name" stroke="#1f2937" tick={{ fontSize: 11 }} interval={0} />
+                  <YAxis stroke="#1f2937" />
+                  <RechartsTooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} contentStyle={{ backgroundColor: '#f4ebd0', color: '#2c1e16', border: '1px solid #5d4037', borderRadius: '4px' }} />
+                  <Bar dataKey="count" fill="#a21caf" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
 
             <div className="controls-card" style={{ marginBottom: 0 }}>
-              <h4 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>Top Genres Consumed</h4>
+              <h4 style={{ marginBottom: '1.35rem', fontSize: '1.49rem' }}>Primary Investigative Genres</h4>
               <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={kanavStats.genreData} margin={{ top: 20, right: 10, left: -20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                  <XAxis dataKey="name" stroke="#94a3b8" tick={{ fontSize: 10 }} interval={0} />
-                  <YAxis stroke="#94a3b8" />
-                  <RechartsTooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} contentStyle={{ backgroundColor: 'rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }} />
-                  <Bar dataKey="count" fill="#0ea5e9" radius={[4, 4, 0, 0]} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
+                  <XAxis dataKey="name" stroke="#1f2937" tick={{ fontSize: 10 }} interval={0} />
+                  <YAxis stroke="#1f2937" />
+                  <RechartsTooltip cursor={{ fill: 'rgba(0,0,0,0.05)' }} contentStyle={{ backgroundColor: '#f4ebd0', color: '#2c1e16', border: '1px solid #5d4037', borderRadius: '4px' }} />
+                  <Bar dataKey="count" fill="#c2410c" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
           </div>
         </div>
       </div>
-
-      <StoryDetailModal 
-        story={detailStory}
-        isOpen={Boolean(detailStory)}
-        onClose={() => setDetailStory(null)}
-      />
     </div>
   );
 }
