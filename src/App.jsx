@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { supabase } from './lib/supabaseClient';
 import initialStories from './data/stories.json';
 import initialTop25Stories from './data/top25.json';
@@ -110,6 +111,7 @@ export default function App() {
       ) : (
         <AboutView onViewChange={handleViewChange} />
       )}
+      <Analytics />
     </>
   );
 }
