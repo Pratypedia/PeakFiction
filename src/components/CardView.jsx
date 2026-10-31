@@ -4,33 +4,32 @@ import StatsBar from './StatsBar';
 import FilterControls from './FilterControls';
 import StoryCard from './StoryCard';
 import StoryDetailModal from './StoryDetailModal';
-import { Mountain } from 'lucide-react';
 import { playElevatorDing } from '../lib/audio';
+import { TIER_ORDER, PENDING, tierKey, tierScore } from '../lib/tiers';
 
-export default function CardView({ stories, socialData, setStories, onViewChange, targetStory, clearTargetStory }) {
+export default function CardView({ stories, socialData, socialAvailable, openSlug, onOpenStory, onCloseStory }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMedium, setSelectedMedium] = useState('');
   const [selectedTier, setSelectedTier] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
   
-  const [detailStory, setDetailStory] = useState(null);
-  
   const [isElevatorMoving, setIsElevatorMoving] = useState(false);
   const [floorDisplay, setFloorDisplay] = useState('Floor Peak');
 
+  const detailStory = useMemo(
+    () => (openSlug ? stories.find(s => s.slug === openSlug) || null : null),
+    [openSlug, stories]
+  );
+
+  // Deep links (#/stories/<slug>) scroll the card into view behind the modal.
+  const detailSlug = detailStory?.slug;
   React.useEffect(() => {
-    if (targetStory) {
-      const story = stories.find(s => s.name === targetStory.name);
-      if (story) {
-        setDetailStory(story);
-        setTimeout(() => {
-          const el = document.getElementById(`story-card-${story.id}`);
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 100);
-      }
-      if (clearTargetStory) clearTargetStory();
-    }
-  }, [targetStory, stories, clearTargetStory]);
+    if (!detailSlug) return;
+    const timer = setTimeout(() => {
+      document.getElementById(`story-card-${detailSlug}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [detailSlug]);
 
   // Extract unique mediums
   const allMediums = useMemo(() => {
@@ -76,11 +75,12 @@ export default function CardView({ stories, socialData, setStories, onViewChange
         return false;
       }
       if (selectedTier) {
-        const pRank = story.rankingPratyush || 'Pending';
-        const kRank = story.rankingKanav || 'Pending';
-        if (pRank !== selectedTier && kRank !== selectedTier) {
-          return false;
-        }
+        const pTier = tierKey(story.rankingPratyush);
+        const kTier = tierKey(story.rankingKanav);
+        const matches = selectedTier === PENDING
+          ? pTier === PENDING && kTier === PENDING
+          : pTier === selectedTier || kTier === selectedTier;
+        if (!matches) return false;
       }
 
       return true;
@@ -94,48 +94,23 @@ export default function CardView({ stories, socialData, setStories, onViewChange
     setSelectedGenre('');
   };
 
-  const getTierValue = (rank) => {
-    if (!rank) return 0;
-    const cleanRank = rank.trim().toUpperCase();
-    if (cleanRank === 'PEAK') return 10;
-    if (cleanRank === 'S') return 9;
-    if (cleanRank === 'A') return 8;
-    if (cleanRank === 'B') return 7;
-    if (cleanRank === 'C') return 6;
-    if (cleanRank === 'D') return 5;
-    if (cleanRank === 'F') return 3;
-    return 0; // Pending
-  };
-
-  const getTierLabel = (val) => {
-    switch(val) {
-      case 10: return 'Peak';
-      case 9: return 'S';
-      case 8: return 'A';
-      case 7: return 'B';
-      case 6: return 'C';
-      case 5: return 'D';
-      case 3: return 'F';
-      default: return 'Pending';
-    }
-  };
-
+  // Group by the better of the two ratings.
   const groupedStories = useMemo(() => {
     const groups = {};
     filteredStories.forEach(story => {
-      const pVal = getTierValue(story.rankingPratyush);
-      const kVal = getTierValue(story.rankingKanav);
-      const highest = Math.max(pVal, kVal);
-      const label = getTierLabel(highest);
-      
-      if (!groups[label]) groups[label] = [];
-      groups[label].push(story);
+      const best = [story.rankingPratyush, story.rankingKanav]
+        .sort((a, b) => (tierScore(b) ?? -1) - (tierScore(a) ?? -1))[0];
+      const label = tierKey(best);
+      (groups[label] ??= []).push(story);
     });
     return groups;
   }, [filteredStories]);
 
-  const orderedTiers = ['Peak', 'S', 'A', 'B', 'C', 'D', 'F', 'Pending'];
-  const populatedTiers = orderedTiers.filter(t => groupedStories[t] && groupedStories[t].length > 0);
+  const populatedTiers = TIER_ORDER.filter(t => groupedStories[t]?.length > 0);
+  const availableTiers = useMemo(() => {
+    const present = new Set(stories.flatMap(s => [tierKey(s.rankingPratyush), tierKey(s.rankingKanav)]));
+    return TIER_ORDER.filter(t => present.has(t));
+  }, [stories]);
 
   const scrollToTier = (tier) => {
     if (isElevatorMoving) return;
@@ -179,6 +154,7 @@ export default function CardView({ stories, socialData, setStories, onViewChange
             setSelectedGenre={setSelectedGenre}
             allMediums={allMediums}
             allGenres={allGenres}
+            tiers={availableTiers}
             onResetFilters={handleResetFilters}
           />
         </div>
@@ -213,11 +189,11 @@ export default function CardView({ stories, socialData, setStories, onViewChange
                 </div>
                 <div className="cards-grid">
                   {groupedStories[tier].map(story => (
-                    <div key={story.id} id={`story-card-${story.id}`}>
+                    <div key={story.slug} id={`story-card-${story.slug}`}>
                       <StoryCard 
                         story={story}
                         social={socialData[story.name] || { likes: 0, comments: 0 }}
-                        onCardClick={(s) => setDetailStory(s)}
+                        onCardClick={onOpenStory}
                       />
                     </div>
                   ))}
@@ -261,7 +237,8 @@ export default function CardView({ stories, socialData, setStories, onViewChange
       <StoryDetailModal 
         story={detailStory}
         isOpen={Boolean(detailStory)}
-        onClose={() => setDetailStory(null)}
+        onClose={onCloseStory}
+        socialAvailable={socialAvailable}
       />
 
       <div className={`elevator-doors ${isElevatorMoving ? 'closed' : 'open'}`}>

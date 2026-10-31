@@ -1,56 +1,905 @@
 [
   {
     "id": "story-1",
-    "name": "Disney",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Fantasy",
-      "Family & YA"
-    ],
-    "length": "Too much going on lol",
-    "hours": "500",
-    "rankingPratyush": "S",
+    "name": "Your lie in April",
+    "medium": "movie",
+    "genre": "Drama, Romance, Slice of Life",
+    "length": "1 movie",
+    "hours": "2",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
-    "rankingKanav": "",
+    "rankingKanav": "-",
     "commentsKanav": "",
-    "favoriteCharacters": "Merida (from Brave) and Flynn Ryder (from Tangled)",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRoaVhCbCpEuzT8QAFTKjcXMD53i-HblDO8siwVIdC_w&s=10"
+    "favoriteCharacters": "",
+    "imageUrl": "https://myhotposters.com/cdn/shop/products/mz1572_large.jpeg?v=1748540296"
   },
   {
     "id": "story-2",
     "name": "Doraemon",
-    "medium": [
-      "show",
-      "movie"
-    ],
-    "genre": [
-      "Comedy",
-      "Sci-Fi",
-      "Slice of Life"
-    ],
+    "medium": "show, movie",
+    "genre": "Comedy, Sci-Fi, Slice of Life",
     "length": "2700+ episodes, many movies",
     "hours": "500",
     "rankingPratyush": "A",
     "commentsPratyush": "Watched it as a child - it was vibes.",
-    "rankingKanav": "",
+    "rankingKanav": "-",
     "commentsKanav": "I barely remember this story",
     "favoriteCharacters": "The 3 mini Doaremon bots",
     "imageUrl": "https://m.media-amazon.com/images/M/MV5BNTZlMzRjZTUtZDVjNi00ODFiLWFmMzEtMzQ1ODIwOWQ3YjIwXkEyXkFqcGc@.V1.jpg"
   },
   {
     "id": "story-3",
+    "name": "One Piece",
+    "medium": "show",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "1122 manga chapters, 1114 anime episodes (ongoing - both); I have only watched the Live Action",
+    "hours": "409",
+    "rankingPratyush": "A",
+    "commentsPratyush": "This is a long journey I need to get to eventually. So far, I've only watched the live action - and its actually pretty good.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Live action Zoro",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-BeslEMqiPhlk.jpg"
+  },
+  {
+    "id": "story-4",
+    "name": "swordmaster’s youngest son",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "204 chapters (ongoing), 810 novel chapters",
+    "hours": "142",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Magic-swordsman power fanstasy with clear power scaling and likable characters. I really enjoyed the start of the story, but towards the end I started feeling lost as to where the story was headed, who is the villain, and when it would wrap up.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Gilly, Murakan, Dante Hairan",
+    "imageUrl": "https://media.kitsu.app/manga/63282/poster_image/large-0353518b780d4f94d93006236c2b9361.jpeg"
+  },
+  {
+    "id": "story-5",
+    "name": "Ben 10",
+    "medium": "show",
+    "genre": "Action, Sci-Fi, Superhero",
+    "length": "393 episodes across 5 series",
+    "hours": "131",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Its crazy to think how many universes with amazing power scaling lose to Ben 10 (low diff win). Inetersting concept + I enjoyed watching it when I was <10 years.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Wrath from Ultimate Alien Force",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Ben_10_reboot_logo.png"
+  },
+  {
+    "id": "story-6",
+    "name": "Damn Reincarnation",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "81 chapters (ongoing), 678 in novel",
+    "hours": "116",
+    "rankingPratyush": "A",
+    "commentsPratyush": "The novel is hillarious. It starts off well, and then I got worried it wouldn't be able to transition and wrap up - but it managed to tie the end of the story in a fun way. Some weird arcs and irritating characters at time, but overall fun.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Hamel/Eugene",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx151512-q0Xddr1JNKNq.png"
+  },
+  {
+    "id": "story-7",
+    "name": "Legend of Zelda",
+    "medium": "Game",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "20+ games; I've followed the lore for 2",
+    "hours": "100",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Love BOTW and TOTK. Beautiful games that got me invested into the Zelda lore. Link is him.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Link is him",
+    "imageUrl": "https://cdng.europosters.eu/pod_public/750/240445.jpg"
+  },
+  {
+    "id": "story-8",
+    "name": "Lego Ninjago",
+    "medium": "show",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "290 episodes",
+    "hours": "97",
+    "rankingPratyush": "A",
+    "commentsPratyush": "This felt so cool as a child, and it has some of my favorite scenes ever - \"You ruined my life\" \"How could I ruin your life when I wasn't even there?\" (absentee father)",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Master Wu",
+    "imageUrl": "https://cdn.displate.com/artwork/270x380/2026-01-08/69c5fcc5-3634-459a-9c1f-a871cb5480be.jpg"
+  },
+  {
+    "id": "story-9",
+    "name": "Studio Ghibli",
+    "medium": "movie",
+    "genre": "Adventure, Fantasy, Family & YA",
+    "length": "22 feature films, I've watched 3",
+    "hours": "44",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Vibes.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/91ktK7p2SAL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": "story-10",
+    "name": "Rick & Morty",
+    "medium": "show",
+    "genre": "Comedy, Sci-Fi",
+    "length": "91 episodes / 9 seasons",
+    "hours": "30",
+    "rankingPratyush": "A",
+    "commentsPratyush": "One of my friends told me that this show messed him up as a child. I understand that now. I didn't know crazy until I watched this show. That being said - still fun.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Space Beth is the one I hate the least",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "id": "story-11",
+    "name": "Impact Winter",
+    "medium": "Book, show",
+    "genre": "Drama, Sci-Fi",
+    "length": "3 audio books",
+    "hours": "30",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Vampires, but its better than twilight. Like much better. And the two female leads are actually well written.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNTliYzY2MDItNzdlMC00ZDk5LWFmYTYtMmU3ZGMxMmI0ZTcxXkEyXkFqcGc@._V1_FMjpg_UX640_.jpg"
+  },
+  {
+    "id": "story-12",
+    "name": "Sakamoto Days",
+    "medium": "Manga",
+    "genre": "Action, Comedy",
+    "length": "269 chapters (ongoing), 22 episodes",
+    "hours": "16",
+    "rankingPratyush": "A",
+    "commentsPratyush": "John Wick (but happy) meets anime + elements of slice of life and comedy. Its a lot of fun.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Nagumo",
+    "imageUrl": "https://media.kitsu.app/manga/58159/poster_image/large-f812099474664e9aa9f7e8d2181c8011.jpeg"
+  },
+  {
+    "id": "story-13",
+    "name": "Eminence in Shadow",
+    "medium": "anime, Novel, Manga",
+    "genre": "Action, Comedy, Isekai & LitRPG",
+    "length": "83 chapters (ongoing), 32 episodes",
+    "hours": "14",
+    "rankingPratyush": "A",
+    "commentsPratyush": "A comedy filled with meta jokes about anime tropes. Wouldn't recommend to a first time anime watcher, but if you're deep in the community, this is hillarious. A little but like One Punch Man - don't take the show seriously, you're just there for a laugh.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Cid",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7PZKmuDsBo8EgvRBzqMyjifzaZeBiQm99_CrvuWo22HuxlwZwQlRzMTg&s=10"
+  },
+  {
+    "id": "story-14",
+    "name": "Horimiya",
+    "medium": "anime, Manga",
+    "genre": "Comedy, Romance, Slice of Life",
+    "length": "127 chapters, 26 episodes",
+    "hours": "13",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Cute slice of life and romance. Lots of memes.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Hori",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/22352/large.jpg"
+  },
+  {
+    "id": "story-15",
+    "name": "John Wick",
+    "medium": "movie",
+    "genre": "Action, Thriller & Mystery",
+    "length": "4 films, 523 min (5 w/ Ballerina, 648 min)",
+    "hours": "11",
+    "rankingPratyush": "A",
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_.jpg"
+  },
+  {
+    "id": "story-16",
+    "name": "Superhuman Battlefield",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Slice of Life",
+    "length": "151 chapters",
+    "hours": "5",
+    "rankingPratyush": "A",
+    "commentsPratyush": "A good well rounded story about super humans and an other-worldly invasion. In the world after the invasion, these super humans turn into athletes that play in global team v/s team competitive leagues.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx150744-oItNn4LvB2Pc.jpg"
+  },
+  {
+    "id": "story-17",
+    "name": "I want to eat your pancreas",
+    "medium": "movie, Novel, Manga",
+    "genre": "Drama, Romance",
+    "length": "1 movie, I didn't read the comic",
+    "hours": "2",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Don't go off of the name - this is a great movie. The name will make sense when you watch it. You might even tear up.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9UJat_yusOIcLwpsgpkP_d4tSYLdvPVNVAm98NUb8-Q&s=10"
+  },
+  {
+    "id": "story-18",
+    "name": "Suzume",
+    "medium": "movie",
+    "genre": "Adventure, Fantasy",
+    "length": "1 movie",
+    "hours": "2",
+    "rankingPratyush": "A",
+    "commentsPratyush": "First anime movie I watched in the theather with friends. Great animation and sound, meh story, but I'll remember it fondly due to the experience.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/65130/poster_image/large-b164e0fe6b7aae2664ea1cd70d972033.jpeg"
+  },
+  {
+    "id": "story-19",
+    "name": "A silent voice",
+    "medium": "movie, Manga",
+    "genre": "Drama, Romance, Slice of Life",
+    "length": "1 movie",
+    "hours": "2",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Touching slice of life movie about growing up, and growing out of the walls we built around ourselves as children when we were dumb and made some mistakes we regret.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/16554/large.jpg"
+  },
+  {
+    "id": "story-20",
+    "name": "Weathering with you",
+    "medium": "movie",
+    "genre": "Drama, Fantasy, Romance",
+    "length": "1 movie",
+    "hours": "2",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Its a good movie, but kind of like Your Name, I think animation and sound design hard carry. Not that the story is bad, but you wouldn't have people hyping it up as much if it weren't such a visual spectacle.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/55885/large.jpg"
+  },
+  {
+    "id": "story-21",
+    "name": "I Got a New Skill Every Time I Was Exiled, and After 100 Different Worlds, I Was Unmatched",
+    "medium": "Manga",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "30 chapters (5 vols), ongoing",
+    "hours": "1",
+    "rankingPratyush": "A",
+    "commentsPratyush": "VERY Honest name. That being said, interesting gimmick and story telling so far. It is A rank because it has a lot of promise, but lets see how it unfolds.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159212-WVbxqBQfdlU4.jpg"
+  },
+  {
+    "id": "story-22",
+    "name": "Pokemon",
+    "medium": "show, Game",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "1400 episodes",
+    "hours": "467",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Why is Ash still a child? How many more remakes and new regions?",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Bulbasaur with sunglasses playing a trumpet",
+    "imageUrl": "https://japanesegallery.com/pub/media/catalog/product/cache/bf9755d0aebc9926d3fcf359a414a1cd/j/g/jgkp799.jpg"
+  },
+  {
+    "id": "story-23",
+    "name": "Ninja Hatori",
+    "medium": "show",
+    "genre": "Comedy, Slice of Life, Martial Arts",
+    "length": "705 episodes",
+    "hours": "235",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Peak hindi-dub childhood show. Growing up is realizing Amara was never the villain and Keneji needed to lock in.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNmM0NzRlMjgtYWZiNy00MzkwLWJmMWMtYjY0Zjc3MmMyMGJlXkEyXkFqcGc@.V1_FMjpg_UX1000.jpg"
+  },
+  {
+    "id": "story-24",
+    "name": "Star Wars",
+    "medium": "movie, show",
+    "genre": "Action, Sci-Fi",
+    "length": "Skywalker Saga = 9 films, I don't know how long the full cannon is",
+    "hours": "18",
+    "rankingPratyush": "B",
+    "commentsPratyush": "I should come back to this. This was my favorite Angry Birds collab game by far.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://images.squarespace-cdn.com/content/v1/5d5d5bbe2cc2d000018127a9/1677466567825-4XNXOSMIT8U8RK41UZNZ/ella%27s+pic+1.jpg"
+  },
+  {
+    "id": "story-25",
+    "name": "Wind Breaker",
+    "medium": "anime, Manga, Manhwa",
+    "genre": "Action, Martial Arts",
+    "length": "225 chapters (ongoing), 25 episodes",
+    "hours": "16",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Beautiful animation, but its just highschoolers throwing hands. Refreshing to see an action story without crazy powerscaling (unlike some other stories that pretend to be human but are basically supers). A fun light watch.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx135083-TQbNFWKGJJHW.jpg"
+  },
+  {
+    "id": "story-26",
+    "name": "Transformers",
+    "medium": "movie, show, comic",
+    "genre": "Action, Sci-Fi",
+    "length": "Full franchise — too broad; live-action films = 7",
+    "hours": "14",
+    "rankingPratyush": "B",
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2265-uGaMUjSpJVWa.png"
+  },
+  {
+    "id": "story-27",
+    "name": "Hell's Paradise",
+    "medium": "anime, Manga",
+    "genre": "Action, Drama, Fantasy",
+    "length": "127 chapters, 27 episodes",
+    "hours": "13",
+    "rankingPratyush": "B",
+    "commentsPratyush": "It has its weird parts, but its still a good watch. The story is based on a mix of history, popular fictional tropes, and fantasy inserts - so you might see the twists coming a mile away, but the execution isn't bad.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/40546/large.jpg"
+  },
+  {
+    "id": "story-28",
+    "name": "The Live",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "176 chapters",
+    "hours": "6",
+    "rankingPratyush": "B",
+    "commentsPratyush": "One of the oldest manhwas on this list - it was a very interesting story when it came out. No over the top power scaling, crazy visuals, fight choreographies, or aura farming - just a good set of characters trying their best to survive and get back home.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/56292/large.jpg"
+  },
+  {
+    "id": "story-29",
+    "name": "Trash of the Count's Family",
+    "medium": "Manhwa, Novel",
+    "genre": "Fantasy, Isekai & LitRPG",
+    "length": "182 chapters (ongoing)",
+    "hours": "6",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Lol, what a cheesy scammer.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx123573-LKoCKwRouEMW.png"
+  },
+  {
+    "id": "story-30",
+    "name": "The Water Magician",
+    "medium": "Manga, Novel",
+    "genre": "Fantasy, Slice of Life",
+    "length": "48 chapters (ongoing), 12 episodes",
+    "hours": "6",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Straight forward and fun. This guy has water magic, and he uses it to fight monsters and bad guys. Very creative - people in the avatar world should've tried these water bending techniques.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/69142/poster_image/large-c5bd15dcfe1d69f5b03def3edcfddad8.jpeg"
+  },
+  {
+    "id": "story-31",
+    "name": "The Novel’s Extra",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "165 chapters, ongoing",
+    "hours": "6",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Interesting but not entirely original concept - you become an extra in a novel you wrote yourself (kinda like ORV). So far so good. Evangel (the adopted daughter of the protagonist) is really cute.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Evangel",
+    "imageUrl": "https://media.kitsu.app/manga/63926/poster_image/large-c4607fd32903b27f98b909b9df86a4b2.jpeg"
+  },
+  {
+    "id": "story-32",
+    "name": "Player Who Returned 10,000 years later",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Comedy, Fantasy",
+    "length": "154 chapters (ongoing)",
+    "hours": "5",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Demon King is just a dude, and he returns from the Demon Realm and tries to fit in with the humans, and then tries really hard to frame literally anyone else as the final villain. He also really likes Kimchi stew.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/63977/poster_image/large-bcc7100bc646f56fab6f90304b7bc24d.jpeg"
+  },
+  {
+    "id": "story-33",
+    "name": "Return of the 8th class magician",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "81 chapters",
+    "hours": "3",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Another really old manhwa on here - genius magicial gets manipulated by bad folks, turns back time, and switches teams. This was one of the stories that introduced me to the magic circles and mana mechanisms for magic in the korean comic world.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx136331-cM7yJu8RtCoU.jpg"
+  },
+  {
+    "id": "story-34",
+    "name": "Your name",
+    "medium": "movie",
+    "genre": "Drama, Fantasy, Romance",
+    "length": "1 movie",
+    "hours": "2",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Really hot take - this movie isn't a master piece. I know the animation and sound design is awesome, but I'm just not as blown away by the story. Its still good, but I personally think its overhyped.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/38482/large.jpg"
+  },
+  {
+    "id": "story-35",
+    "name": "Power Rangers",
+    "medium": "show",
+    "genre": "Action, Sci-Fi, Superhero",
+    "length": "973 episodes total",
+    "hours": "324",
+    "rankingPratyush": "C",
+    "commentsPratyush": "vibes as a kid, but I out grew this fast",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://i.etsystatic.com/8078437/r/il/189774/3064942292/il_fullxfull.3064942292_imsj.jpg"
+  },
+  {
+    "id": "story-36",
+    "name": "Digimon",
+    "medium": "show",
+    "genre": "Adventure, Fantasy, Sci-Fi",
+    "length": "519 episodes",
+    "hours": "173",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Pokemon, but edgy. Your friends would know you're a cool kid and not a normie when you talked about Digimon at the age of 10.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "that starfish sword was cool",
+    "imageUrl": "https://static.wikia.nocookie.net/digimon/images/b/b2/Digimon_Adventure.jpg"
+  },
+  {
+    "id": "story-37",
+    "name": "I Funny",
+    "medium": "other",
+    "genre": "Comedy",
+    "length": "6 books",
+    "hours": "60",
+    "rankingPratyush": "C",
+    "commentsPratyush": "I don't remember this too well.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK6TayVxcQvK9HCtqQGBuwO0dAx1etoA4pYr6zsxkSJQ&s=10"
+  },
+  {
+    "id": "story-38",
+    "name": "Book Eater",
+    "medium": "Novel",
+    "genre": "Action, Fantasy",
+    "length": "114 chapters (ongoing)",
+    "hours": "19",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Man gets a tome called gluttony - and then eats books and learns the magic in them. Very straight forward.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/60656/large.jpg"
+  },
+  {
+    "id": "story-39",
+    "name": "Mashle: Magic & Muscle",
+    "medium": "show",
+    "genre": "Action, Comedy, Fantasy",
+    "length": "162 chapters in manga, S1 Anime has 12 episodes",
+    "hours": "9",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Harry Potter but with creatine and protien powder.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974748853/mashle-magic-and-muscles-vol-17-9781974748853_hr.jpg"
+  },
+  {
+    "id": "story-40",
+    "name": "Legendary Son of the Marquis House",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "172 chapters (ongoing)",
+    "hours": "6",
+    "rankingPratyush": "C",
+    "commentsPratyush": "I think I liked it when I read it many years ago, but don't remember a lot anymore.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThfCNx2ZckVaBs4S5hGThzlwXHjAoMRAPaS8uHyFiWgQ&s=10"
+  },
+  {
+    "id": "story-41",
+    "name": "Shadowless night",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Romance",
+    "length": "80 chapters, dropped",
+    "hours": "3",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Cute socially awkward protagonist, great art, but not much of a story.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/64657/poster_image/large-c922f6927e9ccd801659963a50c4e0d2.jpeg"
+  },
+  {
+    "id": "story-42",
+    "name": "Warrior High School",
+    "medium": "Manhwa",
+    "genre": "Action, Drama, Fantasy",
+    "length": "45 chapters, dropped",
+    "hours": "2",
+    "rankingPratyush": "C",
+    "commentsPratyush": "I enjoyed reading it in the start, but then it went on hiatus and never returned.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx155967-UYbp88lyVXfS.jpg"
+  },
+  {
+    "id": "story-43",
+    "name": "The Challenger",
+    "medium": "Manhwa",
+    "genre": "Action, Sci-Fi, Isekai & LitRPG",
+    "length": "52 chapters, dropped",
+    "hours": "2",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Another VR video game story, but with a new cool mechanic - sync rate. This measures how much you're able to overcome ping/lag in your brain and get completely synchronized with the video game. Also has much better analysis of how different gamers get good with different strategies.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "King",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx139500-HXVjQRNB5Ds8.jpg"
+  },
+  {
+    "id": "story-44",
+    "name": "Beyblade",
+    "medium": "show, Game",
+    "genre": "Action, Sci-Fi, Slice of Life",
+    "length": "772+ episodes",
+    "hours": "257",
+    "rankingPratyush": "D",
+    "commentsPratyush": "This anime confuses me looking back, but it was definitely hype to first play with the toys",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZDY4YzZkYzEtNTAzNS00NTE0LWIxMDktNmM4MTFmNDQ0NmIzXkEyXkFqcGc@.V1_FMjpg_UX1000.jpg"
+  },
+  {
+    "id": "story-45",
+    "name": "Chota Bheem",
+    "medium": "show, movie",
+    "genre": "Action, Comedy, Fantasy",
+    "length": "421 episodes / 30 seasons + 60 TV movies + 6 films",
+    "hours": "212",
+    "rankingPratyush": "D",
+    "commentsPratyush": "I think its a bad story. Terrible portrayal of Indian villages, teaches kids to fat shame and bully each other, promotes an unhealthy diet, and its like a 6 year old's power fantasy. The movies redeem the franchise a lot though.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjFhNzU4NmItOTczMC00YTMyLTkzZjgtNTJjZDA0YmRkZTc4XkEyXkFqcGc@.V1_FMjpg_UX1000.jpg"
+  },
+  {
+    "id": "story-46",
+    "name": "Regressor instruction manual",
+    "medium": "Manhwa, Novel",
+    "genre": "Drama, Fantasy, Isekai & LitRPG",
+    "length": "196 chapters (ongoing), even longer novel",
+    "hours": "7",
+    "rankingPratyush": "D",
+    "commentsPratyush": "Interesting concept where the protagonist isn't a regressor, but rather figures out who the regressor is and tries to get carried - but soon devolves into a disgustingly manipulative story. Sometimes I was just rooting for more bad things to happen to this guy coz he sucks, but he has the tenacity of a cockroach. I dropped this one.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/61570/poster_image/large-a2cca59f103c01a0201fa1947eff6983.jpeg"
+  },
+  {
+    "id": "story-47",
+    "name": "My School Life Pretending To Be a Worthless Person",
+    "medium": "Manhwa",
+    "genre": "Action, Drama, Fantasy",
+    "length": "153 chapters",
+    "hours": "5",
+    "rankingPratyush": "D",
+    "commentsPratyush": "Meh. Too edgy for my taste with this guy's mental issues and ass-pull powerups.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/64308/poster_image/large-03b8be96a31ec173ae76ae44d5768ae1.jpeg"
+  },
+  {
+    "id": "story-48",
+    "name": "Baki",
+    "medium": "anime, Manga",
+    "genre": "Action, Martial Arts",
+    "length": "~1378 chapters",
+    "hours": "46",
+    "rankingPratyush": "F",
+    "commentsPratyush": "Dude what even is this show. Do not watch with active braincells. I'm not saying its not entertaining - but if you try to make sense of it, that's already wrong.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQvnI_H9cn_WziouTXAgO2bIKn9MEXnDrdLPzv8lRxpg&s=10"
+  },
+  {
+    "id": "story-49",
+    "name": "Cowboy Bebop",
+    "medium": "anime",
+    "genre": "Action, Sci-Fi",
+    "length": "26 episodes",
+    "hours": "9",
+    "rankingPratyush": "Peak",
+    "commentsPratyush": "If you like Bladerunner and futuristic sci-fi, this is down your alley. This show is like a dream that you'll be jarred to wake up from, and you'll carry it with you.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Spike (he defines cool)",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png"
+  },
+  {
+    "id": "story-50",
+    "name": "Disney",
+    "medium": "show",
+    "genre": "Fantasy, Family & YA",
+    "length": "Too much going on lol",
+    "hours": "500",
+    "rankingPratyush": "S",
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Merida (from Brave) and Flynn Ryder (from Tangled)",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRoaVhCbCpEuzT8QAFTKjcXMD53i-HblDO8siwVIdC_w&s=10"
+  },
+  {
+    "id": "story-51",
+    "name": "Death is the only ending for the villainess",
+    "medium": "Manhwa, Novel",
+    "genre": "Drama, Romance, Isekai & LitRPG",
+    "length": "279 novel chapters, 214 comic chapters",
+    "hours": "54",
+    "rankingPratyush": "S",
+    "commentsPratyush": "This is not a story I'd expect to be down my alley - a girl magically transmigrates into a medieval europe dating sim where she needs to get a proposal from one of the male leads to finish the game. It sounds really stupid and I thought I'd drop it - but surprisingly its a really good story about how female strength and struggle look very different from male strength and struggle. Bridgerton fans, get a load of this.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Kallisto by far",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118408-zZuOINqjBZYn.jpg"
+  },
+  {
+    "id": "story-52",
+    "name": "Sherlock Holmes",
+    "medium": "Book, movie, show",
+    "genre": "Thriller & Mystery",
+    "length": "13 episodes of Sherlock, 2 RDJ movies, numerous comics + the actual books",
+    "hours": "24",
+    "rankingPratyush": "S",
+    "commentsPratyush": "This created the genre of detective fiction. Its honestly peak - the only issue is, its unclear what I'm referring to here. Still, I like almost all Sherlock content - and I'd recommend Benedict Cumberbatch's show off the top of my mind.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://cdn.kobo.com/book-images/c443ba6e-f336-410e-abcf-24c80b2fcf7e/1200/1200/False/the-adventures-of-sherlock-holmes-extraordinary-edition-with-illustrations.jpg"
+  },
+  {
+    "id": "story-53",
+    "name": "Invincible",
+    "medium": "show, comic",
+    "genre": "Action, Drama, Superhero",
+    "length": "26 episodes, 144 chapters",
+    "hours": "24",
+    "rankingPratyush": "S",
+    "commentsPratyush": "This man has really been beaten senseless so many times that I can't bring myself to call him out on plot armor anymore. I enjoyed the comics, but I think the story in the show is a huge step up - though the animation is inconsistent. Cmon Amazon, money clearly isn't the issue here.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Battle Beast is a vibe",
+    "imageUrl": "https://m.media-amazon.com/images/I/61z68MpchzL._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "id": "story-54",
+    "name": "Fullmetal Alchemist Brotherhood",
+    "medium": "anime, Manga",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "64 episodes",
+    "hours": "21",
+    "rankingPratyush": "S",
+    "commentsPratyush": "Beautiful well rounded story. I see why its a contender for 'best anime ever' despite all of the new gen anime having better animation and sound design. Love the world building, plot progression and inter-twining of all the arcs. My favorite part of this story is - there are almost no 'side characters'. Every character feels like a living-thinking-feeling human being having their own motivations and making their own decisions. No character introduced goes to waste, and everyone plays a part (the total opposite of Solo Leveling).",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Roy Mustang (ik, how basic of me)",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg"
+  },
+  {
+    "id": "story-55",
+    "name": "Six of Crows",
+    "medium": "Book",
+    "genre": "Fantasy, Thriller & Mystery, Family & YA",
+    "length": "2 books",
+    "hours": "20",
+    "rankingPratyush": "S",
+    "commentsPratyush": "Book 1 is one of my favorite hiest stories. Book 2 wraps up the plot and connects to the broader fictional universe.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Kaz, Inej, Jesper",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXutcZTb4QY2BDU6v61Y78IB_9nlYnxr3_0DE8Oz5qOA&s"
+  },
+  {
+    "id": "story-56",
+    "name": "Alice in Borderland",
+    "medium": "show, Manga",
+    "genre": "Adventure, Sci-Fi, Thriller & Mystery",
+    "length": "22 episodes",
+    "hours": "18",
+    "rankingPratyush": "S",
+    "commentsPratyush": "Its a gamified apolocalytpic world. Given my ranking of ORV, you know I love stories like this. Fun to discuss with your friends how you would deal with and try to survive the different games. For APDA people - Daniel Katari has a really fun debate case on this too.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Chishiya",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZDdhMTAwMmQtOTVlYi00OTcwLTllZGMtMjc4NGU0NzFhODM3XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "id": "story-57",
+    "name": "Arcane",
+    "medium": "show",
+    "genre": "Action, Adventure, Fantasy, Sci-Fi",
+    "length": "18 Episodes",
+    "hours": "14",
+    "rankingPratyush": "S",
+    "commentsPratyush": "Just because you love Arcane doesn't mean you need to start playing League - every league player I know. Its a beautiful 2 season show with a unique art style, a rich cast of characters, and an interesting magic-meets-steampunk power system. Would recommending watching; I don't play league so can't comment on what to do after the show is over.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "(to my great surprise) Silco, and Mel",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "id": "story-58",
+    "name": "Frieren",
+    "medium": "anime, Manga",
+    "genre": "Adventure, Fantasy",
+    "length": "28 episodes",
+    "hours": "9",
+    "rankingPratyush": "S",
+    "commentsPratyush": "This is my current favorite feel good show. Its like therapy after all the 2nd hand trauma from the many other stories I've read/watched. I also study to the sound tracks from this show (10/10 would recommend)",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "I like all of them",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg"
+  },
+  {
+    "id": "story-59",
+    "name": "Violet Evergarden",
+    "medium": "anime, Novel",
+    "genre": "Drama, Fantasy, Slice of Life",
+    "length": "13 episodes, 2 movies",
+    "hours": "8",
+    "rankingPratyush": "S",
+    "commentsPratyush": "This story is so beautiful, it actually made me cry. Its about a child soldier recovering from their PTSD and trying to readjust in the post-war world.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Violet",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-ubzq619ZA2E9.png"
+  },
+  {
+    "id": "story-60",
+    "name": "Odd Taxi",
+    "medium": "anime",
+    "genre": "Thriller & Mystery",
+    "length": "13 episodes",
+    "hours": "4",
+    "rankingPratyush": "S",
+    "commentsPratyush": "This is a slept on masterpiece. Unique art style, great usage of characters for plot progression, and a twist you won't see coming. 10/10 would recommend.",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx128564-TOB0GlDMx2xe.jpg"
+  },
+  {
+    "id": "story-61",
+    "name": "Cyberpunk Edgerunners",
+    "medium": "anime",
+    "genre": "Action, Sci-Fi",
+    "length": "10 episodes",
+    "hours": "3",
+    "rankingPratyush": "S",
+    "commentsPratyush": "High octane sci-fi thriller with amazing visuals and plot progression. I loved this series when I watched it, but just a headsup - this is still Night City. \"A happier ending? For folks like us? Wrong city, wrong people.\"",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "Rebecca, Lucy, David",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg"
+  },
+  {
+    "id": "story-62",
+    "name": "Stormlight Archive",
+    "medium": "Book",
+    "genre": "Adventure, Fantasy",
+    "length": "5 main books so far, 6192 pages",
+    "hours": "200",
+    "rankingPratyush": "S",
+    "commentsPratyush": "Lots of depression, and the story takes time to get to a roll, but the ending of each book has been really hype so far. Finishing the series rn.",
+    "rankingKanav": "A",
+    "commentsKanav": "",
+    "favoriteCharacters": "Rock and Lopen (The one armed herdazian)",
+    "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1659905828i/7235533.jpg"
+  },
+  {
+    "id": "story-63",
+    "name": "Absolute Regression",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "112 Ongoing",
+    "hours": "4",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "A",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://static.wikia.nocookie.net/absoluteregression/images/1/1c/Weebton_cover.png/revision/latest?cb=20240913164504"
+  },
+  {
+    "id": "story-64",
+    "name": "Genius Prismatic Mage",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy",
+    "length": "87 Ongoing",
+    "hours": "3",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "A",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://i.redd.it/081qfszrjyie1.jpeg"
+  },
+  {
+    "id": "story-65",
     "name": "DC",
-    "medium": [
-      "movie",
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi",
-      "Superhero"
-    ],
+    "medium": "movie, show",
+    "genre": "Action, Sci-Fi, Superhero",
     "length": "new: 2 films + 2 seasons (15 eps); but many more movies, shows and comics",
     "hours": "500",
     "rankingPratyush": "A",
@@ -61,17 +910,10 @@
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/DC_Comics_logo.svg/960px-DC_Comics_logo.svg.png"
   },
   {
-    "id": "story-4",
+    "id": "story-66",
     "name": "Marvel Cinematic Universe",
-    "medium": [
-      "movie",
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi",
-      "Superhero"
-    ],
+    "medium": "movie, show",
+    "genre": "Action, Sci-Fi, Superhero",
     "length": "38 films; 17 series (21 seasons), and more comics than I want to count",
     "hours": "500",
     "rankingPratyush": "A",
@@ -82,346 +924,10 @@
     "imageUrl": "https://www.boxofficepro.com/wp-content/uploads/2021/12/mcu-rewindFeb2023775x970-copy.png"
   },
   {
-    "id": "story-5",
-    "name": "Reincarnation of the strongest Sword God",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "2918 chapters in the novel",
-    "hours": "486",
-    "rankingPratyush": "D",
-    "commentsPratyush": "I don't know why I read this. I wasted so many hours of my life on this. The story wasn't even good. Would lowkey read an AI summary of the plot if I picked it up now.",
-    "rankingKanav": "E",
-    "commentsKanav": "Just don't",
-    "favoriteCharacters": "NO",
-    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/reincarnation-of-the-strongest-sword-god.4b5305-400.webp"
-  },
-  {
-    "id": "story-6",
-    "name": "Pokemon",
-    "medium": [
-      "show",
-      "Game"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "1400 episodes",
-    "hours": "467",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Why is Ash still a child? How many more remakes and new regions?",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Bulbasaur with sunglasses playing a trumpet",
-    "imageUrl": "https://japanesegallery.com/pub/media/catalog/product/cache/bf9755d0aebc9926d3fcf359a414a1cd/j/g/jgkp799.jpg"
-  },
-  {
-    "id": "story-7",
-    "name": "One Piece",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "1122 manga chapters, 1114 anime episodes (ongoing - both); I have only watched the Live Action",
-    "hours": "409",
-    "rankingPratyush": "A",
-    "commentsPratyush": "This is a long journey I need to get to eventually. So far, I've only watched the live action - and its actually pretty good.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Live action Zoro",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30013-BeslEMqiPhlk.jpg"
-  },
-  {
-    "id": "story-8",
-    "name": "Overgeared",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "2,059 novel chapters, 300+ comic chapters (ongoing)",
-    "hours": "353",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Its hilarious. Read the novel if you have the time. Bonus if you like video game equipment.",
-    "rankingKanav": "S",
-    "commentsKanav": "This was the first Virtual Reality MMORPG story I read so it is speacial to me, I think both the comic and novel are great, its especially fun if you like games",
-    "favoriteCharacters": "Piaro, Braham Eshwald (#1 troller)",
-    "imageUrl": "https://m.media-amazon.com/images/I/91j2VjH7jSL._AC_UF1000,1000_QL80_.jpg"
-  },
-  {
-    "id": "story-9",
-    "name": "Naruto + Shippudden",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "720 episodes, Boruto at 293 (ongoing), Boruto comic at 116 (ongoing), 3 movies",
-    "hours": "348",
-    "rankingPratyush": "B",
-    "commentsPratyush": "The first anime I watched. Loved it when I first watched it - but I analyzed it too much and now I can't unsee the issues I have with the story. Still one of the previous gen big 3 for a reason. I could probably give an impromptu 1 hour lecture on the sharingan.",
-    "rankingKanav": "C",
-    "commentsKanav": "Never watched real shipuden, all my information and entertainment is from amagi and other channels that have summary videos",
-    "favoriteCharacters": "Kakashi and Jiraya",
-    "imageUrl": "https://media.kitsu.app/manga/71975/poster_image/large-fa9104c92d8304d6a1fdf50cc25890f1.jpeg"
-  },
-  {
-    "id": "story-10",
-    "name": "Power Rangers",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi",
-      "Superhero"
-    ],
-    "length": "973 episodes total",
-    "hours": "324",
-    "rankingPratyush": "C",
-    "commentsPratyush": "vibes as a kid, but I out grew this fast",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://i.etsystatic.com/8078437/r/il/189774/3064942292/il_fullxfull.3064942292_imsj.jpg"
-  },
-  {
-    "id": "story-11",
-    "name": "Geronimo Stilton",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Adventure",
-      "Comedy",
-      "Family & YA"
-    ],
-    "length": "300+ books",
-    "hours": "300",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Peak fiction back in primary school. I have probably read over a 100 of these books now.",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "Thea (she's so cool) and Trap",
-    "imageUrl": "https://geronimostilton.com/upload/assets/files/US,116,-1,746/2734-0.jpg"
-  },
-  {
-    "id": "story-12",
-    "name": "All of DragonBall",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "Over 800 episodes",
-    "hours": "267",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Its a very honest story - people punch each other, over and over again. You know what you sign up for.",
-    "rankingKanav": "C",
-    "commentsKanav": "I find that the story feels like every single arc is trying to be endgame which makes previous arcs feel miniscule in comparison",
-    "favoriteCharacters": "Gohan (so valid for not following in Goku's footsteps)",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnPEhyYchpORLDGIMYUWruByae2npcva1ReE068YeSiQ&s"
-  },
-  {
-    "id": "story-13",
-    "name": "Beyblade",
-    "medium": [
-      "show",
-      "Game"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi",
-      "Slice of Life"
-    ],
-    "length": "772+ episodes",
-    "hours": "257",
-    "rankingPratyush": "D",
-    "commentsPratyush": "This anime confuses me looking back, but it was definitely hype to first play with the toys",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZDY4YzZkYzEtNTAzNS00NTE0LWIxMDktNmM4MTFmNDQ0NmIzXkEyXkFqcGc@.V1_FMjpg_UX1000.jpg"
-  },
-  {
-    "id": "story-14",
-    "name": "Ninja Hatori",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Comedy",
-      "Slice of Life",
-      "Martial Arts"
-    ],
-    "length": "705 episodes",
-    "hours": "235",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Peak hindi-dub childhood show. Growing up is realizing Amara was never the villain and Keneji needed to lock in.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNmM0NzRlMjgtYWZiNy00MzkwLWJmMWMtYjY0Zjc3MmMyMGJlXkEyXkFqcGc@.V1_FMjpg_UX1000.jpg"
-  },
-  {
-    "id": "story-15",
-    "name": "Chota Bheem",
-    "medium": [
-      "show",
-      "movie"
-    ],
-    "genre": [
-      "Action",
-      "Comedy",
-      "Fantasy"
-    ],
-    "length": "421 episodes / 30 seasons + 60 TV movies + 6 films",
-    "hours": "212",
-    "rankingPratyush": "D",
-    "commentsPratyush": "I think its a bad story. Terrible portrayal of Indian villages, teaches kids to fat shame and bully each other, promotes an unhealthy diet, and its like a 6 year old's power fantasy. The movies redeem the franchise a lot though.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjFhNzU4NmItOTczMC00YTMyLTkzZjgtNTJjZDA0YmRkZTc4XkEyXkFqcGc@.V1_FMjpg_UX1000.jpg"
-  },
-  {
-    "id": "story-16",
-    "name": "Stormlight Archive",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "5 main books so far, 6192 pages",
-    "hours": "200",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "A-",
-    "commentsKanav": "",
-    "favoriteCharacters": "Rock and Lopen (The one armed herdazian)",
-    "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1659905828i/7235533.jpg"
-  },
-  {
-    "id": "story-17",
-    "name": "Digimon",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Adventure",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "length": "519 episodes",
-    "hours": "173",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Pokemon, but edgy. Your friends would know you're a cool kid and not a normie when you talked about Digimon at the age of 10.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "that starfish sword was cool",
-    "imageUrl": "https://static.wikia.nocookie.net/digimon/images/b/b2/Digimon_Adventure.jpg"
-  },
-  {
-    "id": "story-18",
-    "name": "The Beginning After the end",
-    "medium": [
-      "comic",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "529 Novel chapters, 206 Comic chapters (ongoing)",
-    "hours": "150",
-    "rankingPratyush": "Peak",
-    "commentsPratyush": "One of my favorite stories. Great world building, character development, plot progression, and many beautiful quotes. I prefer the books/novels by far. The protagonist is talented, but also relatably human - making internally consistent decisions. Minimal plot armour. Many lessons about responsibility, patience and sacrifice. The only con: Depression.",
-    "rankingKanav": "Peak+",
-    "commentsKanav": "Fav Story OAT, Books are better than the manhwa and you should NOT watch the anime. Wish that the ending was a bit diffrent or slower, I might have rushed reading it. 10/10 on everything except the ending which gets a 7/10 (Well above average but compared to the other sections it falls behind)",
-    "favoriteCharacters": "Regis, Arthur, Sylvie",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/cc/The_Beginning_After_the_End_webtoon_volume_1_cover.jpg"
-  },
-  {
-    "id": "story-19",
-    "name": "omniscient readers viewpoint",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "length": "551 Novel chapters, 308 Manhwa chapters  (ongoing)",
-    "hours": "148",
-    "rankingPratyush": "Peak",
-    "commentsPratyush": "I could teach a 10-week college course on this story. This is the singular story I have recommended the most. A lot of my world-view is shaped by it, and people who have read it are able to understand me better. It has like every cliche trope in it - but it does an excellent job of executing it. It has the best execution of any meta-fiction I have seen.",
-    "rankingKanav": "Peak",
-    "commentsKanav": "",
-    "favoriteCharacters": "Dokja, Uriel, Han Sooyung, Huiwon",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/69/Omniscient_Reader%27s_Viewpoint_Volume_1_Cover.jpg"
-  },
-  {
-    "id": "story-20",
-    "name": "swordmaster’s youngest son",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "204 chapters (ongoing), 810 novel chapters",
-    "hours": "142",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Magic-swordsman power fanstasy with clear power scaling and likable characters. I really enjoyed the start of the story, but towards the end I started feeling lost as to where the story was headed, who is the villain, and when it would wrap up.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Gilly, Murakan, Dante Hairan",
-    "imageUrl": "https://media.kitsu.app/manga/63282/poster_image/large-0353518b780d4f94d93006236c2b9361.jpeg"
-  },
-  {
-    "id": "story-21",
+    "id": "story-67",
     "name": "Regressed Mercenary’s Machinations",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
     "length": "99 comic chapters (ongoing), 786 novel chapters (ongoing)",
     "hours": "134",
     "rankingPratyush": "A",
@@ -432,200 +938,10 @@
     "imageUrl": "https://cdn.asurascans.com/asura-images/covers/the-regressed-mercenarys-machinations.3acc20-400.webp"
   },
   {
-    "id": "story-22",
-    "name": "Ben 10",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi",
-      "Superhero"
-    ],
-    "length": "393 episodes across 5 series",
-    "hours": "131",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Its crazy to think how many universes with amazing power scaling lose to Ben 10 (low diff win). Inetersting concept + I enjoyed watching it when I was <10 years.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Wrath from Ultimate Alien Force",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Ben_10_reboot_logo.png"
-  },
-  {
-    "id": "story-23",
-    "name": "Damn Reincarnation",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "81 chapters (ongoing), 678 in novel",
-    "hours": "116",
-    "rankingPratyush": "A",
-    "commentsPratyush": "The novel is hillarious. It starts off well, and then I got worried it wouldn't be able to transition and wrap up - but it managed to tie the end of the story in a fun way. Some weird arcs and irritating characters at time, but overall fun.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Hamel/Eugene",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx151512-q0Xddr1JNKNq.png"
-  },
-  {
-    "id": "story-24",
-    "name": "Michael Vey",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Sci-Fi",
-      "Family & YA"
-    ],
-    "length": "10 books",
-    "hours": "100",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Really interesting concept for powers based on actual physics. Starts great, but falls off quite poorly towards the last few books.",
-    "rankingKanav": "B",
-    "commentsKanav": "The human aspect of this story is great, it has been a while since I read this but it was nice",
-    "favoriteCharacters": "Ostin, Ian",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/75/Michael_Vey_The_Prisoner_of_Cell_25_paperback_book_cover.jpg"
-  },
-  {
-    "id": "story-25",
-    "name": "Legend of Zelda",
-    "medium": [
-      "Game"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "20+ games; I've followed the lore for 2",
-    "hours": "100",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Love BOTW and TOTK. Beautiful games that got me invested into the Zelda lore. Link is him.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Link is him",
-    "imageUrl": "https://cdng.europosters.eu/pod_public/750/240445.jpg"
-  },
-  {
-    "id": "story-26",
-    "name": "Lego Ninjago",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "290 episodes",
-    "hours": "97",
-    "rankingPratyush": "A",
-    "commentsPratyush": "This felt so cool as a child, and it has some of my favorite scenes ever - You ruined my life How could I ruin your life when I wasn't even there? (absentee father)",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Master Wu",
-    "imageUrl": "https://cdn.displate.com/artwork/270x380/2026-01-08/69c5fcc5-3634-459a-9c1f-a871cb5480be.jpg"
-  },
-  {
-    "id": "story-27",
-    "name": "Harry Potter",
-    "medium": [
-      "Book",
-      "movie"
-    ],
-    "genre": [
-      "Fantasy",
-      "Family & YA"
-    ],
-    "length": "7 books, 8 movies",
-    "hours": "86",
-    "rankingPratyush": "B",
-    "commentsPratyush": "People have been telling me I look like Harry Potter since grade 8. I even got round glasses in the middle + I'm the same height as Daniel Radcliff. This unfortunately doesn't stop me from giving the story a B - I love the fandom, but outgrew the story eventually. Also, they really shouldn't have made Snape black in the new show...",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "Newt Scamander lmao",
-    "imageUrl": "https://bci.kinokuniya.com/ae/jsp/images/book-img/97814/97814088/9781408855652.JPG"
-  },
-  {
-    "id": "story-28",
-    "name": "My Hero Academia",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Superhero"
-    ],
-    "length": "430 chapters, 170 episodes",
-    "hours": "71",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Do I have issues with the story? Yes. Does the story go from a beautiful set of characters with a lot of potential to just a big 3? Also yes. Do they force unecessary fan service and ships that don't make any sense or matter for the plot? Also yes. But they have one very redeeming point - Bakugo is awesome. That being said, haters might be right that he's a Roy Mustang rip off.",
-    "rankingKanav": "C",
-    "commentsKanav": "Eh (Not bad but not a fav)",
-    "favoriteCharacters": "Bakugo",
-    "imageUrl": "https://media.kitsu.app/manga/26004/poster_image/large-226bfa9e2bb2d77058802994345e1d7f.jpeg"
-  },
-  {
-    "id": "story-29",
-    "name": "Hunter X Hunter",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "148 episodes, 415 chapters",
-    "hours": "63",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "B",
-    "commentsKanav": "Its a good story to pass time but it was not very moving for me, I realy like the art and power system but the story was still a bit short in comparision to others and plot twists were a bit infrequent so I didn't get that thrill of having my expectations subverted often. Its a great story when you read it but it is also forgettable",
-    "favoriteCharacters": "Killua",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30026-uCvXMudMzmwI.jpg"
-  },
-  {
-    "id": "story-30",
-    "name": "Pick Me Up, Infinite Gacha",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "212 chapters (ongoing), 327 chapters in novel",
-    "hours": "62",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Very interesting concept, gets annoying towards the end because the author brings in random tropes that feel off-putting. The ending drags this down for me, despite it being a generally enjoyable story for the most part.",
-    "rankingKanav": "B",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159441-9W8201jAT9Yv.jpg"
-  },
-  {
-    "id": "story-31",
+    "id": "story-68",
     "name": "Solo leveling",
-    "medium": [
-      "Manhwa",
-      "Novel",
-      "anime"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
+    "medium": "Manhwa, Novel, anime",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
     "length": "270 novel, 200 comic chapters, 68 sequel comic chapters (ongoing), anime 2 seasons (ongoing)",
     "hours": "62",
     "rankingPratyush": "A",
@@ -636,438 +952,10 @@
     "imageUrl": "https://m.media-amazon.com/images/I/81jS951SgDL.jpg"
   },
   {
-    "id": "story-32",
-    "name": "Mistborn",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "6 books, I've read first 3",
-    "hours": "60",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Really interesting power system where people consume and burn metals and their alloys for very specific powers. Very good world-building and descriptive writing. Brandon Sanderson writes beautifully - so even if you see the twists coming a mile away, the execution is very fun to read.",
-    "rankingKanav": "S",
-    "commentsKanav": "3 very well put together books with 1 novella that you should read if you plan on reading other Cosmere Stories. Ending of book 1 seemed a bit confusing to me but apart from that the story is great",
-    "favoriteCharacters": "Sazid and Kelsier",
-    "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1617768316i/68428.jpg"
-  },
-  {
-    "id": "story-33",
-    "name": "I Funny",
-    "medium": [
-      "other"
-    ],
-    "genre": [
-      "Comedy"
-    ],
-    "length": "6 books",
-    "hours": "60",
-    "rankingPratyush": "C",
-    "commentsPratyush": "I don't remember this too well.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK6TayVxcQvK9HCtqQGBuwO0dAx1etoA4pYr6zsxkSJQ&s=10"
-  },
-  {
-    "id": "story-34",
-    "name": "Death is the only ending for the villainess",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Drama",
-      "Romance",
-      "Isekai & LitRPG"
-    ],
-    "length": "279 novel chapters, 214 comic chapters",
-    "hours": "54",
-    "rankingPratyush": "S",
-    "commentsPratyush": "This is not a story I'd expect to be down my alley - a girl magically transmigrates into a medieval europe dating sim where she needs to get a proposal from one of the male leads to finish the game. It sounds really stupid and I thought I'd drop it - but surprisingly its a really good story about how female strength and struggle look very different from male strength and struggle. Bridgerton fans, get a load of this.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Kallisto by far",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118408-zZuOINqjBZYn.jpg"
-  },
-  {
-    "id": "story-35",
-    "name": "Baki",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Martial Arts"
-    ],
-    "length": "~1378 chapters",
-    "hours": "46",
-    "rankingPratyush": "F",
-    "commentsPratyush": "Dude what even is this show. Do not watch with active braincells. I'm not saying its not entertaining - but if you try to make sense of it, that's already wrong.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQvnI_H9cn_WziouTXAgO2bIKn9MEXnDrdLPzv8lRxpg&s=10"
-  },
-  {
-    "id": "story-36",
-    "name": "Studio Ghibli",
-    "medium": [
-      "movie"
-    ],
-    "genre": [
-      "Adventure",
-      "Fantasy",
-      "Family & YA"
-    ],
-    "length": "22 feature films, I've watched 3",
-    "hours": "44",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Vibes.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://m.media-amazon.com/images/I/91ktK7p2SAL._AC_UF1000,1000_QL80_.jpg"
-  },
-  {
-    "id": "story-37",
-    "name": "The Terrible Two",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Comedy",
-      "Family & YA"
-    ],
-    "length": "4 books",
-    "hours": "40",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Funny light read. Wouldn't go out of my way to recommend this though.",
-    "rankingKanav": "B",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://m.media-amazon.com/images/I/71Wo3cNBa7L._AC_UF1000,1000_QL80_AIweblab1381794,T1_.jpg"
-  },
-  {
-    "id": "story-38",
-    "name": "Rick & Morty",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Comedy",
-      "Sci-Fi"
-    ],
-    "length": "91 episodes / 9 seasons",
-    "hours": "30",
-    "rankingPratyush": "A",
-    "commentsPratyush": "One of my friends told me that this show messed him up as a child. I understand that now. I didn't know crazy until I watched this show. That being said - still fun.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Space Beth is the one I hate the least",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg"
-  },
-  {
-    "id": "story-39",
-    "name": "Impact Winter",
-    "medium": [
-      "Book",
-      "show"
-    ],
-    "genre": [
-      "Drama",
-      "Sci-Fi"
-    ],
-    "length": "3 audio books",
-    "hours": "30",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Vampires, but its better than twilight. Like much better. And the two female leads are actually well written.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNTliYzY2MDItNzdlMC00ZDk5LWFmYTYtMmU3ZGMxMmI0ZTcxXkEyXkFqcGc@._V1_FMjpg_UX640_.jpg"
-  },
-  {
-    "id": "story-40",
-    "name": "Attack on Titan",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy"
-    ],
-    "length": "75 episodes total, 139 chapters",
-    "hours": "30",
-    "rankingPratyush": "",
-    "commentsPratyush": "Haven't watched it.",
-    "rankingKanav": "Peak",
-    "commentsKanav": "I believe this is the best story in the whole list. Great at everything though it realy picks up around S3. I could not predict how the story would go at all even with how much I have read, its a must watch.",
-    "favoriteCharacters": "Reiner, Levi, Erwin Smith, Sasha and Jean",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg"
-  },
-  {
-    "id": "story-41",
-    "name": "Jujutsu Kaisen",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy"
-    ],
-    "length": "271 manga chapters, 52 anime episodes, 1 movie",
-    "hours": "28",
-    "rankingPratyush": "S",
-    "commentsPratyush": "I'll be really surprised if you don't know about this story. Gege really cooked with this.",
-    "rankingKanav": "Peak",
-    "commentsKanav": "Peak of modern anime, great story and animation, though the reading comprehension of the greater fanbase is questionable, peak memes as well",
-    "favoriteCharacters": "Gojo (ofc), Maki, Higuruma",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-H3TdM3g5ZUe9.jpg"
-  },
-  {
-    "id": "story-42",
-    "name": "Demon Slayer",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Fantasy"
-    ],
-    "length": "205 chapters, 63 episodes",
-    "hours": "28",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Very honest name - that's the entire story. The animation and sound production make this a really good watch tho.",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "Inosuke, Sanemi, Giyu",
-    "imageUrl": "https://media.kitsu.app/manga/37280/poster_image/large-e7e54c8f2b193ff53f645f46ee6608e1.jpeg"
-  },
-  {
-    "id": "story-43",
-    "name": "Avatar: ATLA",
-    "medium": [
-      "show",
-      "comic"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "61 Avatar: The Last Airbender episodes, 18 Avatar comics (main post-ATLA comics)",
-    "hours": "25",
-    "rankingPratyush": "Peak",
-    "commentsPratyush": "Arguably the best animated series I've ever watched. The story, the character development, the world building, the visuals - everything. Don't just think its a kids show - its still a masterpiece all these years later even as an adult.",
-    "rankingKanav": "Peak",
-    "commentsKanav": "Only ATLA - Despite being a childrens show it manages to be deep and interesting, I wish that the ending was slightly diffrent as it feels like the writer was just trying to wrap stuf up",
-    "favoriteCharacters": "Toph",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar_The_Last_Airbender_The_Promise_Part_1_cover.jpg"
-  },
-  {
-    "id": "story-44",
-    "name": "Sherlock Holmes",
-    "medium": [
-      "Book",
-      "movie",
-      "show"
-    ],
-    "genre": [
-      "Thriller & Mystery"
-    ],
-    "length": "13 episodes of Sherlock, 2 RDJ movies, numerous comics + the actual books",
-    "hours": "24",
-    "rankingPratyush": "S",
-    "commentsPratyush": "This created the genre of detective fiction. Its honestly peak - the only issue is, its unclear what I'm referring to here. Still, I like almost all Sherlock content - and I'd recommend Benedict Cumberbatch's show off the top of my mind.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://cdn.kobo.com/book-images/c443ba6e-f336-410e-abcf-24c80b2fcf7e/1200/1200/False/the-adventures-of-sherlock-holmes-extraordinary-edition-with-illustrations.jpg"
-  },
-  {
-    "id": "story-45",
-    "name": "Invincible",
-    "medium": [
-      "show",
-      "comic"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Superhero"
-    ],
-    "length": "26 episodes, 144 chapters",
-    "hours": "24",
-    "rankingPratyush": "S",
-    "commentsPratyush": "This man has really been beaten senseless so many times that I can't bring myself to call him out on plot armor anymore. I enjoyed the comics, but I think the story in the show is a huge step up - though the animation is inconsistent. Cmon Amazon, money clearly isn't the issue here.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Battle Beast is a vibe",
-    "imageUrl": "https://m.media-amazon.com/images/I/61z68MpchzL._AC_UF894,1000_QL80_.jpg"
-  },
-  {
-    "id": "story-46",
-    "name": "Lookism",
-    "medium": [
-      "show",
-      "comic"
-    ],
-    "genre": [
-      "Action",
-      "Drama"
-    ],
-    "length": "Ongoing webtoon with 617 episodes, 8 episodes on Netflix",
-    "hours": "23",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "B",
-    "commentsKanav": "Drop after killing CEO guy, the story just becomes Baki with diffrent characheters",
-    "favoriteCharacters": "Gun",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86848-4CSItSclJUvi.jpg"
-  },
-  {
-    "id": "story-47",
-    "name": "Fullmetal Alchemist Brotherhood",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "64 episodes",
-    "hours": "21",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Beautiful well rounded story. I see why its a contender for 'best anime ever' despite all of the new gen anime having better animation and sound design. Love the world building, plot progression and inter-twining of all the arcs. My favorite part of this story is - there are almost no 'side characters'. Every character feels like a living-thinking-feeling human being having their own motivations and making their own decisions. No character introduced goes to waste, and everyone plays a part (the total opposite of Solo Leveling).",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Roy Mustang (ik, how basic of me)",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg"
-  },
-  {
-    "id": "story-48",
-    "name": "Six of Crows",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Fantasy",
-      "Thriller & Mystery",
-      "Family & YA"
-    ],
-    "length": "2 books",
-    "hours": "20",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Book 1 is one of my favorite hiest stories. Book 2 wraps up the plot and connects to the broader fictional universe.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Kaz, Inej, Jesper",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXutcZTb4QY2BDU6v61Y78IB_9nlYnxr3_0DE8Oz5qOA&s"
-  },
-  {
-    "id": "story-49",
-    "name": "One Punch Man",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Comedy",
-      "Superhero"
-    ],
-    "length": "233 chapters, 36 episodes",
-    "hours": "20",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Look - its a gag story. If you accept that as a premise, its entertaining.",
-    "rankingKanav": "C",
-    "commentsKanav": "C is not a bad rating, its just average and meant to be funny, the story is not deep and S3 shot the animators and the hands",
-    "favoriteCharacters": "King",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74347-sZpmNJ5xLwRK.jpg"
-  },
-  {
-    "id": "story-50",
-    "name": "Book Eater",
-    "medium": [
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy"
-    ],
-    "length": "114 chapters (ongoing)",
-    "hours": "19",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Man gets a tome called gluttony - and then eats books and learns the magic in them. Very straight forward.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/60656/large.jpg"
-  },
-  {
-    "id": "story-51",
-    "name": "Alice in Borderland",
-    "medium": [
-      "show",
-      "Manga"
-    ],
-    "genre": [
-      "Adventure",
-      "Sci-Fi",
-      "Thriller & Mystery"
-    ],
-    "length": "22 episodes",
-    "hours": "18",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Its a gamified apolocalytpic world. Given my ranking of ORV, you know I love stories like this. Fun to discuss with your friends how you would deal with and try to survive the different games. For APDA people - Daniel Katari has a really fun debate case on this too.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Chishiya",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZDdhMTAwMmQtOTVlYi00OTcwLTllZGMtMjc4NGU0NzFhODM3XkEyXkFqcGc@._V1_.jpg"
-  },
-  {
-    "id": "story-52",
-    "name": "Star Wars",
-    "medium": [
-      "movie",
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi"
-    ],
-    "length": "Skywalker Saga = 9 films, I don't know how long the full cannon is",
-    "hours": "18",
-    "rankingPratyush": "B",
-    "commentsPratyush": "I should come back to this. This was my favorite Angry Birds collab game by far.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://images.squarespace-cdn.com/content/v1/5d5d5bbe2cc2d000018127a9/1677466567825-4XNXOSMIT8U8RK41UZNZ/ella%27s+pic+1.jpg"
-  },
-  {
-    "id": "story-53",
+    "id": "story-69",
     "name": "Spy x Family",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Comedy",
-      "Thriller & Mystery"
-    ],
+    "medium": "anime, Manga",
+    "genre": "Action, Comedy, Thriller & Mystery",
     "length": "138 chapters (ongoing), 37 episodes",
     "hours": "17",
     "rankingPratyush": "A",
@@ -1078,611 +966,38 @@
     "imageUrl": "https://media.kitsu.app/manga/54448/poster_image/large-0ff02098a7d97a91d5e4cb8ec597165a.jpeg"
   },
   {
-    "id": "story-54",
-    "name": "Classroom of the Elite",
-    "medium": [
-      "anime",
-      "Novel"
-    ],
-    "genre": [
-      "Drama",
-      "Thriller & Mystery"
-    ],
-    "length": "~94 chapters",
-    "hours": "16",
-    "rankingPratyush": "C",
-    "commentsPratyush": "I liked the quotes. It felt smart and cool in the start, and it has its moments. Unfortunately, it collapses into a mainpulation show.",
-    "rankingKanav": "D",
-    "commentsKanav": "eh not fun",
-    "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx96798-SIQLQqS8HO9h.jpg"
-  },
-  {
-    "id": "story-55",
-    "name": "Wind Breaker",
-    "medium": [
-      "anime",
-      "Manga",
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Martial Arts"
-    ],
-    "length": "225 chapters (ongoing), 25 episodes",
-    "hours": "16",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Beautiful animation, but its just highschoolers throwing hands. Refreshing to see an action story without crazy powerscaling (unlike some other stories that pretend to be human but are basically supers). A fun light watch.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx135083-TQbNFWKGJJHW.jpg"
-  },
-  {
-    "id": "story-56",
-    "name": "Sakamoto Days",
-    "medium": [
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Comedy"
-    ],
-    "length": "269 chapters (ongoing), 22 episodes",
-    "hours": "16",
+    "id": "story-70",
+    "name": "The Alchemist",
+    "medium": "Book",
+    "genre": "Adventure, Fantasy, Family & YA",
+    "length": "1 book",
+    "hours": "4",
     "rankingPratyush": "A",
-    "commentsPratyush": "John Wick (but happy) meets anime + elements of slice of life and comedy. Its a lot of fun.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Nagumo",
-    "imageUrl": "https://media.kitsu.app/manga/58159/poster_image/large-f812099474664e9aa9f7e8d2181c8011.jpeg"
-  },
-  {
-    "id": "story-57",
-    "name": "Arcane",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "length": "18 Episodes",
-    "hours": "14",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Just because you love Arcane doesn't mean you need to start playing League - every league player I know. Its a beautiful 2 season show with a unique art style, a rich cast of characters, and an interesting magic-meets-steampunk power system. Would recommending watching; I don't play league so can't comment on what to do after the show is over.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "(to my great surprise) Silco, and Mel",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-  },
-  {
-    "id": "story-58",
-    "name": "Eminence in Shadow",
-    "medium": [
-      "anime",
-      "Novel",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Comedy",
-      "Isekai & LitRPG"
-    ],
-    "length": "83 chapters (ongoing), 32 episodes",
-    "hours": "14",
-    "rankingPratyush": "A",
-    "commentsPratyush": "A comedy filled with meta jokes about anime tropes. Wouldn't recommend to a first time anime watcher, but if you're deep in the community, this is hillarious. A little but like One Punch Man - don't take the show seriously, you're just there for a laugh.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Cid",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7PZKmuDsBo8EgvRBzqMyjifzaZeBiQm99_CrvuWo22HuxlwZwQlRzMTg&s=10"
-  },
-  {
-    "id": "story-59",
-    "name": "Transformers",
-    "medium": [
-      "movie",
-      "show",
-      "comic"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi"
-    ],
-    "length": "Full franchise — too broad; live-action films = 7",
-    "hours": "14",
-    "rankingPratyush": "B",
-    "commentsPratyush": "",
-    "rankingKanav": "",
+    "commentsPratyush": "Great book. I read this on my flight to college for the first time.",
+    "rankingKanav": "A",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2265-uGaMUjSpJVWa.png"
+    "imageUrl": ""
   },
   {
-    "id": "story-60",
-    "name": "Hell's Paradise",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Fantasy"
-    ],
-    "length": "127 chapters, 27 episodes",
-    "hours": "13",
-    "rankingPratyush": "B",
-    "commentsPratyush": "It has its weird parts, but its still a good watch. The story is based on a mix of history, popular fictional tropes, and fantasy inserts - so you might see the twists coming a mile away, but the execution isn't bad.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/40546/large.jpg"
-  },
-  {
-    "id": "story-61",
-    "name": "Horimiya",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Comedy",
-      "Romance",
-      "Slice of Life"
-    ],
-    "length": "127 chapters, 26 episodes",
-    "hours": "13",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Cute slice of life and romance. Lots of memes.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Hori",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/22352/large.jpg"
-  },
-  {
-    "id": "story-62",
-    "name": "Death Note",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Drama",
-      "Fantasy",
-      "Thriller & Mystery"
-    ],
-    "length": "37 anime episodes",
-    "hours": "12",
-    "rankingPratyush": "S",
-    "commentsPratyush": "This is a very common recommendation, so most anime watchers have already seen this. What I will point you to is the fan-made remakes and fan-fics that are genuinely hillarious. You can find a lot of them on youtube.",
-    "rankingKanav": "S",
-    "commentsKanav": "",
-    "favoriteCharacters": "Ryuk",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
-  },
-  {
-    "id": "story-63",
-    "name": "The Game That I Came From",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "359 chapters",
-    "hours": "12",
-    "rankingPratyush": "C",
-    "commentsPratyush": "One of the many futuristic VR game stories - kind of an Overgeared rip off. I enjoyed reading it in the start, then Kanav and I talked about it, and now I realize its mid.",
-    "rankingKanav": "E",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/59620/large.jpg"
-  },
-  {
-    "id": "story-64",
-    "name": "I am the Fated Villain",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "347 Ongoing",
-    "hours": "12",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "F",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://static.wikia.nocookie.net/i-am-the-fated-villain-novel/images/4/40/IATFV_Manhua_Cover_0.png/revision/latest?cb=20230829163658"
-  },
-  {
-    "id": "story-65",
+    "id": "story-71",
     "name": "Nano Machine",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi",
-      "Martial Arts"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Sci-Fi, Martial Arts",
     "length": "322 chapters (ongoing)",
     "hours": "11",
     "rankingPratyush": "B",
     "commentsPratyush": "Really interesting concept - taking futuristic nano machines and giving them to a martial artist back in history to see how the course of history changes. Unfortunately, the character progression tanks as the story progresses, and the manhwa kept a part of the novel that I really didn't like - so that drops the rating in my eyes.",
-    "rankingKanav": "A-",
+    "rankingKanav": "A",
     "commentsKanav": "",
     "favoriteCharacters": "",
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx120980-RZ9WLd0o9hyo.jpg"
   },
   {
-    "id": "story-66",
-    "name": "John Wick",
-    "medium": [
-      "movie"
-    ],
-    "genre": [
-      "Action",
-      "Thriller & Mystery"
-    ],
-    "length": "4 films, 523 min (5 w/ Ballerina, 648 min)",
-    "hours": "11",
-    "rankingPratyush": "A",
-    "commentsPratyush": "",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_.jpg"
-  },
-  {
-    "id": "story-67",
-    "name": "Frieren",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "28 episodes",
-    "hours": "9",
-    "rankingPratyush": "S",
-    "commentsPratyush": "This is my current favorite feel good show. Its like therapy after all the 2nd hand trauma from the many other stories I've read/watched. I also study to the sound tracks from this show (10/10 would recommend)",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "I like all of them",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg"
-  },
-  {
-    "id": "story-68",
-    "name": "Cowboy Bebop",
-    "medium": [
-      "anime"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi"
-    ],
-    "length": "26 episodes",
-    "hours": "9",
-    "rankingPratyush": "Peak",
-    "commentsPratyush": "If you like Bladerunner and futuristic sci-fi, this is down your alley. This show is like a dream that you'll be jarred to wake up from, and you'll carry it with you.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Spike (he defines cool)",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png"
-  },
-  {
-    "id": "story-69",
-    "name": "The Tutorial is Too Hard",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "281 + prologue",
-    "hours": "9",
-    "rankingPratyush": "D",
-    "commentsPratyush": "Meh?",
-    "rankingKanav": "C-",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://us-a.tapas.io/sa/ab/6f1360db-6c54-4060-945d-925c54df5a27_z.jpg"
-  },
-  {
-    "id": "story-70",
-    "name": "Mashle: Magic & Muscle",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Comedy",
-      "Fantasy"
-    ],
-    "length": "162 chapters in manga, S1 Anime has 12 episodes",
-    "hours": "9",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Harry Potter but with creatine and protien powder.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974748853/mashle-magic-and-muscles-vol-17-9781974748853_hr.jpg"
-  },
-  {
-    "id": "story-71",
-    "name": "Solo Max-Level Newbie",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "269 chapters (ongoing)",
-    "hours": "9",
-    "rankingPratyush": "A",
-    "commentsPratyush": "There are a ton of apocalyptic tower climbing stories that rip off tropes and mythology, but this is one of the best executions of it.",
-    "rankingKanav": "C+",
-    "commentsKanav": "",
-    "favoriteCharacters": "Alice",
-    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/solo-max-level-newbie.bac83f-400.webp"
-  },
-  {
     "id": "story-72",
-    "name": "Violet Evergarden",
-    "medium": [
-      "anime",
-      "Novel"
-    ],
-    "genre": [
-      "Drama",
-      "Fantasy",
-      "Slice of Life"
-    ],
-    "length": "13 episodes, 2 movies",
-    "hours": "8",
-    "rankingPratyush": "S",
-    "commentsPratyush": "This story is so beautiful, it actually made me cry. Its about a child soldier recovering from their PTSD and trying to readjust in the post-war world.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Violet",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-ubzq619ZA2E9.png"
-  },
-  {
-    "id": "story-73",
-    "name": "The World After The End",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "length": "245 chapters (ongoing)",
-    "hours": "8",
-    "rankingPratyush": "E",
-    "commentsPratyush": "Started off fine, but then they got Jaehwan running around naked so I dropped it.",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2m7Fzgg-X5bsEfuhniIYmNOFII6I7e5rYOAspqeNjkg&s=10"
-  },
-  {
-    "id": "story-74",
-    "name": "Player who can’t level up",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "238 chapters (ongoing)",
-    "hours": "8",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Starts off great, gets confusing in the middle, back to being good. Interesting concept of not being able to level up and relying entirely on your equipment, but it collapses back to - scrap anything I've told you, the protagonist is the chosen one.",
-    "rankingKanav": "B",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/58886/large.jpg"
-  },
-  {
-    "id": "story-75",
-    "name": "Doctor’s rebirth",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Drama",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "237 chapters (ongoing)",
-    "hours": "8",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Cool concept - a war medic isekai's (reincarnates/transfers) into a murim (chinese martial arts) world.",
-    "rankingKanav": "B",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/59179/large.jpg"
-  },
-  {
-    "id": "story-76",
-    "name": "Villain to Kill",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Superhero"
-    ],
-    "length": "246 chapters (ongoing)",
-    "hours": "8",
-    "rankingPratyush": "B",
-    "commentsPratyush": "I thought this would be bad, but it has been surprisingly okay. I wouldn't go out of my way to recommend this, but not bad.",
-    "rankingKanav": "B",
-    "commentsKanav": "",
-    "favoriteCharacters": "Cleaner",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/59357/large.jpg"
-  },
-  {
-    "id": "story-77",
-    "name": "Ember Knight",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Fantasy"
-    ],
-    "length": "246 Ongoing",
-    "hours": "8",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "S",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://image-repository-cdn.tappytoon.com/series/530/67995900-4a46-425f-be6b-be914702c0ef.jpg"
-  },
-  {
-    "id": "story-78",
-    "name": "The Greatest Estate Developer",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Comedy",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "223 manhwa chapters",
-    "hours": "7",
-    "rankingPratyush": "S",
-    "commentsPratyush": "Civil Engineering student isekais into a medieval fantasy novel, and brings them the gift of capitalism. Its as ridiculous as it sounds- and I love it. 10/10 facial expressions.",
-    "rankingKanav": "A",
-    "commentsKanav": "",
-    "favoriteCharacters": "Lloyd",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png"
-  },
-  {
-    "id": "story-79",
-    "name": "Regressor instruction manual",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Drama",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "196 chapters (ongoing), even longer novel",
-    "hours": "7",
-    "rankingPratyush": "D",
-    "commentsPratyush": "Interesting concept where the protagonist isn't a regressor, but rather figures out who the regressor is and tries to get carried - but soon devolves into a disgustingly manipulative story. Sometimes I was just rooting for more bad things to happen to this guy coz he sucks, but he has the tenacity of a cockroach. I dropped this one.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/61570/poster_image/large-a2cca59f103c01a0201fa1947eff6983.jpeg"
-  },
-  {
-    "id": "story-80",
-    "name": "Legendary Son of the Marquis House",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "172 chapters (ongoing)",
-    "hours": "6",
-    "rankingPratyush": "C",
-    "commentsPratyush": "I think I liked it when I read it many years ago, but don't remember a lot anymore.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThfCNx2ZckVaBs4S5hGThzlwXHjAoMRAPaS8uHyFiWgQ&s=10"
-  },
-  {
-    "id": "story-81",
-    "name": "The Live",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "176 chapters",
-    "hours": "6",
-    "rankingPratyush": "B",
-    "commentsPratyush": "One of the oldest manhwas on this list - it was a very interesting story when it came out. No over the top power scaling, crazy visuals, fight choreographies, or aura farming - just a good set of characters trying their best to survive and get back home.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/56292/large.jpg"
-  },
-  {
-    "id": "story-82",
-    "name": "Trash of the Count's Family",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "182 chapters (ongoing)",
-    "hours": "6",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Lol, what a cheesy scammer.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx123573-LKoCKwRouEMW.png"
-  },
-  {
-    "id": "story-83",
     "name": "Academy's Undercover Professor",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Fantasy",
-      "Thriller & Mystery"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Fantasy, Thriller & Mystery",
     "length": "168 chapters, dropped",
     "hours": "6",
     "rankingPratyush": "B",
@@ -1693,324 +1008,69 @@
     "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx150836-RbhplaCkc2dy.jpg"
   },
   {
-    "id": "story-84",
-    "name": "The Water Magician",
-    "medium": [
-      "Manga",
-      "Novel"
-    ],
-    "genre": [
-      "Fantasy",
-      "Slice of Life"
-    ],
-    "length": "48 chapters (ongoing), 12 episodes",
-    "hours": "6",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Straight forward and fun. This guy has water magic, and he uses it to fight monsters and bad guys. Very creative - people in the avatar world should've tried these water bending techniques.",
-    "rankingKanav": "",
+    "id": "story-73",
+    "name": "The Greatest Estate Developer",
+    "medium": "Manhwa, Novel",
+    "genre": "Comedy, Fantasy, Isekai & LitRPG",
+    "length": "223 manhwa chapters",
+    "hours": "7",
+    "rankingPratyush": "S",
+    "commentsPratyush": "Civil Engineering student isekais into a medieval fantasy novel, and brings them the gift of capitalism. Its as ridiculous as it sounds- and I love it. 10/10 facial expressions.",
+    "rankingKanav": "A",
     "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/69142/poster_image/large-c5bd15dcfe1d69f5b03def3edcfddad8.jpeg"
+    "favoriteCharacters": "Lloyd",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png"
   },
   {
-    "id": "story-85",
-    "name": "Return of the Mount Hua sect",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Comedy",
-      "Martial Arts"
-    ],
-    "length": "172 chapters (ongoing)",
-    "hours": "6",
-    "rankingPratyush": "A",
-    "commentsPratyush": "This is one of my favorite Murim stories. Chung Myung is hillarious, the drawings are fun, but its antics that really sell me on this story.",
-    "rankingKanav": "S",
-    "commentsKanav": "",
-    "favoriteCharacters": "Chung Myung",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132144-i5B4VnG9sRgh.png"
+    "id": "story-74",
+    "name": "Hunter X Hunter",
+    "medium": "anime, Manga",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "148 episodes, 415 chapters",
+    "hours": "63",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "B",
+    "commentsKanav": "Its a good story to pass time but it was not very moving for me, I realy like the art and power system but the story was still a bit short in comparision to others and plot twists were a bit infrequent so I didn't get that thrill of having my expectations subverted often. Its a great story when you read it but it is also forgettable",
+    "favoriteCharacters": "Killua",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30026-uCvXMudMzmwI.jpg"
   },
   {
-    "id": "story-86",
-    "name": "The Novel’s Extra",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "165 chapters, ongoing",
-    "hours": "6",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Interesting but not entirely original concept - you become an extra in a novel you wrote yourself (kinda like ORV). So far so good. Evangel (the adopted daughter of the protagonist) is really cute.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Evangel",
-    "imageUrl": "https://media.kitsu.app/manga/63926/poster_image/large-c4607fd32903b27f98b909b9df86a4b2.jpeg"
+    "id": "story-75",
+    "name": "Lookism",
+    "medium": "show, comic",
+    "genre": "Action, Drama",
+    "length": "Ongoing webtoon with 617 episodes, 8 episodes on Netflix",
+    "hours": "23",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "B",
+    "commentsKanav": "Drop after killing CEO guy, the story just becomes Baki with diffrent characheters",
+    "favoriteCharacters": "Gun",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86848-4CSItSclJUvi.jpg"
   },
   {
-    "id": "story-87",
-    "name": "Revenge of the iron blooded sword hound",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy"
-    ],
-    "length": "173 chapters, ongoing",
-    "hours": "6",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Its not that special - you've seen this plot before - but its a fun story regardless.",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx163824-KiablxybJD6i.jpg"
-  },
-  {
-    "id": "story-88",
-    "name": "Return of the Disaster Class Hero",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy"
-    ],
-    "length": "182 chapters, ongoing",
-    "hours": "6",
-    "rankingPratyush": "B",
-    "commentsPratyush": "It was great when it started, but then the inconsistent posting schedule, and the slow & unclear progression of the main plot drop it down for me. I still read it, but wouldn't recommend it the same way I did in the start.",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "Lee Geon",
-    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/return-of-the-disaster-class-hero.e23831-400.webp"
-  },
-  {
-    "id": "story-89",
+    "id": "story-76",
     "name": "Absolute Sword Sense",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
     "length": "194 Ongoing",
     "hours": "6",
-    "rankingPratyush": "",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
-    "rankingKanav": "B+",
+    "rankingKanav": "B",
     "commentsKanav": "",
     "favoriteCharacters": "",
     "imageUrl": "https://cdn.asurascans.com/asura-images/covers/absolute-sword-sense.09c12f.webp"
   },
   {
-    "id": "story-90",
-    "name": "Standard of Reincarnation",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "191 (S1: 54, S2: 44, S3: 36, S4: 34, S5: 23+) Ongoing",
-    "hours": "6",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/standard-of-reincarnation.32ce34.webp"
-  },
-  {
-    "id": "story-91",
-    "name": "Player Who Returned 10,000 years later",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Comedy",
-      "Fantasy"
-    ],
-    "length": "154 chapters (ongoing)",
-    "hours": "5",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Demon King is just a dude, and he returns from the Demon Realm and tries to fit in with the humans, and then tries really hard to frame literally anyone else as the final villain. He also really likes Kimchi stew.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/63977/poster_image/large-bcc7100bc646f56fab6f90304b7bc24d.jpeg"
-  },
-  {
-    "id": "story-92",
-    "name": "My School Life Pretending To Be a Worthless Person",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Fantasy"
-    ],
-    "length": "153 chapters",
-    "hours": "5",
-    "rankingPratyush": "D",
-    "commentsPratyush": "Meh. Too edgy for my taste with this guy's mental issues and ass-pull powerups.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/64308/poster_image/large-03b8be96a31ec173ae76ae44d5768ae1.jpeg"
-  },
-  {
-    "id": "story-93",
-    "name": "The Newbie is Too Strong",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "162 chapters, dropped",
-    "hours": "5",
-    "rankingPratyush": "B",
-    "commentsPratyush": "I only read this for the Poppois - the really cute pets of the protagonist.",
-    "rankingKanav": "C+",
-    "commentsKanav": "",
-    "favoriteCharacters": "Poppois.",
-    "imageUrl": "https://media.kitsu.app/manga/63854/poster_image/large-138c8e795b11d2a8a5f30b5a79f36108.jpeg"
-  },
-  {
-    "id": "story-94",
-    "name": "Sleeping Ranker",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "154 chapters",
-    "hours": "5",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Another VR game, but the protagonist just sleeps a lot and then unlocks a special myth level class that makes him OP. He continues half-playing and half-sleeping.",
-    "rankingKanav": "B",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/62861/poster_image/large-f2eedf38daf4265c881ce3ca22a0c6fc.jpeg"
-  },
-  {
-    "id": "story-95",
-    "name": "Superhuman Battlefield",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Slice of Life"
-    ],
-    "length": "151 chapters",
-    "hours": "5",
-    "rankingPratyush": "A",
-    "commentsPratyush": "A good well rounded story about super humans and an other-worldly invasion. In the world after the invasion, these super humans turn into athletes that play in global team v/s team competitive leagues.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx150744-oItNn4LvB2Pc.jpg"
-  },
-  {
-    "id": "story-96",
-    "name": "Reformation of the Deadbeat Noble",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "152 chapters, ongoing",
-    "hours": "5",
-    "rankingPratyush": "A",
-    "commentsPratyush": "The start is very slow and confusing, but if you stick with it - the story gets really good and things start to make sense. Where the manhwa is now, the arc has been a lot of fun to read. Its also a story about locking in - and how much you can improve your life if you do.",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "Ignet, Ilya, Brett, Airen",
-    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/reformation-of-the-deadbeat-noble.35b8e9-400.webp"
-  },
-  {
-    "id": "story-97",
-    "name": "The Nebula's Civilization",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "length": "140 (S1: 55, S2: 55, S3: 30+) Ongoing",
-    "hours": "5",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "S",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://cdn.wuxiaworld.com/images/covers/tnc.webp?v=98466158499b9b08199019f2f11638dd424c9a3b"
-  },
-  {
-    "id": "story-98",
-    "name": "Killer Pietro",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Thriller & Mystery"
-    ],
-    "length": "136 + part-1 summary/part-2 prologue (S1: 104, S2: 28+) Ongoing",
-    "hours": "5",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://static.wikia.nocookie.net/topstrongest/images/3/33/Killer_Peter_Thumbnail.png/revision/latest?cb=20240514160313"
-  },
-  {
-    "id": "story-99",
+    "id": "story-77",
     "name": "Academy's Genius Swordmaster",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Fantasy"
-    ],
+    "medium": "Manhwa",
+    "genre": "Action, Drama, Fantasy",
     "length": "147 (S1: 129, S2: 18) Ongoing",
     "hours": "5",
-    "rankingPratyush": "",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
     "rankingKanav": "B",
     "commentsKanav": "",
@@ -2018,194 +1078,52 @@
     "imageUrl": "https://i.namu.wiki/i/sURjrO0ijFUSPEju6TYvQmwBhd99c480P0sWWxTb5eeXxGHu6FSZvU2xe-xRf-mG78s8uArRcKS8Nrt7Rwtfyg.webp"
   },
   {
-    "id": "story-100",
-    "name": "Odd Taxi",
-    "medium": [
-      "anime"
-    ],
-    "genre": [
-      "Thriller & Mystery"
-    ],
-    "length": "13 episodes",
-    "hours": "4",
-    "rankingPratyush": "S",
-    "commentsPratyush": "This is a slept on masterpiece. Unique art style, great usage of characters for plot progression, and a twist you won't see coming. 10/10 would recommend.",
-    "rankingKanav": "",
+    "id": "story-78",
+    "name": "Surviving as a Genius on Borrowed Time",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "87 ongoing",
+    "hours": "3",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "B",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx128564-TOB0GlDMx2xe.jpg"
+    "imageUrl": "https://static.wikia.nocookie.net/surviving-as-a-genius-on-borrowed-time/images/e/e0/IMG_20250714_045635.jpg/revision/latest?cb=20250714080540"
   },
   {
-    "id": "story-101",
-    "name": "Star-Embracing Sword Master",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy"
-    ],
-    "length": "131 chapters, ongoing",
-    "hours": "4",
+    "id": "story-79",
+    "name": "Murim Psycopath",
+    "medium": "Manhwa",
+    "genre": "Action, Drama, Martial Arts",
+    "length": "35+ (S1: 1–34 complete; S2: 35+) Ongoing",
+    "hours": "1",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "B",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://6ed7f732781d5145ac367958b98f24ef.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=cover,q=75/f1770593107623x384346954366992400/IMG_5435.PNG"
+  },
+  {
+    "id": "story-80",
+    "name": "The Terrible Two",
+    "medium": "Book",
+    "genre": "Comedy, Family & YA",
+    "length": "4 books",
+    "hours": "40",
     "rankingPratyush": "A",
-    "commentsPratyush": "This is my favorite execution of genius kid (common trope) works really hard and climbs the social heirarchy (common trope) - now in a western medieval knight setting (common trope).",
-    "rankingKanav": "S",
-    "commentsKanav": "",
-    "favoriteCharacters": "Vlad, Alicia Heinal, jager",
-    "imageUrl": "https://media.kitsu.app/manga/69516/poster_image/large-aad39241dd00e02a4646f7e548056b40.jpeg"
-  },
-  {
-    "id": "story-102",
-    "name": "Eternally Regressing Knight",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "112 + prologue (S1 complete at 112) On hiatus between seasons (S2 TBA)",
-    "hours": "4",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "S",
+    "commentsPratyush": "Funny light read. Wouldn't go out of my way to recommend this though.",
+    "rankingKanav": "B",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://smschumacher.com/wp-content/uploads/2026/04/manga-cover-enternally-regressing-knight.webp"
+    "imageUrl": "https://m.media-amazon.com/images/I/71Wo3cNBa7L._AC_UF1000,1000_QL80_AIweblab1381794,T1_.jpg"
   },
   {
-    "id": "story-103",
-    "name": "Absolute Regression",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "112 Ongoing",
-    "hours": "4",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "A",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://static.wikia.nocookie.net/absoluteregression/images/1/1c/Weebton_cover.png/revision/latest?cb=20240913164504"
-  },
-  {
-    "id": "story-104",
-    "name": "Reborn as the Heavenly Demon",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "132 Ongoing",
-    "hours": "4",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "C-",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://us-a.tapas.io/sa/e5/98792fb8-1b41-4bbc-934a-c72c921995b0_z.jpg"
-  },
-  {
-    "id": "story-105",
-    "name": "Genius Martial Arts Trainer",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "124 Ongoing",
-    "hours": "4",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/genius-martial-arts-trainer.7a9f27-400.webp"
-  },
-  {
-    "id": "story-106",
-    "name": "Martial God Regressed to Level 2",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "126 (S1: 51, S2: 49, S3: 26+) Ongoing",
-    "hours": "4",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "D+",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://book-pic.webnovel.com/bookcover/27077253306531505?imageMogr2/thumbnail/600x&imageId=1691551085552"
-  },
-  {
-    "id": "story-107",
-    "name": "Cyberpunk Edgerunners",
-    "medium": [
-      "anime"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi"
-    ],
-    "length": "10 episodes",
-    "hours": "3",
-    "rankingPratyush": "S",
-    "commentsPratyush": "High octane sci-fi thriller with amazing visuals and plot progression. I loved this series when I watched it, but just a headsup - this is still Night City. A happier ending? For folks like us? Wrong city, wrong people.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "Rebecca, Lucy, David",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg"
-  },
-  {
-    "id": "story-108",
-    "name": "Shadowless night",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Romance"
-    ],
-    "length": "80 chapters, dropped",
-    "hours": "3",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Cute socially awkward protagonist, great art, but not much of a story.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/64657/poster_image/large-c922f6927e9ccd801659963a50c4e0d2.jpeg"
-  },
-  {
-    "id": "story-109",
+    "id": "story-81",
     "name": "Reincarnation of the suicidal battlegod",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
     "length": "101 chapters - hiatus?",
     "hours": "3",
     "rankingPratyush": "A",
@@ -2216,59 +1134,167 @@
     "imageUrl": "https://media.kitsu.app/manga/poster_images/60196/large.jpg"
   },
   {
-    "id": "story-110",
-    "name": "Return of the 8th class magician",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "81 chapters",
-    "hours": "3",
+    "id": "story-82",
+    "name": "Roald Dahl",
+    "medium": "Book",
+    "genre": "Comedy, Fantasy, Family & YA",
+    "length": "49 books",
+    "hours": "40",
+    "rankingPratyush": "A",
+    "commentsPratyush": "I love Roald Dahl, but I'll probably have to come back and think of the specific books again.",
+    "rankingKanav": "B",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": ""
+  },
+  {
+    "id": "story-83",
+    "name": "Michael Vey",
+    "medium": "Book",
+    "genre": "Sci-Fi, Family & YA",
+    "length": "10 books",
+    "hours": "100",
     "rankingPratyush": "B",
-    "commentsPratyush": "Another really old manhwa on here - genius magicial gets manipulated by bad folks, turns back time, and switches teams. This was one of the stories that introduced me to the magic circles and mana mechanisms for magic in the korean comic world.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx136331-cM7yJu8RtCoU.jpg"
+    "commentsPratyush": "Really interesting concept for powers based on actual physics. Starts great, but falls off quite poorly towards the last few books.",
+    "rankingKanav": "B",
+    "commentsKanav": "The human aspect of this story is great, it has been a while since I read this but it was nice",
+    "favoriteCharacters": "Ostin, Ian",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/75/Michael_Vey_The_Prisoner_of_Cell_25_paperback_book_cover.jpg"
   },
   {
-    "id": "story-111",
-    "name": "Genius Prismatic Mage",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy"
-    ],
-    "length": "87 Ongoing",
-    "hours": "3",
-    "rankingPratyush": "",
+    "id": "story-84",
+    "name": "Player who can’t level up",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "238 chapters (ongoing)",
+    "hours": "8",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Starts off great, gets confusing in the middle, back to being good. Interesting concept of not being able to level up and relying entirely on your equipment, but it collapses back to - scrap anything I've told you, the protagonist is the chosen one.",
+    "rankingKanav": "B",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/58886/large.jpg"
+  },
+  {
+    "id": "story-85",
+    "name": "Villain to Kill",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Superhero",
+    "length": "246 chapters (ongoing)",
+    "hours": "8",
+    "rankingPratyush": "B",
+    "commentsPratyush": "I thought this would be bad, but it has been surprisingly okay. I wouldn't go out of my way to recommend this, but not bad.",
+    "rankingKanav": "B",
+    "commentsKanav": "",
+    "favoriteCharacters": "Cleaner",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/59357/large.jpg"
+  },
+  {
+    "id": "story-86",
+    "name": "Pick Me Up, Infinite Gacha",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "212 chapters (ongoing), 327 chapters in novel",
+    "hours": "62",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Very interesting concept, gets annoying towards the end because the author brings in random tropes that feel off-putting. The ending drags this down for me, despite it being a generally enjoyable story for the most part.",
+    "rankingKanav": "B",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159441-9W8201jAT9Yv.jpg"
+  },
+  {
+    "id": "story-87",
+    "name": "Doctor’s rebirth",
+    "medium": "Manhwa, Novel",
+    "genre": "Drama, Fantasy, Martial Arts",
+    "length": "237 chapters (ongoing)",
+    "hours": "8",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Cool concept - a war medic isekai's (reincarnates/transfers) into a murim (chinese martial arts) world.",
+    "rankingKanav": "B",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/59179/large.jpg"
+  },
+  {
+    "id": "story-88",
+    "name": "Sleeping Ranker",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "154 chapters",
+    "hours": "5",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Another VR game, but the protagonist just sleeps a lot and then unlocks a special myth level class that makes him OP. He continues half-playing and half-sleeping.",
+    "rankingKanav": "B",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/62861/poster_image/large-f2eedf38daf4265c881ce3ca22a0c6fc.jpeg"
+  },
+  {
+    "id": "story-89",
+    "name": "Standard of Reincarnation",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "191 (S1: 54, S2: 44, S3: 36, S4: 34, S5: 23+) Ongoing",
+    "hours": "6",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
-    "rankingKanav": "A",
+    "rankingKanav": "C",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://i.redd.it/081qfszrjyie1.jpeg"
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/standard-of-reincarnation.32ce34.webp"
   },
   {
-    "id": "story-112",
+    "id": "story-90",
+    "name": "Killer Pietro",
+    "medium": "Manhwa",
+    "genre": "Action, Thriller & Mystery",
+    "length": "136 + part-1 summary/part-2 prologue (S1: 104, S2: 28+) Ongoing",
+    "hours": "5",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://objects.asurasset.shop/Killer%20Pietro/cover.webp"
+  },
+  {
+    "id": "story-91",
+    "name": "Reborn as the Heavenly Demon",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "132 Ongoing",
+    "hours": "4",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://us-a.tapas.io/sa/e5/98792fb8-1b41-4bbc-934a-c72c921995b0_z.jpg"
+  },
+  {
+    "id": "story-92",
+    "name": "Genius Martial Arts Trainer",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "124 Ongoing",
+    "hours": "4",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/genius-martial-arts-trainer.7a9f27-400.webp"
+  },
+  {
+    "id": "story-93",
     "name": "The Academy’s Sashimi Sword Master",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Fantasy"
-    ],
+    "medium": "Manhwa",
+    "genre": "Action, Drama, Fantasy",
     "length": "87 + prologue + 2 specials (S1: 49, S2: 38) Ongoing",
     "hours": "3",
-    "rankingPratyush": "",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
     "rankingKanav": "C",
     "commentsKanav": "",
@@ -2276,57 +1302,220 @@
     "imageUrl": "https://cdn.novelupdates.com/images/2026/01/Conquering-the-Academy-with-Just-a-Sashimi-Knife.jpeg"
   },
   {
-    "id": "story-113",
-    "name": "I'm Gonna Anhilate This Land",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Comedy",
-      "Fantasy"
-    ],
-    "length": "86 (S1: 70, S2: 71+) Ongoing",
-    "hours": "3",
-    "rankingPratyush": "",
+    "id": "story-94",
+    "name": "Divine Demons Grand Ascension",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "58 (S1: 47, S2: 11+) Ongoing",
+    "hours": "2",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
-    "rankingKanav": "E",
+    "rankingKanav": "C",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://preview.redd.it/sauce-im-gonna-annihilate-this-land-whats-your-opinion-on-v0-m8wxp81i1pge1.jpeg?auto=webp&s=40b601d94c979acaf4f0f5f3648b41b88114b609"
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/the-divine-demons-grand-ascension.306205.webp"
   },
   {
-    "id": "story-114",
-    "name": "Surviving as a Genius on Borrowed Time",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "87 ongoing",
-    "hours": "3",
-    "rankingPratyush": "",
+    "id": "story-95",
+    "name": "World-Saving is a Skill",
+    "medium": "Manhwa",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "36 Ongoing",
+    "hours": "1",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
-    "rankingKanav": "B",
+    "rankingKanav": "C",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://static.wikia.nocookie.net/surviving-as-a-genius-on-borrowed-time/images/e/e0/IMG_20250714_045635.jpg/revision/latest?cb=20250714080540"
+    "imageUrl": "https://book-pic.webnovel.com/bookcover/34697984800932305?imageMogr2/thumbnail/600x&imageId=1767099253860"
   },
   {
-    "id": "story-115",
+    "id": "story-96",
+    "name": "Wimps Strategy Guide to Conquer the Tower",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "39 Ongoing",
+    "hours": "1",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://book-pic.webnovel.com/bookcover/34558578208208005?imageMogr2/thumbnail/600x&imageId=1766151627276"
+  },
+  {
+    "id": "story-97",
+    "name": "Nobel Lady Reformation Guide",
+    "medium": "Manhwa",
+    "genre": "Drama, Fantasy, Romance",
+    "length": "35 Ongoing",
+    "hours": "1",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://book-pic.webnovel.com/bookcover/34920546000351805?imageMogr2/thumbnail/600x&imageId=1770306843155"
+  },
+  {
+    "id": "story-98",
+    "name": "Geronimo Stilton",
+    "medium": "Book",
+    "genre": "Adventure, Comedy, Family & YA",
+    "length": "300+ books",
+    "hours": "300",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Peak fiction back in primary school. I have probably read over a 100 of these books now.",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "Thea (she's so cool) and Trap",
+    "imageUrl": "https://geronimostilton.com/upload/assets/files/US,116,-1,746/2734-0.jpg"
+  },
+  {
+    "id": "story-99",
+    "name": "My Hero Academia",
+    "medium": "anime, Manga",
+    "genre": "Action, Superhero",
+    "length": "430 chapters, 170 episodes",
+    "hours": "71",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Do I have issues with the story? Yes. Does the story go from a beautiful set of characters with a lot of potential to just a big 3? Also yes. Do they force unecessary fan service and ships that don't make any sense or matter for the plot? Also yes. But they have one very redeeming point - Bakugo is awesome. That being said, haters might be right that he's a Roy Mustang rip off.",
+    "rankingKanav": "C",
+    "commentsKanav": "Eh (Not bad but not a fav)",
+    "favoriteCharacters": "Bakugo",
+    "imageUrl": "https://media.kitsu.app/manga/26004/poster_image/large-226bfa9e2bb2d77058802994345e1d7f.jpeg"
+  },
+  {
+    "id": "story-100",
+    "name": "Demon Slayer",
+    "medium": "anime, Manga",
+    "genre": "Action, Drama, Fantasy",
+    "length": "205 chapters, 63 episodes",
+    "hours": "28",
+    "rankingPratyush": "A",
+    "commentsPratyush": "Very honest name - that's the entire story. The animation and sound production make this a really good watch tho.",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "Inosuke, Sanemi, Giyu",
+    "imageUrl": "https://media.kitsu.app/manga/37280/poster_image/large-e7e54c8f2b193ff53f645f46ee6608e1.jpeg"
+  },
+  {
+    "id": "story-101",
+    "name": "Solo Max-Level Newbie",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "269 chapters (ongoing)",
+    "hours": "9",
+    "rankingPratyush": "A",
+    "commentsPratyush": "There are a ton of apocalyptic tower climbing stories that rip off tropes and mythology, but this is one of the best executions of it.",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "Alice",
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/solo-max-level-newbie.bac83f-400.webp"
+  },
+  {
+    "id": "story-102",
+    "name": "Reformation of the Deadbeat Noble",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "152 chapters, ongoing",
+    "hours": "5",
+    "rankingPratyush": "A",
+    "commentsPratyush": "The start is very slow and confusing, but if you stick with it - the story gets really good and things start to make sense. Where the manhwa is now, the arc has been a lot of fun to read. Its also a story about locking in - and how much you can improve your life if you do.",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "Ignet, Ilya, Brett, Airen",
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/reformation-of-the-deadbeat-noble.35b8e9-400.webp"
+  },
+  {
+    "id": "story-103",
+    "name": "Naruto + Shippudden",
+    "medium": "anime, Manga",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "720 episodes, Boruto at 293 (ongoing), Boruto comic at 116 (ongoing), 3 movies",
+    "hours": "348",
+    "rankingPratyush": "B",
+    "commentsPratyush": "The first anime I watched. Loved it when I first watched it - but I analyzed it too much and now I can't unsee the issues I have with the story. Still one of the previous gen big 3 for a reason. I could probably give an impromptu 1 hour lecture on the sharingan.",
+    "rankingKanav": "C",
+    "commentsKanav": "Never watched real shipuden, all my information and entertainment is from amagi and other channels that have summary videos",
+    "favoriteCharacters": "Kakashi and Jiraya",
+    "imageUrl": "https://media.kitsu.app/manga/71975/poster_image/large-fa9104c92d8304d6a1fdf50cc25890f1.jpeg"
+  },
+  {
+    "id": "story-104",
+    "name": "Harry Potter",
+    "medium": "Book, movie",
+    "genre": "Fantasy, Family & YA",
+    "length": "7 books, 8 movies",
+    "hours": "86",
+    "rankingPratyush": "B",
+    "commentsPratyush": "People have been telling me I look like Harry Potter since grade 8. I even got round glasses in the middle + I'm the same height as Daniel Radcliff. This unfortunately doesn't stop me from giving the story a B - I love the fandom, but outgrew the story eventually. Also, they really shouldn't have made Snape black in the new show...",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "Newt Scamander lmao",
+    "imageUrl": "https://bci.kinokuniya.com/ae/jsp/images/book-img/97814/97814088/9781408855652.JPG"
+  },
+  {
+    "id": "story-105",
+    "name": "One Punch Man",
+    "medium": "anime, Manga",
+    "genre": "Action, Comedy, Superhero",
+    "length": "233 chapters, 36 episodes",
+    "hours": "20",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Look - its a gag story. If you accept that as a premise, its entertaining.",
+    "rankingKanav": "C",
+    "commentsKanav": "C is not a bad rating, its just average and meant to be funny, the story is not deep and S3 shot the animators and the hands",
+    "favoriteCharacters": "King",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx74347-sZpmNJ5xLwRK.jpg"
+  },
+  {
+    "id": "story-106",
+    "name": "Revenge of the iron blooded sword hound",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy",
+    "length": "173 chapters, ongoing",
+    "hours": "6",
+    "rankingPratyush": "B",
+    "commentsPratyush": "Its not that special - you've seen this plot before - but its a fun story regardless.",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx163824-KiablxybJD6i.jpg"
+  },
+  {
+    "id": "story-107",
+    "name": "Return of the Disaster Class Hero",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy",
+    "length": "182 chapters, ongoing",
+    "hours": "6",
+    "rankingPratyush": "B",
+    "commentsPratyush": "It was great when it started, but then the inconsistent posting schedule, and the slow & unclear progression of the main plot drop it down for me. I still read it, but wouldn't recommend it the same way I did in the start.",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "Lee Geon",
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/return-of-the-disaster-class-hero.e23831-400.webp"
+  },
+  {
+    "id": "story-108",
+    "name": "The Newbie is Too Strong",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "162 chapters, dropped",
+    "hours": "5",
+    "rankingPratyush": "B",
+    "commentsPratyush": "I only read this for the Poppois - the really cute pets of the protagonist.",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "Poppois.",
+    "imageUrl": "https://media.kitsu.app/manga/63854/poster_image/large-138c8e795b11d2a8a5f30b5a79f36108.jpeg"
+  },
+  {
+    "id": "story-109",
     "name": "Everyone else is a returnee",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
     "length": "46 chapters (ongoing)",
     "hours": "2",
     "rankingPratyush": "B",
@@ -2337,196 +1526,220 @@
     "imageUrl": "https://media.kitsu.app/manga/66087/poster_image/large-3944dde1c00910d2a4404d815c5dd6d9.jpeg"
   },
   {
-    "id": "story-116",
-    "name": "I want to eat your pancreas",
-    "medium": [
-      "movie",
-      "Novel",
-      "Manga"
-    ],
-    "genre": [
-      "Drama",
-      "Romance"
-    ],
-    "length": "1 movie, I didn't read the comic",
-    "hours": "2",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Don't go off of the name - this is a great movie. The name will make sense when you watch it. You might even tear up.",
-    "rankingKanav": "",
+    "id": "story-110",
+    "name": "All of DragonBall",
+    "medium": "anime, Manga",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "Over 800 episodes",
+    "hours": "267",
+    "rankingPratyush": "C",
+    "commentsPratyush": "Its a very honest story - people punch each other, over and over again. You know what you sign up for.",
+    "rankingKanav": "C",
+    "commentsKanav": "I find that the story feels like every single arc is trying to be endgame which makes previous arcs feel miniscule in comparison",
+    "favoriteCharacters": "Gohan (so valid for not following in Goku's footsteps)",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnPEhyYchpORLDGIMYUWruByae2npcva1ReE068YeSiQ&s"
+  },
+  {
+    "id": "story-111",
+    "name": "The Tutorial is Too Hard",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "281 + prologue",
+    "hours": "9",
+    "rankingPratyush": "D",
+    "commentsPratyush": "Meh?",
+    "rankingKanav": "C",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9UJat_yusOIcLwpsgpkP_d4tSYLdvPVNVAm98NUb8-Q&s=10"
+    "imageUrl": "https://us-a.tapas.io/sa/ab/6f1360db-6c54-4060-945d-925c54df5a27_z.jpg"
+  },
+  {
+    "id": "story-112",
+    "name": "The World After The End",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Sci-Fi",
+    "length": "245 chapters (ongoing)",
+    "hours": "8",
+    "rankingPratyush": "E",
+    "commentsPratyush": "Started off fine, but then they got Jaehwan running around naked so I dropped it.",
+    "rankingKanav": "C",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2m7Fzgg-X5bsEfuhniIYmNOFII6I7e5rYOAspqeNjkg&s=10"
+  },
+  {
+    "id": "story-113",
+    "name": "Martial God Regressed to Level 2",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "126 (S1: 51, S2: 49, S3: 26+) Ongoing",
+    "hours": "4",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "D",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://book-pic.webnovel.com/bookcover/27077253306531505?imageMogr2/thumbnail/600x&imageId=1691551085552"
+  },
+  {
+    "id": "story-114",
+    "name": "Sword-Devouring Swordmaster",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "39 ongoing",
+    "hours": "1",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "D",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://cdn.novelupdates.com/images/2025/09/Sword-Devouring-Swordmaster.jpg"
+  },
+  {
+    "id": "story-115",
+    "name": "Classroom of the Elite",
+    "medium": "anime, Novel",
+    "genre": "Drama, Thriller & Mystery",
+    "length": "~94 chapters",
+    "hours": "16",
+    "rankingPratyush": "C",
+    "commentsPratyush": "I liked the quotes. It felt smart and cool in the start, and it has its moments. Unfortunately, it collapses into a mainpulation show.",
+    "rankingKanav": "D",
+    "commentsKanav": "eh not fun",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx96798-SIQLQqS8HO9h.jpg"
+  },
+  {
+    "id": "story-116",
+    "name": "I'm Gonna Anhilate This Land",
+    "medium": "Manhwa",
+    "genre": "Action, Comedy, Fantasy",
+    "length": "86 (S1: 70, S2: 71+) Ongoing",
+    "hours": "3",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "E",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://preview.redd.it/sauce-im-gonna-annihilate-this-land-whats-your-opinion-on-v0-m8wxp81i1pge1.jpeg?auto=webp&s=40b601d94c979acaf4f0f5f3648b41b88114b609"
   },
   {
     "id": "story-117",
-    "name": "Suzume",
-    "medium": [
-      "movie"
-    ],
-    "genre": [
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "1 movie",
-    "hours": "2",
-    "rankingPratyush": "A",
-    "commentsPratyush": "First anime movie I watched in the theather with friends. Great animation and sound, meh story, but I'll remember it fondly due to the experience.",
-    "rankingKanav": "",
+    "name": "The Game That I Came From",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "359 chapters",
+    "hours": "12",
+    "rankingPratyush": "C",
+    "commentsPratyush": "One of the many futuristic VR game stories - kind of an Overgeared rip off. I enjoyed reading it in the start, then Kanav and I talked about it, and now I realize its mid.",
+    "rankingKanav": "E",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/65130/poster_image/large-b164e0fe6b7aae2664ea1cd70d972033.jpeg"
+    "imageUrl": "https://media.kitsu.app/manga/poster_images/59620/large.jpg"
   },
   {
     "id": "story-118",
-    "name": "Your name",
-    "medium": [
-      "movie"
-    ],
-    "genre": [
-      "Drama",
-      "Fantasy",
-      "Romance"
-    ],
-    "length": "1 movie",
-    "hours": "2",
-    "rankingPratyush": "B",
-    "commentsPratyush": "Really hot take - this movie isn't a master piece. I know the animation and sound design is awesome, but I'm just not as blown away by the story. Its still good, but I personally think its overhyped.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/38482/large.jpg"
+    "name": "Reincarnation of the strongest Sword God",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "2918 chapters in the novel",
+    "hours": "486",
+    "rankingPratyush": "D",
+    "commentsPratyush": "I don't know why I read this. I wasted so many hours of my life on this. The story wasn't even good. Would lowkey read an AI summary of the plot if I picked it up now.",
+    "rankingKanav": "E",
+    "commentsKanav": "Just don't",
+    "favoriteCharacters": "NO",
+    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/reincarnation-of-the-strongest-sword-god.4b5305-400.webp"
   },
   {
     "id": "story-119",
-    "name": "A silent voice",
-    "medium": [
-      "movie",
-      "Manga"
-    ],
-    "genre": [
-      "Drama",
-      "Romance",
-      "Slice of Life"
-    ],
-    "length": "1 movie",
-    "hours": "2",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Touching slice of life movie about growing up, and growing out of the walls we built around ourselves as children when we were dumb and made some mistakes we regret.",
-    "rankingKanav": "",
+    "name": "I am the Fated Villain",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Martial Arts",
+    "length": "347 Ongoing",
+    "hours": "12",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "F",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/16554/large.jpg"
+    "imageUrl": "https://static.wikia.nocookie.net/i-am-the-fated-villain-novel/images/4/40/IATFV_Manhua_Cover_0.png/revision/latest?cb=20230829163658"
   },
   {
     "id": "story-120",
-    "name": "Weathering with you",
-    "medium": [
-      "movie"
-    ],
-    "genre": [
-      "Drama",
-      "Fantasy",
-      "Romance"
-    ],
-    "length": "1 movie",
-    "hours": "2",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Its a good movie, but kind of like Your Name, I think animation and sound design hard carry. Not that the story is bad, but you wouldn't have people hyping it up as much if it weren't such a visual spectacle.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://media.kitsu.app/manga/poster_images/55885/large.jpg"
+    "name": "Attack on Titan",
+    "medium": "anime, Manga",
+    "genre": "Action, Fantasy",
+    "length": "75 episodes total, 139 chapters",
+    "hours": "30",
+    "rankingPratyush": "-",
+    "commentsPratyush": "Haven't watched it.",
+    "rankingKanav": "Peak",
+    "commentsKanav": "I believe this is the best story in the whole list. Great at everything though it realy picks up around S3. I could not predict how the story would go at all even with how much I have read, its a must watch.",
+    "favoriteCharacters": "Reiner, Levi, Erwin Smith, Sasha and Jean",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg"
   },
   {
     "id": "story-121",
-    "name": "Warrior High School",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Fantasy"
-    ],
-    "length": "45 chapters, dropped",
-    "hours": "2",
-    "rankingPratyush": "C",
-    "commentsPratyush": "I enjoyed reading it in the start, but then it went on hiatus and never returned.",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx155967-UYbp88lyVXfS.jpg"
+    "name": "The Beginning After the end",
+    "medium": "comic, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "529 Novel chapters, 206 Comic chapters (ongoing)",
+    "hours": "150",
+    "rankingPratyush": "Peak",
+    "commentsPratyush": "One of my favorite stories. Great world building, character development, plot progression, and many beautiful quotes. I prefer the books/novels by far. The protagonist is talented, but also relatably human - making internally consistent decisions. Minimal plot armour. Many lessons about responsibility, patience and sacrifice. The only con: Depression.",
+    "rankingKanav": "Peak",
+    "commentsKanav": "Fav Story OAT, Books are better than the manhwa and you should NOT watch the anime. Wish that the ending was a bit diffrent or slower, I might have rushed reading it. 10/10 on everything except the ending which gets a 7/10 (Well above average but compared to the other sections it falls behind)",
+    "favoriteCharacters": "Regis, Arthur, Sylvie",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/cc/The_Beginning_After_the_End_webtoon_volume_1_cover.jpg"
   },
   {
     "id": "story-122",
-    "name": "The Challenger",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Sci-Fi",
-      "Isekai & LitRPG"
-    ],
-    "length": "52 chapters, dropped",
-    "hours": "2",
-    "rankingPratyush": "C",
-    "commentsPratyush": "Another VR video game story, but with a new cool mechanic - sync rate. This measures how much you're able to overcome ping/lag in your brain and get completely synchronized with the video game. Also has much better analysis of how different gamers get good with different strategies.",
-    "rankingKanav": "",
+    "name": "omniscient readers viewpoint",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Sci-Fi",
+    "length": "551 Novel chapters, 308 Manhwa chapters  (ongoing)",
+    "hours": "148",
+    "rankingPratyush": "Peak",
+    "commentsPratyush": "I could teach a 10-week college course on this story. This is the singular story I have recommended the most. A lot of my world-view is shaped by it, and people who have read it are able to understand me better. It has like every cliche trope in it - but it does an excellent job of executing it. It has the best execution of any meta-fiction I have seen.",
+    "rankingKanav": "Peak",
     "commentsKanav": "",
-    "favoriteCharacters": "King",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx139500-HXVjQRNB5Ds8.jpg"
+    "favoriteCharacters": "Dokja, Uriel, Han Sooyung, Huiwon",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/69/Omniscient_Reader%27s_Viewpoint_Volume_1_Cover.jpg"
   },
   {
     "id": "story-123",
-    "name": "Divine Demons Grand Ascension",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "58 (S1: 47, S2: 11+) Ongoing",
-    "hours": "2",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "C-",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://cdn.asurascans.com/asura-images/covers/the-divine-demons-grand-ascension.306205.webp"
+    "name": "Avatar: ATLA",
+    "medium": "show, comic",
+    "genre": "Action, Adventure, Fantasy",
+    "length": "61 Avatar: The Last Airbender episodes, 18 Avatar comics (main post-ATLA comics)",
+    "hours": "25",
+    "rankingPratyush": "Peak",
+    "commentsPratyush": "Arguably the best animated series I've ever watched. The story, the character development, the world building, the visuals - everything. Don't just think its a kids show - its still a masterpiece all these years later even as an adult.",
+    "rankingKanav": "Peak",
+    "commentsKanav": "Only ATLA - Despite being a childrens show it manages to be deep and interesting, I wish that the ending was slightly diffrent as it feels like the writer was just trying to wrap stuf up",
+    "favoriteCharacters": "Toph",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar_The_Last_Airbender_The_Promise_Part_1_cover.jpg"
   },
   {
     "id": "story-124",
-    "name": "Your lie in April",
-    "medium": [
-      "movie"
-    ],
-    "genre": [
-      "Drama",
-      "Romance",
-      "Slice of Life"
-    ],
-    "length": "1 movie",
-    "hours": "2",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://myhotposters.com/cdn/shop/products/mz1572_large.jpeg?v=1748540296"
+    "name": "Jujutsu Kaisen",
+    "medium": "anime, Manga",
+    "genre": "Action, Fantasy",
+    "length": "271 manga chapters, 52 anime episodes, 1 movie",
+    "hours": "28",
+    "rankingPratyush": "S",
+    "commentsPratyush": "I'll be really surprised if you don't know about this story. Gege really cooked with this.",
+    "rankingKanav": "Peak",
+    "commentsKanav": "Peak of modern anime, great story and animation, though the reading comprehension of the greater fanbase is questionable, peak memes as well",
+    "favoriteCharacters": "Gojo (ofc), Maki, Higuruma",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-H3TdM3g5ZUe9.jpg"
   },
   {
     "id": "story-125",
     "name": "The Potato War",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Comedy"
-    ],
+    "medium": "Manhwa",
+    "genre": "Action, Comedy",
     "length": "3 videos - 1 hour",
     "hours": "1",
     "rankingPratyush": "S",
@@ -2538,178 +1751,114 @@
   },
   {
     "id": "story-126",
-    "name": "I Got a New Skill Every Time I Was Exiled, and After 100 Different Worlds, I Was Unmatched",
-    "medium": [
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "30 chapters (5 vols), ongoing",
-    "hours": "1",
-    "rankingPratyush": "A",
-    "commentsPratyush": "VERY Honest name. That being said, interesting gimmick and story telling so far. It is A rank because it has a lot of promise, but lets see how it unfolds.",
-    "rankingKanav": "",
+    "name": "Ember Knight",
+    "medium": "Manhwa",
+    "genre": "Action, Drama, Fantasy",
+    "length": "246 Ongoing",
+    "hours": "8",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
+    "rankingKanav": "S",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx159212-WVbxqBQfdlU4.jpg"
+    "imageUrl": "https://image-repository-cdn.tappytoon.com/series/530/67995900-4a46-425f-be6b-be914702c0ef.jpg"
   },
   {
     "id": "story-127",
-    "name": "Murim Psycopath",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Drama",
-      "Martial Arts"
-    ],
-    "length": "35+ (S1: 1–34 complete; S2: 35+) Ongoing",
-    "hours": "1",
-    "rankingPratyush": "",
+    "name": "The Nebula's Civilization",
+    "medium": "Manhwa",
+    "genre": "Fantasy, Sci-Fi",
+    "length": "140 (S1: 55, S2: 55, S3: 30+) Ongoing",
+    "hours": "5",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
-    "rankingKanav": "B",
+    "rankingKanav": "S",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://6ed7f732781d5145ac367958b98f24ef.cdn.bubble.io/cdn-cgi/image/w=,h=,f=auto,dpr=1,fit=cover,q=75/f1770593107623x384346954366992400/IMG_5435.PNG"
+    "imageUrl": "https://cdn.wuxiaworld.com/images/covers/tnc.webp?v=98466158499b9b08199019f2f11638dd424c9a3b"
   },
   {
     "id": "story-128",
-    "name": "World-Saving is a Skill",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
-    "length": "36 Ongoing",
-    "hours": "1",
-    "rankingPratyush": "",
+    "name": "Eternally Regressing Knight",
+    "medium": "Manhwa",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "112 + prologue (S1 complete at 112) On hiatus between seasons (S2 TBA)",
+    "hours": "4",
+    "rankingPratyush": "-",
     "commentsPratyush": "",
-    "rankingKanav": "C",
+    "rankingKanav": "S",
     "commentsKanav": "",
     "favoriteCharacters": "",
-    "imageUrl": "https://book-pic.webnovel.com/bookcover/34697984800932305?imageMogr2/thumbnail/600x&imageId=1767099253860"
+    "imageUrl": "https://smschumacher.com/wp-content/uploads/2026/04/manga-cover-enternally-regressing-knight.webp"
   },
   {
     "id": "story-129",
-    "name": "Wimps Strategy Guide to Conquer the Tower",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Isekai & LitRPG"
-    ],
-    "length": "39 Ongoing",
-    "hours": "1",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "C",
+    "name": "Return of the Mount Hua sect",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Comedy, Martial Arts",
+    "length": "172 chapters (ongoing)",
+    "hours": "6",
+    "rankingPratyush": "A",
+    "commentsPratyush": "This is one of my favorite Murim stories. Chung Myung is hillarious, the drawings are fun, but its antics that really sell me on this story.",
+    "rankingKanav": "S",
     "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://book-pic.webnovel.com/bookcover/34558578208208005?imageMogr2/thumbnail/600x&imageId=1766151627276"
+    "favoriteCharacters": "Chung Myung",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132144-i5B4VnG9sRgh.png"
   },
   {
     "id": "story-130",
-    "name": "Nobel Lady Reformation Guide",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Drama",
-      "Fantasy",
-      "Romance"
-    ],
-    "length": "35 Ongoing",
-    "hours": "1",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "C+",
+    "name": "Star-Embracing Sword Master",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy",
+    "length": "131 chapters, ongoing",
+    "hours": "4",
+    "rankingPratyush": "A",
+    "commentsPratyush": "This is my favorite execution of genius kid (common trope) works really hard and climbs the social heirarchy (common trope) - now in a western medieval knight setting (common trope).",
+    "rankingKanav": "S",
     "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://book-pic.webnovel.com/bookcover/34920546000351805?imageMogr2/thumbnail/600x&imageId=1770306843155"
+    "favoriteCharacters": "Vlad, Alicia Heinal, jager",
+    "imageUrl": "https://media.kitsu.app/manga/69516/poster_image/large-aad39241dd00e02a4646f7e548056b40.jpeg"
   },
   {
     "id": "story-131",
-    "name": "Sword-Devouring Swordmaster",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Martial Arts"
-    ],
-    "length": "39 ongoing",
-    "hours": "1",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "D+",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://cdn.novelupdates.com/images/2025/09/Sword-Devouring-Swordmaster.jpg"
+    "name": "Overgeared",
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Isekai & LitRPG",
+    "length": "2,059 novel chapters, 300+ comic chapters (ongoing)",
+    "hours": "353",
+    "rankingPratyush": "S",
+    "commentsPratyush": "Its hilarious. Read the novel if you have the time. Bonus if you like video game equipment.",
+    "rankingKanav": "S",
+    "commentsKanav": "This was the first Virtual Reality MMORPG story I read so it is speacial to me, I think both the comic and novel are great, its especially fun if you like games",
+    "favoriteCharacters": "Piaro, Braham Eshwald (#1 troller)",
+    "imageUrl": "https://m.media-amazon.com/images/I/91j2VjH7jSL._AC_UF1000,1000_QL80_.jpg"
   },
   {
     "id": "story-132",
-    "name": "The Alchemist",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Adventure",
-      "Fantasy",
-      "Family & YA"
-    ],
-    "length": "1 book",
-    "hours": "4",
-    "rankingPratyush": "A",
-    "commentsPratyush": "Great book. I read this on my flight to college for the first time.",
-    "rankingKanav": "A",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": ""
+    "name": "Mistborn",
+    "medium": "Book",
+    "genre": "Adventure, Fantasy",
+    "length": "6 books, I've read first 3",
+    "hours": "60",
+    "rankingPratyush": "S",
+    "commentsPratyush": "Really interesting power system where people consume and burn metals and their alloys for very specific powers. Very good world-building and descriptive writing. Brandon Sanderson writes beautifully - so even if you see the twists coming a mile away, the execution is very fun to read.",
+    "rankingKanav": "S",
+    "commentsKanav": "3 very well put together books with 1 novella that you should read if you plan on reading other Cosmere Stories. Ending of book 1 seemed a bit confusing to me but apart from that the story is great",
+    "favoriteCharacters": "Sazid and Kelsier",
+    "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1617768316i/68428.jpg"
   },
   {
     "id": "story-133",
-    "name": "Roald Dahl",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Comedy",
-      "Fantasy",
-      "Family & YA"
-    ],
-    "length": "49 books",
-    "hours": "40",
-    "rankingPratyush": "A",
-    "commentsPratyush": "I love Roald Dahl, but I'll probably have to come back and think of the specific books again.",
-    "rankingKanav": "B",
+    "name": "Death Note",
+    "medium": "anime, Manga",
+    "genre": "Drama, Fantasy, Thriller & Mystery",
+    "length": "37 anime episodes",
+    "hours": "12",
+    "rankingPratyush": "S",
+    "commentsPratyush": "This is a very common recommendation, so most anime watchers have already seen this. What I will point you to is the fan-made remakes and fan-fics that are genuinely hillarious. You can find a lot of them on youtube.",
+    "rankingKanav": "S",
     "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": ""
-  },
-  {
-    "id": "story-134",
-    "name": "Killer Pietro",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [],
-    "length": "",
-    "hours": "6",
-    "rankingPratyush": "",
-    "commentsPratyush": "",
-    "rankingKanav": "C",
-    "commentsKanav": "",
-    "favoriteCharacters": "",
-    "imageUrl": "https://objects.asurasset.shop/Killer%20Pietro/cover.webp"
+    "favoriteCharacters": "Ryuk",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
   }
 ]

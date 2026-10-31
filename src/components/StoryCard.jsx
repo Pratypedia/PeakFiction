@@ -1,30 +1,23 @@
 import React from 'react';
 import { Star, MessageSquare, Heart } from 'lucide-react';
+import Poster from './Poster';
+import { tierKey, tierLabel } from '../lib/tiers';
 
 export default function StoryCard({ story, social, onCardClick }) {
-  const getBadgeClass = (rank) => {
-    if (!rank) return 'Pending';
-    const cleanRank = rank.trim();
-    if (cleanRank.toLowerCase() === 'peak') return 'Peak';
-    if (cleanRank.toUpperCase() === 'S') return 'S';
-    if (cleanRank.toUpperCase() === 'A') return 'A';
-    if (cleanRank.toUpperCase() === 'B') return 'B';
-    if (cleanRank.toUpperCase() === 'C') return 'C';
-    if (cleanRank.toUpperCase() === 'D') return 'D';
-    if (cleanRank.toUpperCase() === 'F') return 'F';
-    return 'Pending';
-  };
-
   const commentsCount = (story.commentsPratyush ? 1 : 0) + (story.commentsKanav ? 1 : 0);
 
   return (
-    <div className="story-card" onClick={() => onCardClick && onCardClick(story)}>
+    <div
+      className="story-card"
+      role="button"
+      tabIndex={0}
+      onClick={() => onCardClick?.(story)}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onCardClick?.(story); } }}
+    >
       <div>
-        {story.imageUrl && (
-          <div style={{ margin: '-1.25rem -1.25rem 1rem -1.25rem', overflow: 'hidden', background: 'rgba(0,0,0,0.3)' }}>
-            <img src={story.imageUrl} alt={story.name} style={{ width: '100%', height: 'auto', aspectRatio: '2/3', objectFit: 'contain' }} />
-          </div>
-        )}
+        <div style={{ margin: '-1.25rem -1.25rem 1rem -1.25rem', overflow: 'hidden', background: 'rgba(0,0,0,0.3)' }}>
+          <Poster story={story} style={{ width: '100%', height: 'auto', aspectRatio: '2/3', objectFit: 'contain', display: 'block' }} />
+        </div>
         <div className="card-header">
           <h3 className="card-title">{story.name}</h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -74,8 +67,8 @@ export default function StoryCard({ story, social, onCardClick }) {
               <div className="avatar-badge avatar-pratyush">P</div>
               <span className="brother-name">Pratyush</span>
             </div>
-            <span className={`tier-badge ${getBadgeClass(story.rankingPratyush)}`}>
-              {story.rankingPratyush || '-'}
+            <span className={`tier-badge ${tierKey(story.rankingPratyush)}`}>
+              {tierLabel(story.rankingPratyush)}
             </span>
           </div>
 
@@ -87,8 +80,8 @@ export default function StoryCard({ story, social, onCardClick }) {
               <div className="avatar-badge avatar-kanav">K</div>
               <span className="brother-name">Kanav</span>
             </div>
-            <span className={`tier-badge ${getBadgeClass(story.rankingKanav)}`}>
-              {story.rankingKanav || '-'}
+            <span className={`tier-badge ${tierKey(story.rankingKanav)}`}>
+              {tierLabel(story.rankingKanav)}
             </span>
           </div>
         </div>
