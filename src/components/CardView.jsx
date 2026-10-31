@@ -7,7 +7,7 @@ import StoryDetailModal from './StoryDetailModal';
 import { playElevatorDing } from '../lib/audio';
 import { TIER_ORDER, PENDING, tierKey, tierScore } from '../lib/tiers';
 
-export default function CardView({ stories, socialData, socialAvailable, openSlug, onOpenStory, onCloseStory }) {
+export default function CardView({ stories, openSlug, onOpenStory, onCloseStory }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMedium, setSelectedMedium] = useState('');
   const [selectedTier, setSelectedTier] = useState('');
@@ -192,7 +192,6 @@ export default function CardView({ stories, socialData, socialAvailable, openSlu
                     <div key={story.slug} id={`story-card-${story.slug}`}>
                       <StoryCard 
                         story={story}
-                        social={socialData[story.name] || { likes: 0, comments: 0 }}
                         onCardClick={onOpenStory}
                       />
                     </div>
@@ -238,7 +237,6 @@ export default function CardView({ stories, socialData, socialAvailable, openSlu
         story={detailStory}
         isOpen={Boolean(detailStory)}
         onClose={onCloseStory}
-        socialAvailable={socialAvailable}
       />
 
       <div className={`elevator-doors ${isElevatorMoving ? 'closed' : 'open'}`}>

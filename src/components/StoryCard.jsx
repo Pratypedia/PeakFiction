@@ -1,9 +1,9 @@
 import React from 'react';
-import { Star, MessageSquare, Heart } from 'lucide-react';
+import { Star, MessageSquare } from 'lucide-react';
 import Poster from './Poster';
 import { tierKey, tierLabel } from '../lib/tiers';
 
-export default function StoryCard({ story, social, onCardClick }) {
+export default function StoryCard({ story, onCardClick }) {
   const commentsCount = (story.commentsPratyush ? 1 : 0) + (story.commentsKanav ? 1 : 0);
 
   return (
@@ -103,21 +103,6 @@ export default function StoryCard({ story, social, onCardClick }) {
           )}
         </div>
 
-        {/* Dynamic Social Stats */}
-        {social && (social.likes > 0 || social.comments > 0) && (
-          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--text-muted)', fontSize: '1rem' }}>
-            {social.likes > 0 && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#ff6b8b' }}>
-                <Heart size={16} fill="currentColor" /> {social.likes}
-              </div>
-            )}
-            {social.comments > 0 && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#60a5fa' }}>
-                <MessageSquare size={16} fill="currentColor" /> {social.comments}
-              </div>
-            )}
-          </div>
-        )}
       </div>
     </div>
   );

@@ -6,7 +6,12 @@ A modern, interactive web application showcasing rankings, reviews, favorite cha
 
 ## 📊 Dataset Structure
 
-The source of truth is the **Peak Fiction** Google Sheet (tabs `All` and `top-25`, published as CSV). The live site fetches it on every page load, so edits to the sheet show up without a redeploy. `src/data/stories.json` and `src/data/top25.json` are an offline fallback refreshed by `npm run sync`.
+The database is two CSV files in this repo:
+
+- **`data/stories.csv`**: every story (one row each).
+- **`data/top25.csv`**: the top-25 list shown on the Peak mountain, in rank order.
+
+Edit them in Excel, Numbers, Google Sheets (import, then export as CSV) or any text editor, then commit and push; Vercel redeploys automatically. In Excel, save as **CSV UTF-8** so curly quotes and accents survive. Columns are matched by header name, so you can reorder them.
 
 ### CSV Columns Schema
 
@@ -60,7 +65,7 @@ Modifiers (`C+`, `A-`, `Peak+`) are shown as written and nudge the numeric score
 - **Interactive Story Tiles (All Stories)**: Cards compactly display consumption hours and a message bubble count for comments. Clicking a card opens a detailed popup containing the poster image and comprehensive story information.
 - **Smart Grouping & Elevator Navigation**: All Stories automatically groups stories by their highest tier. Colored glowing dividers separate tiers, and a pinned left-side elevator navigation allows you to effortlessly jump between rating sections.
 - **Filters & Search**: Filter by tier, medium and genre, or search titles, characters and genres.
-- **Likes & Comments**: Visitors can like stories and leave comments (stored in Supabase). If the database is unreachable the site hides these and keeps working.
+- **Message Me**: Every story popup has a form that emails Pratyush via [Web3Forms](https://web3forms.com). Without a key configured it shows an email link instead.
 - **📊 Data Analysis & Charts View**:
   - **Scatter Plot (Length vs. Rating)**: Interactive plot mapping time commitment against tier rating score, with filters for Average, Pratyush, or Kanav ratings.
   - **Versus & Vibe Matrix (Bubble Chart)**: Plots Kanav's Rating vs. Pratyush's Rating with bubble radii proportional to consumption hours.
@@ -73,12 +78,12 @@ Modifiers (`C+`, `A-`, `Peak+`) are shown as written and nudge the numeric score
 
 ## 🚀 Development & Workflow
 
-### 1. Sync the Sheet (optional)
-The site reads the Google Sheet live, but run this after big edits to refresh the offline fallback and cache new posters into `public/posters/` (so they don't depend on hotlinked images):
+### 1. Cache Posters (after adding stories)
+Downloads any new `Image_URL` posters into `public/posters/` so the site doesn't depend on hotlinked images:
 ```bash
-npm run sync
+npm run posters
 ```
-Use `npm run sync -- --force` to re-download every poster. Posters are resized with macOS `sips` when available.
+Use `npm run posters -- --force` to re-download every poster. Posters are resized with macOS `sips` when available. Commit the new files in `public/posters/`.
 
 ### 2. Start Dev Server
 Launch the local interactive application:
@@ -98,7 +103,7 @@ npm run build
 
 - **Framework**: React 18 + Vite
 - **Data Visualizations**: Recharts
-- **Likes & Comments**: Supabase (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` in `.env`)
+- **Messages**: Web3Forms (`VITE_WEB3FORMS_KEY` in `.env` and in Vercel → Settings → Environment Variables; see `.env.example`)
 - **Icons**: Lucide React
 - **Styling**: Custom Glowing Tier Dividers, Elevator Navigation, and Responsive Charts
-- **Data Engine**: Live Google Sheet fetch (`src/lib/sheetsService.js`) + normalisation (`src/lib/stories.js`, `src/lib/tiers.js`) + sync script (`scripts/sync_sheet.js`)
+- **Data Engine**: CSVs in `data/` → parser (`src/lib/storyCsv.js`) → normalisation (`src/lib/stories.js`, `src/lib/tiers.js`); poster cache script (`scripts/sync_posters.js`)

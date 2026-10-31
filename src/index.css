@@ -1720,15 +1720,19 @@ a.global-nav-btn { text-decoration: none; }
   line-height: 1.3;
 }
 
-.social-offline,
-.social-error {
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  color: var(--text-muted);
+.contact-box {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
-.social-error { color: #fca5a5; border-color: rgba(252, 165, 165, 0.35); }
-.social-offline a { color: var(--accent-pink); }
+.contact-prompt { margin: 0; color: var(--text-main); font-size: 0.95rem; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.contact-actions .btn { display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none; }
+.contact-error { margin: 0; font-size: 0.85rem; color: #fca5a5; }
+.contact-error a { color: inherit; text-decoration: underline; }
+.contact-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
