@@ -8,6 +8,7 @@ import { totalHours, disagreement } from '../lib/storyMath';
 import { tierLabel } from '../../lib/tiers';
 import FilterToolbar from './stories/FilterToolbar';
 import { useFilterOptions, useStoryFilters, DISAGREE_MIN } from './stories/useStoryFilters';
+import { ElevatorDoors, ElevatorPanel, useElevator, floorId, floorHeadingId, floorSign } from './stories/Elevator';
 import './StoriesPage.css';
 
 const fmt = n => Math.round(n).toLocaleString('en-US');
@@ -38,13 +39,14 @@ function Grid({ stories, showGap }) {
 function TierSection({ tier, stories }) {
   const meta = TIER_META[tier];
   const { color } = tierVars(tier);
-  const headingId = `pf-tier-${tier.toLowerCase()}`;
+  const headingId = floorHeadingId(tier);
   return (
-    <section className="pf-stories-tier" aria-labelledby={headingId} style={{ '--section-tier': color }}>
+    <section className="pf-stories-tier" id={floorId(tier)} aria-labelledby={headingId} style={{ '--section-tier': color }}>
       <header className="pf-stories-tier__head">
         <TierBadge rank={tier === 'Pending' ? '' : tier} size="lg" title="" />
         <div className="pf-stories-tier__text">
-          <h2 className="pf-stories-tier__name" id={headingId}>{meta.name}</h2>
+          <p className="pf-stories-tier__floor" aria-hidden="true">{floorSign(tier)}</p>
+          <h2 className="pf-stories-tier__name" id={headingId} tabIndex={-1}>{meta.name}</h2>
           <p className="pf-stories-tier__blurb">{meta.blurb}</p>
         </div>
         <p className="pf-stories-tier__count v2-num">
@@ -60,9 +62,13 @@ export default function StoriesPage({ stories = [] }) {
   const options = useFilterOptions(stories);
   const { filters, update, toggleIn, reset, activeCount, results, groups } = useStoryFilters(stories);
   const hours = useMemo(() => totalHours(stories), [stories]);
+  const floorKey = groups ? groups.map(g => g.tier).join('|') : '';
+  const floors = useMemo(() => (floorKey ? floorKey.split('|') : []), [floorKey]);
+  const lift = useElevator(floors);
+  const hasLift = floors.length > 0;
 
   return (
-    <div className="pf-stories">
+    <div className={`pf-stories ${hasLift ? 'pf-stories--lift' : ''}`}>
       <PageHeader
         eyebrow="The whole shelf"
         title={<>All <span className="v2-italic">stories</span></>}
@@ -109,6 +115,9 @@ export default function StoriesPage({ stories = [] }) {
           </section>
         )}
       </div>
+
+      {hasLift && <ElevatorPanel floors={floors} current={lift.current} ride={lift.ride} onCall={lift.call} />}
+      <ElevatorDoors ride={lift.ride} />
     </div>
   );
 }
