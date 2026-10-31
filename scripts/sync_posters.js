@@ -1,17 +1,17 @@
-// Pulls the published Google Sheet into src/data/*.json (the offline fallback)
-// and caches every poster into public/posters/ so the site doesn't depend on
-// hotlinked images that other sites can block or delete.
+// Caches every poster referenced in data/*.csv into public/posters/ so the site
+// doesn't depend on hotlinked images that other sites can block or delete.
 //
-//   npm run sync            # refresh data, download only missing posters
-//   npm run sync -- --force # re-download every poster
+//   npm run posters            # download only missing posters
+//   npm run posters -- --force # re-download every poster
 import fs from 'fs';
 import path from 'path';
 import { execFileSync } from 'child_process';
 import { fileURLToPath } from 'url';
-import { fetchLiveSheetData } from '../src/lib/sheetsService.js';
+import { parseAllStoriesCSV, parseTopStoriesCSV } from '../src/lib/storyCsv.js';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = path.join(root, 'src', 'data');
+const csvDir = path.join(root, 'data');
 const posterDir = path.join(root, 'public', 'posters');
 const force = process.argv.includes('--force');
 
@@ -96,19 +96,12 @@ async function syncPosters(records) {
   failures.forEach(f => console.log(`  ✗ ${f}`));
 }
 
-async function main() {
-  console.log('Fetching Google Sheet...');
-  const { stories, topStories } = await fetchLiveSheetData();
-  if (!stories || !topStories) {
-    console.error('Could not fetch both sheet tabs; leaving local data untouched.');
-    process.exit(1);
-  }
-
-  writeJSON('stories.json', stories);
-  writeJSON('top25.json', topStories);
-  console.log(`Wrote ${stories.length} stories and ${topStories.length} top stories.`);
-
-  await syncPosters([...stories, ...topStories]);
+function main() {
+  const read = (file) => fs.readFileSync(path.join(csvDir, file), 'utf8');
+  const stories = parseAllStoriesCSV(read('stories.csv'));
+  const topStories = parseTopStoriesCSV(read('top25.csv'));
+  console.log(`Read ${stories.length} stories and ${topStories.length} top stories.`);
+  return syncPosters([...stories, ...topStories]);
 }
 
 main();

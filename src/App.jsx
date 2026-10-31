@@ -1,10 +1,6 @@
-import React, { useState, useEffect, useMemo, useCallback, Suspense, lazy } from 'react';
+import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
 import { Analytics } from '@vercel/analytics/react';
-import initialStories from './data/stories.json';
-import initialTop25Stories from './data/top25.json';
-import { fetchLiveSheetData } from './lib/sheetsService';
-import { fetchSocialCounts } from './lib/social';
-import { normalizeStories } from './lib/stories';
+import { stories, topStories } from './lib/data';
 import CardView from './components/CardView';
 import MountainView from './components/MountainView';
 import AboutView from './components/AboutView';
@@ -34,13 +30,7 @@ const NAV_ITEMS = [
 ];
 
 export default function App() {
-  const [rawStories, setRawStories] = useState(initialStories);
-  const [rawTopStories, setRawTopStories] = useState(initialTop25Stories);
   const [route, setRoute] = useState(parseHash);
-  const [social, setSocial] = useState({ available: false, counts: {} });
-
-  const stories = useMemo(() => normalizeStories(rawStories), [rawStories]);
-  const topStories = useMemo(() => normalizeStories(rawTopStories), [rawTopStories]);
 
   useEffect(() => {
     const onHashChange = () => setRoute(parseHash());
@@ -52,14 +42,6 @@ export default function App() {
   useEffect(() => {
     if (route.view !== 'mountain') window.scrollTo({ top: 0, behavior: 'instant' });
   }, [route.view]);
-
-  useEffect(() => {
-    fetchSocialCounts().then(setSocial);
-    fetchLiveSheetData().then(({ stories: liveStories, topStories: liveTopStories }) => {
-      if (liveStories?.length) setRawStories(liveStories);
-      if (liveTopStories?.length) setRawTopStories(liveTopStories);
-    });
-  }, []);
 
   const navigate = useCallback((view, story = null) => {
     window.location.hash = buildHash(view, story?.slug);
@@ -86,14 +68,11 @@ export default function App() {
       {route.view === 'mountain' ? (
         <MountainView
           stories={topStories}
-          socialData={social.counts}
           onViewChange={navigate}
         />
       ) : route.view === 'cards' ? (
         <CardView
           stories={stories}
-          socialData={social.counts}
-          socialAvailable={social.available}
           openSlug={route.slug}
           onOpenStory={openStory}
           onCloseStory={closeStory}

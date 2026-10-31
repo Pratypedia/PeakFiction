@@ -1,6 +1,7 @@
 // RFC 4180-style CSV parser: handles quoted fields, escaped quotes ("")
 // and newlines inside quoted cells (multi-line comments in the sheet).
 export function parseCSV(text) {
+  text = text.replace(/^\uFEFF/, ''); // Excel adds a BOM to "CSV UTF-8" files
   const rows = [];
   let row = [];
   let field = '';

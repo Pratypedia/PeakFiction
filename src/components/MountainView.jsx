@@ -1,10 +1,10 @@
 import React, { useMemo, useState, useEffect, useRef } from 'react';
-import { ArrowUp, ArrowDown, Heart, MessageSquare } from 'lucide-react';
+import { ArrowUp, ArrowDown } from 'lucide-react';
 import Poster from './Poster';
 import { tierLabel } from '../lib/tiers';
 import '../mountain.css';
 
-export default function MountainView({ stories, socialData, onViewChange }) {
+export default function MountainView({ stories, onViewChange }) {
   const [hoveredStory, setHoveredStory] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const containerRef = useRef(null);
@@ -271,21 +271,6 @@ export default function MountainView({ stories, socialData, onViewChange }) {
               <div><span style={{ color: '#a855f7', fontWeight: 'bold' }}>Pratyush:</span> {tierLabel(hoveredStory.rankingPratyush, 'Unseen')}</div>
               <div><span style={{ color: '#06b6d4', fontWeight: 'bold' }}>Kanav:</span> {tierLabel(hoveredStory.rankingKanav, 'Unseen')}</div>
             </div>
-            
-            {socialData && (socialData[hoveredStory.name]?.likes > 0 || socialData[hoveredStory.name]?.comments > 0) && (
-              <div style={{ display: 'flex', gap: '10px', marginTop: '12px', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.1)', fontSize: '1.2rem' }}>
-                {socialData[hoveredStory.name]?.likes > 0 && (
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#ff6b8b' }}>
-                    <Heart size={16} fill="currentColor" /> {socialData[hoveredStory.name].likes}
-                  </div>
-                )}
-                {socialData[hoveredStory.name]?.comments > 0 && (
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#60a5fa' }}>
-                    <MessageSquare size={16} fill="currentColor" /> {socialData[hoveredStory.name].comments}
-                  </div>
-                )}
-              </div>
-            )}
           </div>
         </div>
       )}
