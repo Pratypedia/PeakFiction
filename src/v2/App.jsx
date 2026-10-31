@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useRef } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { stories, topStories } from '../lib/data';
 import { useRoute } from './lib/router';
@@ -19,12 +19,35 @@ const TITLES = {
   charts: 'Charts',
 };
 
+// The hash is our router, so the skip link must move focus without changing it.
+function skipToContent(e) {
+  e.preventDefault();
+  const main = document.getElementById('main');
+  main?.focus({ preventScroll: true });
+  main?.scrollIntoView();
+}
+
+const SCROLL_KEY = 'pf-v2-scroll-stories';
+
 export default function App() {
   const { page, param } = useRoute();
+  const prevPage = useRef(page);
 
-  // New pages start at the top (pages may override, e.g. the Peak scrolls to its base).
+  // Remember how far down All stories the reader was, so Back from a story returns there.
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (page !== 'stories') return;
+    const save = () => sessionStorage.setItem(SCROLL_KEY, String(Math.round(window.scrollY)));
+    window.addEventListener('scroll', save, { passive: true });
+    return () => window.removeEventListener('scroll', save);
+  }, [page]);
+
+  // New pages start at the top (pages may override, e.g. the Peak scrolls to its base),
+  // except returning from a story to the shelf.
+  useEffect(() => {
+    const saved = Number(sessionStorage.getItem(SCROLL_KEY));
+    const returning = page === 'stories' && prevPage.current === 'story' && saved > 0;
+    prevPage.current = page;
+    window.scrollTo({ top: returning ? saved : 0, behavior: 'instant' });
   }, [page, param]);
 
   useEffect(() => {
@@ -45,7 +68,7 @@ export default function App() {
       content = <ChartsPage stories={stories} />;
       break;
     case 'story':
-      content = <StoryPage stories={stories} topStories={topStories} slug={param} />;
+      content = <StoryPage key={param} stories={stories} topStories={topStories} slug={param} />;
       break;
     default:
       content = <AboutPage stories={stories} topStories={topStories} />;
@@ -53,9 +76,9 @@ export default function App() {
 
   return (
     <>
-      <a className="v2-skip-link" href="#main">Skip to content</a>
+      <a className="v2-skip-link" href="#main" onClick={skipToContent}>Skip to content</a>
       <Nav page={page} />
-      <main id="main" className={`v2-main v2-main--${page}`}>
+      <main id="main" tabIndex={-1} className={`v2-main v2-main--${page}`}>
         <Suspense fallback={<div className="v2-loading" aria-busy="true" />}>
           {content}
         </Suspense>

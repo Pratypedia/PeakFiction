@@ -85,6 +85,8 @@ button {
   max-width: var(--prose-width);
 }
 
+.v2-main:focus { outline: none; }
+
 .v2-main {
   padding-top: var(--nav-height);
   min-height: 100vh;

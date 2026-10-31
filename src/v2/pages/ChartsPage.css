@@ -240,6 +240,7 @@
   gap: var(--space-4) var(--space-7);
 }
 .charts-matrix {
+  overflow-x: auto;
   --cell: clamp(30px, calc((100vw - 3rem - 5.5rem) / var(--n)), 58px);
   display: grid;
   grid-template-columns: 1.5rem auto repeat(var(--n), var(--cell));

@@ -84,12 +84,13 @@ export function lengthVsRating(stories) {
     const inB = points.filter(p => p.hours >= b.min && p.hours < b.max);
     return { ...b, count: inB.length, mean: mean(inB.map(p => p.score)) };
   });
-  const short = buckets[0].mean;
-  const long = buckets[2].mean;
-  const diff = long - short;
-  const mid = buckets[1].mean;
+  const [short, mid, long] = buckets.map(b => b.mean);
+  const diff = short != null && long != null ? long - short : 0;
+  const rated = buckets.filter(b => b.mean != null);
+  const best = rated.reduce((a, b) => (b.mean > a.mean ? b : a), rated[0]);
   let headline;
-  if (mid != null && mid - Math.max(short, long) >= 0.3) headline = 'The sweet spot is somewhere between 10 and 100 hours';
+  if (rated.length < 2) headline = 'Not enough rated stories to compare lengths yet';
+  else if (best === buckets[1] && mid - Math.max(short ?? -Infinity, long ?? -Infinity) >= 0.1) headline = 'The sweet spot is somewhere between 10 and 100 hours';
   else if (Math.abs(diff) < 0.3) headline = 'A longer story isn’t a better one';
   else if (diff > 0) headline = diff >= 0.75 ? 'The long ones really do score higher' : 'The long ones score a little higher';
   else headline = diff <= -0.75 ? 'Shorter stories score clearly higher' : 'Shorter stories score a little higher';

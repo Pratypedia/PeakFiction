@@ -61,6 +61,7 @@ export default function LengthScatter({ data }) {
 
   // Mouse: click opens the hovered story. Touch: first tap shows the card, a second tap on it opens.
   const onTap = (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return; // ignore right/middle clicks
     const p = nearest(e);
     if (!p) { setHover(null); return; }
     setTouch(e.pointerType === 'touch');

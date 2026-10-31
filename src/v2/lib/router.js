@@ -1,8 +1,16 @@
 // Tiny hash router for the redesign.
 import { useEffect, useState } from 'react';
 
+function safeDecode(segment) {
+  try {
+    return decodeURIComponent(segment);
+  } catch {
+    return segment; // malformed escape like "%E0"
+  }
+}
+
 export function parseHash(hash = window.location.hash) {
-  const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
+  const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(safeDecode);
   const [page = '', param = null] = parts;
   // Old links: #/stories/<slug> → story page
   if (page === 'stories' && param) return { page: 'story', param };
