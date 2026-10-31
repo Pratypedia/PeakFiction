@@ -22,7 +22,7 @@ Edit them in Excel, Numbers, Google Sheets (import, then export as CSV) or any t
 | `Genre` | Comma-separated genres | `Action`, `Dark Fantasy`, `Sci-Fi`, `Isekai`, `LitRPG`, `Romance` |
 | `Length` | Optional volume / episode count | *271 manga chapters, 52 anime episodes, 1 movie* |
 | `Hours it would take...` | **Estimated time to consume (hours)** | `500`, `353`, `28` |
-| `Ranking - Pratyush` | Pratyush's tier ranking | `Peak`, `S`, `A`, `B`, `C`, `D`, `E`, `F`, `-` (optional `+`/`-` modifier, e.g. `C+`) |
+| `Ranking - Pratyush` | Pratyush's tier ranking | `Peak`, `S`, `A`, `B`, `C`, `D`, `L`, `-` (optional `+`/`-` modifier, e.g. `C+`) |
 | `Comments - Pratyush` | Pratyush's review & notes | *"Peak world-building..."* |
 | `Ranking - Kanav` | Kanav's tier ranking | same as above |
 | `Comments - Kanav` | Kanav's review & notes | *"Awesome action..."* |
@@ -43,8 +43,7 @@ The app groups and categorizes universes dynamically based on the highest rating
 | 👍 **B Tier** | *"Kinda enjoyed it, but obvious need for improvement at parts."* |
 | 🟡 **C Tier** | Average or mixed feelings. |
 | 🟠 **D Tier** | Below average. |
-| 🟤 **E Tier** | Between D and F. |
-| 🔴 **F Tier** | Poor / Do not recommend. |
+| 🔴 **L Tier** | Took an L. Do not recommend. (Replaces the old E and F tiers.) |
 
 Modifiers (`C+`, `A-`, `Peak+`) are shown as written and nudge the numeric score by ±0.33; stories are grouped under the base tier. All tier logic lives in `src/lib/tiers.js`.
 | ⏳ **Pending (`-`)** | Story is queued to be rated by Pratyush or Kanav. |
