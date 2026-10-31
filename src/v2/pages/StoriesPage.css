@@ -203,8 +203,7 @@
 .pf-stories-tier-chip--b { --chip-tier: var(--tier-b); }
 .pf-stories-tier-chip--c { --chip-tier: var(--tier-c); }
 .pf-stories-tier-chip--d { --chip-tier: var(--tier-d); }
-.pf-stories-tier-chip--e { --chip-tier: var(--tier-e); }
-.pf-stories-tier-chip--f { --chip-tier: var(--tier-f); }
+.pf-stories-tier-chip--l { --chip-tier: var(--tier-l); }
 .pf-stories-tier-chip--pending { --chip-tier: var(--ink-3); font-family: var(--font-body); font-weight: 500; }
 .pf-stories-tier-chip:hover { color: var(--chip-tier); border-color: var(--chip-tier); }
 .pf-stories-tier-chip[aria-pressed='true'],
@@ -408,7 +407,7 @@
 /* Rail spans the page so the sticky panel stops before the footer */
 .pf-elevator-rail {
   position: absolute;
-  top: 0;
+  top: var(--space-7);
   bottom: 0;
   left: var(--space-4);
   width: var(--lift-w);
@@ -417,7 +416,7 @@
 }
 .pf-elevator {
   position: sticky;
-  top: calc(var(--nav-height) + var(--space-5));
+  top: calc(var(--nav-height) + var(--space-8));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -534,8 +533,7 @@
 .pf-elevator__btn--b { --btn-tier: var(--tier-b); }
 .pf-elevator__btn--c { --btn-tier: var(--tier-c); }
 .pf-elevator__btn--d { --btn-tier: var(--tier-d); }
-.pf-elevator__btn--e { --btn-tier: var(--tier-e); }
-.pf-elevator__btn--f { --btn-tier: var(--tier-f); }
+.pf-elevator__btn--l { --btn-tier: var(--tier-l); }
 .pf-elevator__btn--pending { --btn-tier: var(--ink-3); font-family: var(--font-hand); font-size: 1.35rem; }
 
 /* ── Doors ── */
@@ -716,3 +714,9 @@
   .pf-lift__sign-dial { width: 2.6rem; height: 2.6rem; font-size: var(--step-1); }
   .pf-lift__sign-text { font-size: var(--step-2); }
 }
+
+/* Peak floor shows a tiny mountain instead of the word */
+.pf-peak-glyph { width: 1.35em; height: auto; display: block; }
+.pf-elevator__btn--peak .pf-peak-glyph { width: 72%; }
+.pf-elevator__display-floor .pf-peak-glyph { width: 26px; margin-inline: auto; }
+.pf-lift__sign-dial .pf-peak-glyph { width: 70%; }

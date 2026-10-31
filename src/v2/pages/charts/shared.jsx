@@ -71,13 +71,12 @@ export function DataTable({ summary = 'Show the numbers', caption, columns, rows
   );
 }
 
-/** One editorial section: eyebrow, headline that states the finding, one-line explainer, the graphic. */
-export function ChartSection({ id, number, kicker, headline, dek, children }) {
+/** One page section: a plain descriptive title, an optional one-line description, then the graphic. */
+export function ChartSection({ id, title, dek, children }) {
   return (
     <section className="charts-section" aria-labelledby={`${id}-title`}>
       <header className="charts-section__head">
-        <p className="v2-eyebrow"><span className="v2-num">{String(number).padStart(2, '0')}</span> · {kicker}</p>
-        <h2 id={`${id}-title`} className="charts-section__title">{headline}</h2>
+        <h2 id={`${id}-title`} className="charts-section__title">{title}</h2>
         {dek && <p className="charts-section__dek">{dek}</p>}
       </header>
       {children}

@@ -8,8 +8,7 @@ export const TIER_META = {
   B: { name: 'B tier', blurb: 'Kinda enjoyed it, with obvious room for improvement in parts.' },
   C: { name: 'C tier', blurb: 'Average, or mixed feelings.' },
   D: { name: 'D tier', blurb: 'Below average.' },
-  E: { name: 'E tier', blurb: 'Between D and F.' },
-  F: { name: 'F tier', blurb: "Poor. Don't recommend." },
+  L: { name: 'L tier', blurb: "Took an L on this one. Don't recommend." },
   [PENDING]: { name: 'Not rated yet', blurb: 'On the list, waiting for a verdict.' },
 };
 

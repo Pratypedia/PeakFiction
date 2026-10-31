@@ -10,11 +10,11 @@ const gapWords = (g) => {
   return `${fmt(r, 1)} tiers apart`;
 };
 
-// The stories that split us most: a ranked list, each a link to the story page.
-export default function Disagreements({ data }) {
+// The stories that split us most, widest gap first; each row links to the story page.
+export default function Disagreements({ rows }) {
   return (
     <ol className="charts-splits">
-      {data.rows.map(({ story, gap }) => (
+      {rows.map(({ story, gap }) => (
         <li key={story.slug}>
           <a className="charts-split" href={storyHref(story)}>
             <span className="charts-split__thumb"><Poster story={story} className="charts-split__img" /></span>
@@ -35,5 +35,3 @@ export default function Disagreements({ data }) {
     </ol>
   );
 }
-
-export { gapWords };

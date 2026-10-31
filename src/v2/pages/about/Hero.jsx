@@ -1,3 +1,4 @@
+import { TIER_KEYS } from '../../../lib/tiers';
 import React from 'react';
 import Poster from '../../components/Poster';
 import MarginNote from '../../components/MarginNote';
@@ -23,7 +24,7 @@ export default function Hero({ topStories }) {
           way down to F.
         </p>
         <ol className="ap-scale" aria-label="The tiers, best to worst">
-          {['Peak', 'S', 'A', 'B', 'C', 'D', 'E', 'F'].map(t => (
+          {TIER_KEYS.map(t => (
             <li key={t} className={`ap-scale__tier ap-scale__tier--${t.toLowerCase()}`}>{t}</li>
           ))}
         </ol>

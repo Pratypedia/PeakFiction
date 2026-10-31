@@ -8,8 +8,7 @@ export const TIERS = [
   { key: 'B', score: 7 },
   { key: 'C', score: 6 },
   { key: 'D', score: 5 },
-  { key: 'E', score: 4 },
-  { key: 'F', score: 3 },
+  { key: 'L', score: 4 },
 ];
 
 export const PENDING = 'Pending';
@@ -18,6 +17,9 @@ export const TIER_ORDER = [...TIER_KEYS, PENDING];
 
 const MODIFIER_STEP = 0.33;
 const BY_KEY = Object.fromEntries(TIERS.map(t => [t.key.toUpperCase(), t]));
+// E and F were merged into L; keep reading old values so nothing silently becomes "unrated".
+BY_KEY.E = BY_KEY.L;
+BY_KEY.F = BY_KEY.L;
 
 // Values in the sheet that mean "not rated yet".
 const EMPTY_VALUES = new Set(['', '-', 'UNSEEN', 'N/A', 'NA', 'PENDING']);
@@ -31,7 +33,7 @@ export function parseRank(raw) {
   const clean = String(raw).trim().toUpperCase();
   if (EMPTY_VALUES.has(clean)) return null;
 
-  const match = clean.match(/^(PEAK|[SABCDEF])\s*([+-]?)$/);
+  const match = clean.match(/^(PEAK|[SABCDLEF])\s*([+-]?)$/);
   if (!match) return null;
 
   const tier = BY_KEY[match[1]];

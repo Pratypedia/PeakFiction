@@ -14,8 +14,21 @@ const FLASH_MS = 1100; // reduced-motion arrival flash
 export const floorId = tier => `pf-floor-${tier.toLowerCase()}`;
 export const floorHeadingId = tier => `pf-tier-${tier.toLowerCase()}`;
 
+/** Little ink mountain (snow cap + flag) used instead of the word "Peak". */
+function PeakGlyph() {
+  return (
+    <svg className="pf-peak-glyph" viewBox="0 0 24 20" aria-hidden="true" focusable="false">
+      <path d="M1.5 18.5 L9.5 5 L13 10.5 L15.2 7.5 L22.5 18.5 Z" fill="none" stroke="currentColor"
+        strokeWidth="2" strokeLinejoin="round" />
+      <path d="M7.4 8.6 L9.5 5 L11.6 8.4 L10.4 7.8 L9.4 8.9 L8.5 7.9 Z" fill="currentColor" />
+      <path d="M9.5 5 V1.2 L12.6 2.2 L9.5 3.2" fill="none" stroke="currentColor" strokeWidth="1.2"
+        strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 /** Short label used on buttons and the indicator. */
-export const floorGlyph = tier => (tier === PENDING ? '?' : tier);
+export const floorGlyph = tier => (tier === PENDING ? '?' : tier === 'Peak' ? <PeakGlyph /> : tier);
 /** Wording for signs and announcements. */
 export const floorName = tier => (tier === PENDING ? 'the basement' : tier);
 export const floorSign = tier => (tier === PENDING ? 'Basement' : `Floor ${tier}`);

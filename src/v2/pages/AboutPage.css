@@ -52,8 +52,7 @@
 .ap-scale__tier--b { color: var(--tier-b); }
 .ap-scale__tier--c { color: var(--tier-c); }
 .ap-scale__tier--d { color: var(--tier-d); }
-.ap-scale__tier--e { color: var(--tier-e); }
-.ap-scale__tier--f { color: var(--tier-f); }
+.ap-scale__tier--l { color: var(--tier-l); }
 
 /* The fanned stack of posters */
 .ap-fan {

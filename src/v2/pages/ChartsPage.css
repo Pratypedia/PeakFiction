@@ -63,8 +63,6 @@
   font-size: 13px;
 }
 .charts-axis-title { fill: var(--ink-3); font-size: 12px; font-style: italic; }
-.charts-row-label { fill: var(--ink); font-size: 13.5px; font-weight: 500; }
-.charts-band-hover { fill: var(--paper-3); opacity: 0.7; }
 
 /* ───────── Controls & legends ───────── */
 .charts-controls {
@@ -135,8 +133,6 @@
   color: var(--ink);
 }
 .charts-tip__meta { color: var(--ink-3); font-size: var(--step--2); }
-.charts-tip__rows { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-1); }
-.charts-tip__rows li { display: grid; grid-template-columns: 12px 1fr auto; gap: var(--space-2); align-items: center; color: var(--ink-2); }
 
 /* ───────── Table view ───────── */
 .charts-table summary {
@@ -156,83 +152,19 @@
 .charts-table th { position: sticky; top: 0; background: var(--paper); font-weight: 600; color: var(--ink-3); }
 .charts-table .is-num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
-/* ───────── 1. Hours ───────── */
-.charts-hours {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: var(--space-5) var(--space-8);
-  align-items: start;
-}
-.charts-hours .charts-table { grid-column: 1 / -1; }
-.charts-hours__hero { display: grid; gap: var(--space-4); }
-.charts-hours__number {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: clamp(3.5rem, 2.4rem + 5vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.035em;
-  color: var(--ink);
-}
-.charts-hours__unit { font-size: 0.32em; font-weight: 500; letter-spacing: 0; color: var(--ink-2); }
-.charts-hours__translate { font-size: var(--step-1); color: var(--ink-2); line-height: 1.45; max-width: 34ch; }
-.charts-hours__translate strong { color: var(--ink); font-weight: 600; }
-.charts-hours__figure { margin: 0; display: grid; gap: var(--space-4); }
-.charts-hours__figure .charts-figcap { order: 2; }
-
-.charts-barlist { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
-.charts-barlist__row {
-  display: grid;
-  grid-template-columns: 8.5rem minmax(0, 1fr) 8.5rem;
-  align-items: center;
-  gap: var(--space-3);
-  font-size: var(--step--1);
-}
-.charts-barlist__label { font-weight: 600; color: var(--ink); }
-.charts-barlist__track { height: 12px; display: flex; align-items: center; }
-.charts-barlist__bar {
-  display: block;
-  height: 100%;
-  width: max(2px, var(--w));
-  background: var(--ink);
-  border-radius: 0 4px 4px 0;
-  transform-origin: left center;
-  animation: charts-grow var(--dur-3) var(--ease-out) both;
-}
-@keyframes charts-grow { from { transform: scaleX(0); } }
-.charts-barlist__value { color: var(--ink); font-weight: 600; text-align: right; white-space: nowrap; }
-.charts-barlist__sub { color: var(--ink-3); font-weight: 400; }
-
-@media (max-width: 860px) {
-  .charts-hours { grid-template-columns: 1fr; }
-}
-@media (max-width: 520px) {
-  .charts-barlist__row { grid-template-columns: minmax(0, 1fr) auto; row-gap: var(--space-1); }
-  .charts-barlist__track { grid-column: 1 / -1; grid-row: 2; }
-}
-
-/* ───────── 2. Scatter ───────── */
+/* ───────── Length vs. rating ───────── */
 .charts-dot {
   fill: var(--ink);
   stroke: var(--paper-2);
   stroke-width: 2;
   transition: fill var(--dur-1), opacity var(--dur-1);
 }
-.charts-dot.is-dim { fill: var(--rule-strong); opacity: 0.55; }
+.charts-dot--pratyush { fill: var(--pratyush); }
+.charts-dot--kanav { fill: var(--kanav); }
 .charts-dot--active { fill: none; stroke: var(--ink); stroke-width: 2; pointer-events: none; }
-.charts-bucket { pointer-events: none; }
-.charts-bucket__halo { stroke: var(--paper-2); stroke-width: 7; stroke-linecap: round; opacity: 0.85; }
-.charts-bucket__rule { stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; }
-.charts-bucket__label {
-  fill: var(--ink-2);
-  font-size: 12px;
-  font-weight: 600;
-  paint-order: stroke;
-  stroke: var(--paper-2);
-  stroke-width: 4px;
-  stroke-linejoin: round;
-}
+.charts-controls .v2-chip { gap: var(--space-2); }
 
-/* ───────── 3. Matrix ───────── */
+/* ───────── Agreement matrix ───────── */
 .charts-matrix-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -328,12 +260,7 @@ button.charts-cell:hover { transform: scale(1.06); }
   .charts-matrix__legend { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); }
 }
 
-/* ───────── 4. Distribution ───────── */
-.charts-col { transition: opacity var(--dur-1); }
-.charts-col--pratyush { fill: var(--pratyush); }
-.charts-col--kanav { fill: var(--kanav); }
-
-/* ───────── 5. Disagreements ───────── */
+/* ───────── Biggest disagreements ───────── */
 .charts-splits { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--rule); }
 .charts-splits li { border-bottom: 1px solid var(--rule); }
 .charts-split {
@@ -372,13 +299,136 @@ button.charts-cell:hover { transform: scale(1.06); }
   .charts-split__ratings { grid-column: 2; justify-items: start; grid-auto-flow: column; align-items: center; gap: var(--space-3); }
 }
 
-/* ───────── 6. Genres ───────── */
-.charts-dumbbell { stroke: var(--rule-strong); stroke-width: 2; stroke-linecap: round; }
-.charts-pdot { stroke: var(--paper-2); stroke-width: 2; }
-.charts-pdot--pratyush { fill: var(--pratyush); }
-.charts-pdot--kanav { fill: var(--kanav); }
+/* ───────── Leaderboards ───────── */
+.charts-boards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: var(--space-5) var(--space-7);
+}
+.charts-board { display: grid; gap: var(--space-2); align-content: start; }
+.charts-board__title { font-size: var(--step-1); }
+.charts-board__note { font-size: var(--step--1); color: var(--ink-3); }
+.charts-board__list { list-style: none; margin: var(--space-2) 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.charts-board__row {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.charts-board__rank {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 500;
+  color: var(--ink-3);
+  line-height: 1;
+}
+.charts-board__name { display: grid; font-weight: 600; font-size: var(--step-0); line-height: 1.25; }
+.charts-board__count { font-size: var(--step--1); font-weight: 400; color: var(--ink-3); }
+
+/* ───────── Pratyush vs. Kanav ───────── */
+.charts-split-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  gap: var(--space-7) var(--space-7);
+}
+.charts-person {
+  --person: var(--ink);
+  --person-wash: var(--paper-3);
+  display: grid;
+  gap: var(--space-6);
+  align-content: start;
+  padding-top: var(--space-4);
+  border-top: 3px solid var(--person);
+}
+.charts-person--pratyush { --person: var(--pratyush); --person-wash: var(--pratyush-wash); }
+.charts-person--kanav { --person: var(--kanav); --person-wash: var(--kanav-wash); }
+.charts-person__name { display: flex; align-items: center; gap: var(--space-3); font-size: var(--step-3); }
+.charts-person__name .v2-initial { font-size: var(--step--1); width: 1.9em; height: 1.9em; }
+.charts-person__count {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink-3);
+}
+
+.charts-mini { margin: 0; display: grid; gap: var(--space-3); }
+.charts-mini__title {
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.charts-favs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 8.5rem));
+  gap: var(--space-4);
+}
+.charts-favs__card { display: grid; gap: var(--space-1); color: inherit; text-decoration: none; }
+.charts-favs__art {
+  display: block;
+  aspect-ratio: 2 / 3;
+  margin-bottom: var(--space-1);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--paper-3);
+  box-shadow: var(--shadow-poster);
+  transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out);
+}
+.charts-favs__img, .charts-favs__art .poster-fallback { width: 100%; height: 100%; object-fit: cover; }
+a.charts-favs__card:hover .charts-favs__art,
+a.charts-favs__card:focus-visible .charts-favs__art { transform: translateY(-3px) rotate(-0.4deg); box-shadow: var(--shadow-2); }
+.charts-favs__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--step-0);
+  line-height: 1.2;
+}
+.charts-favs__from { font-size: var(--step--2); color: var(--ink-3); line-height: 1.3; }
+
+.charts-hbars { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.charts-hbars__row {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr) 2.25rem;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--step--1);
+}
+.charts-hbars__label { color: var(--ink); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.charts-hbars__track {
+  height: 12px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--rule-strong);
+}
+.charts-hbars__bar {
+  display: block;
+  height: 100%;
+  width: max(2px, var(--w));
+  background: var(--person);
+  border-radius: 0 4px 4px 0;
+  transform-origin: left center;
+  animation: charts-grow var(--dur-3) var(--ease-out) both;
+}
+@keyframes charts-grow { from { transform: scaleX(0); } }
+.charts-hbars__value { color: var(--ink-2); font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+
+@media (max-width: 520px) {
+  .charts-hbars__row { grid-template-columns: 6.5rem minmax(0, 1fr) 2rem; gap: var(--space-2); }
+  .charts-favs { gap: var(--space-3); }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .charts-barlist__bar, .charts-tip { animation: none; }
+  .charts-hbars__bar, .charts-tip { animation: none; }
+  a.charts-favs__card:hover .charts-favs__art { transform: none; }
   button.charts-cell:hover { transform: none; }
 }

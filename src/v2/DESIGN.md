@@ -18,7 +18,7 @@ personal, like a well-kept Moleskine, not like a SaaS dashboard or a neon arcade
 ## Tokens (all in `styles/tokens.css`; never hard-code hex values in components)
 - Paper: `--paper` (page), `--paper-2` (raised/cards), `--paper-3` (sunken/inputs), `--rule` (hairlines)
 - Ink: `--ink` (text), `--ink-2` (secondary), `--ink-3` (muted/meta)
-- Tiers: `--tier-peak`, `--tier-s`, `--tier-a`, `--tier-b`, `--tier-c`, `--tier-d`, `--tier-e`, `--tier-f`,
+- Tiers: `--tier-peak`, `--tier-s`, `--tier-a`, `--tier-b`, `--tier-c`, `--tier-d`, `--tier-l`,
   `--tier-pending`. Each also has a `-wash` variant (≈10% tint) for backgrounds.
 - People: `--pratyush` (blue ink), `--kanav` (orange ink), plus `-wash` variants.
 - Type: `--font-display` (Fraunces), `--font-body` (Instrument Sans), `--font-hand` (Caveat).
