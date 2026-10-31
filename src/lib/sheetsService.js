@@ -1,165 +1,72 @@
-// Live Google Sheets synchronization service
+// Live Google Sheets synchronization service.
+// Returns raw records; normalisation happens in ./stories.js.
+// Kept free of Vite-only imports so scripts/sync_sheet.js can reuse it from Node.
+import { parseCSV } from './csv.js';
 
 export const SHEET_ALL_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRhn1KH6zYm5auAK5TO9NG4EFx-ID9__brfvFMBOcVO6qPiDkWbZzOfkZ3kmfBrrvcH8u3xq1LEDsio/pub?gid=0&single=true&output=csv';
 export const SHEET_TOP_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRhn1KH6zYm5auAK5TO9NG4EFx-ID9__brfvFMBOcVO6qPiDkWbZzOfkZ3kmfBrrvcH8u3xq1LEDsio/pub?gid=1718171764&single=true&output=csv';
 
-function parseCSVLine(line) {
-  const result = [];
-  let current = '';
-  let inQuotes = false;
+// Header matchers, so renaming a column in the sheet ("Hours of my life" vs
+// "Hours it would take...") doesn't break the site.
+const COLUMNS = {
+  name: h => h === 'name',
+  medium: h => h === 'medium',
+  genre: h => h === 'genre',
+  length: h => h === 'length',
+  hours: h => h.includes('hours'),
+  rankingPratyush: h => h.includes('ranking - pratyush'),
+  commentsPratyush: h => h.includes('comments - pratyush'),
+  rankingKanav: h => h.includes('ranking - kanav'),
+  commentsKanav: h => h.includes('comments - kanav'),
+  favoriteCharacters: h => h.includes('favorite'),
+  imageUrl: h => h.includes('image'),
+};
 
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i];
-    if (char === '"') {
-      if (inQuotes && line[i + 1] === '"') {
-        current += '"';
-        i++;
-      } else {
-        inQuotes = !inQuotes;
+function parseSheet(csvText, idPrefix) {
+  const [headerRow = [], ...rows] = parseCSV(csvText);
+  const headers = headerRow.map(h => h.toLowerCase());
+  const indexes = Object.fromEntries(
+    Object.entries(COLUMNS).map(([field, match]) => [field, headers.findIndex(match)])
+  );
+
+  return rows
+    .map((cells, i) => {
+      const record = { id: `${idPrefix}-${i + 1}` };
+      for (const [field, idx] of Object.entries(indexes)) {
+        record[field] = idx === -1 ? '' : cells[idx] ?? '';
       }
-    } else if (char === ',' && !inQuotes) {
-      result.push(current.trim());
-      current = '';
-    } else {
-      current += char;
-    }
-  }
-  result.push(current.trim());
-  return result;
+      return record;
+    })
+    .filter(record => record.name);
 }
 
 export function parseAllStoriesCSV(csvText) {
-  const lines = csvText.split(/\r?\n/).filter(line => line.trim().length > 0);
-  if (lines.length === 0) return [];
-
-  const headers = parseCSVLine(lines[0]);
-
-  const nameIdx = headers.findIndex(h => h.toLowerCase() === 'name');
-  const mediumIdx = headers.findIndex(h => h.toLowerCase() === 'medium');
-  const genreIdx = headers.findIndex(h => h.toLowerCase() === 'genre');
-  const lengthIdx = headers.findIndex(h => h.toLowerCase() === 'length');
-  const hoursIdx = headers.findIndex(h => h.toLowerCase().includes('hours'));
-  const pratyushRankIdx = headers.findIndex(h => h.toLowerCase().includes('ranking - pratyush'));
-  const pratyushCommentIdx = headers.findIndex(h => h.toLowerCase().includes('comments - pratyush'));
-  const kanavRankIdx = headers.findIndex(h => h.toLowerCase().includes('ranking - kanav'));
-  const kanavCommentIdx = headers.findIndex(h => h.toLowerCase().includes('comments - kanav'));
-  const favIdx = headers.findIndex(h => h.toLowerCase().includes('favorite'));
-  const imageIdx = headers.findIndex(h => h.toLowerCase().includes('image'));
-
-  const stories = [];
-
-  for (let i = 1; i < lines.length; i++) {
-    const row = parseCSVLine(lines[i]);
-    if (row.length < 2) continue;
-
-    const name = nameIdx !== -1 ? row[nameIdx] || '' : row[0] || '';
-    if (!name) continue;
-
-    const medium = (mediumIdx !== -1 ? row[mediumIdx] || '' : row[1] || '').split(',').map(m => m.trim()).filter(Boolean);
-    const genre = (genreIdx !== -1 ? row[genreIdx] || '' : row[2] || '').split(',').map(g => g.trim()).filter(Boolean);
-    const length = lengthIdx !== -1 ? row[lengthIdx] || '' : row[3] || '';
-    const hours = hoursIdx !== -1 ? row[hoursIdx] || '' : row[4] || '';
-    
-    const rankingPratyush = pratyushRankIdx !== -1 ? (row[pratyushRankIdx] && row[pratyushRankIdx] !== '-' ? row[pratyushRankIdx] : '') : '';
-    const commentsPratyush = pratyushCommentIdx !== -1 ? row[pratyushCommentIdx] || '' : '';
-    const rankingKanav = kanavRankIdx !== -1 ? (row[kanavRankIdx] && row[kanavRankIdx] !== '-' ? row[kanavRankIdx] : '') : '';
-    const commentsKanav = kanavCommentIdx !== -1 ? row[kanavCommentIdx] || '' : '';
-    const favoriteCharacters = favIdx !== -1 ? row[favIdx] || '' : '';
-    const imageUrl = imageIdx !== -1 ? row[imageIdx] || '' : '';
-
-    stories.push({
-      id: `story-${i}`,
-      name,
-      medium,
-      genre,
-      length,
-      hours,
-      rankingPratyush,
-      commentsPratyush,
-      rankingKanav,
-      commentsKanav,
-      favoriteCharacters,
-      imageUrl
-    });
-  }
-
-  return stories;
+  return parseSheet(csvText, 'story');
 }
 
 export function parseTopStoriesCSV(csvText) {
-  const lines = csvText.split(/\r?\n/).filter(line => line.trim().length > 0);
-  if (lines.length === 0) return [];
+  return parseSheet(csvText, 'top').map((record, i) => ({ ...record, rank: i + 1 }));
+}
 
-  const headers = parseCSVLine(lines[0]);
-
-  const nameIdx = headers.findIndex(h => h.toLowerCase() === 'name');
-  const mediumIdx = headers.findIndex(h => h.toLowerCase() === 'medium');
-  const genreIdx = headers.findIndex(h => h.toLowerCase() === 'genre');
-  const lengthIdx = headers.findIndex(h => h.toLowerCase() === 'length');
-  const hoursIdx = headers.findIndex(h => h.toLowerCase().includes('hours'));
-  const pratyushRankIdx = headers.findIndex(h => h.toLowerCase().includes('ranking - pratyush'));
-  const kanavRankIdx = headers.findIndex(h => h.toLowerCase().includes('ranking - kanav'));
-  const imageIdx = headers.findIndex(h => h.toLowerCase().includes('image'));
-
-  const stories = [];
-
-  for (let i = 1; i < lines.length; i++) {
-    const row = parseCSVLine(lines[i]);
-    if (row.length < 2) continue;
-
-    const name = nameIdx !== -1 ? row[nameIdx] || '' : row[0] || '';
-    if (!name) continue;
-
-    const medium = (mediumIdx !== -1 ? row[mediumIdx] || '' : row[1] || '').split(',').map(m => m.trim()).filter(Boolean);
-    const genre = (genreIdx !== -1 ? row[genreIdx] || '' : row[2] || '').split(',').map(g => g.trim()).filter(Boolean);
-    const length = lengthIdx !== -1 ? row[lengthIdx] || '' : row[3] || '';
-    const hours = hoursIdx !== -1 ? row[hoursIdx] || '' : '';
-    
-    let rankingPratyush = pratyushRankIdx !== -1 ? (row[pratyushRankIdx] && row[pratyushRankIdx] !== '-' ? row[pratyushRankIdx] : 'Unseen') : '';
-    const rankingKanav = kanavRankIdx !== -1 ? (row[kanavRankIdx] && row[kanavRankIdx] !== '-' ? row[kanavRankIdx] : 'Unseen') : '';
-    
-    const imageUrl = imageIdx !== -1 ? row[imageIdx] || '' : row[7] || '';
-
-    stories.push({
-      id: `top-${i}`,
-      rank: i,
-      name,
-      medium,
-      genre,
-      length,
-      hours,
-      rankingPratyush,
-      rankingKanav,
-      imageUrl
-    });
-  }
-
-  return stories;
+async function fetchCSV(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+  return res.text();
 }
 
 export async function fetchLiveSheetData() {
-  try {
-    const [allRes, topRes] = await Promise.all([
-      fetch(SHEET_ALL_CSV_URL),
-      fetch(SHEET_TOP_CSV_URL)
-    ]);
+  const [all, top] = await Promise.allSettled([
+    fetchCSV(SHEET_ALL_CSV_URL),
+    fetchCSV(SHEET_TOP_CSV_URL),
+  ]);
 
-    let stories = null;
-    let topStories = null;
-
-    if (allRes.ok) {
-      const allText = await allRes.text();
-      stories = parseAllStoriesCSV(allText);
-    }
-
-    if (topRes.ok) {
-      const topText = await topRes.text();
-      topStories = parseTopStoriesCSV(topText);
-    }
-
-    return { stories, topStories };
-  } catch (error) {
-    console.warn('Failed to fetch live Google Sheets data, using local fallback:', error);
-    return { stories: null, topStories: null };
+  if (all.status === 'rejected' || top.status === 'rejected') {
+    console.warn('Google Sheets fetch failed, using local fallback where needed.',
+      all.reason ?? '', top.reason ?? '');
   }
+
+  return {
+    stories: all.status === 'fulfilled' ? parseAllStoriesCSV(all.value) : null,
+    topStories: top.status === 'fulfilled' ? parseTopStoriesCSV(top.value) : null,
+  };
 }

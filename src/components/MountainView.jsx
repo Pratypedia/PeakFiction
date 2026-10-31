@@ -1,5 +1,7 @@
 import React, { useMemo, useState, useEffect, useRef } from 'react';
-import { LayoutGrid, Info, ArrowUp, ArrowDown, Heart, MessageSquare } from 'lucide-react';
+import { ArrowUp, ArrowDown, Heart, MessageSquare } from 'lucide-react';
+import Poster from './Poster';
+import { tierLabel } from '../lib/tiers';
 import '../mountain.css';
 
 export default function MountainView({ stories, socialData, onViewChange }) {
@@ -253,16 +255,10 @@ export default function MountainView({ stories, socialData, onViewChange }) {
               : 'translate(80px, -50%)'
           }}
         >
-          {hoveredStory.imageUrl && (
-            <img 
-              src={hoveredStory.imageUrl} 
-              alt={hoveredStory.name} 
-              className="tooltip-image"
-            />
-          )}
+          <Poster story={hoveredStory} className="tooltip-image" />
           <h4>{hoveredStory.name}</h4>
           <div className="tooltip-meta">
-            <span className="tier-badge" style={{ fontSize: '1.6rem', padding: '4px 10px', fontWeight: 'bold' }}>{hoveredStory.rank}</span>
+            <span className="tier-badge" style={{ fontSize: '1.6rem', padding: '4px 10px', fontWeight: 'bold' }}>#{hoveredStory.rank}</span>
             <span className="score-badge">{hoveredStory.medium.join(', ')}</span>
           </div>
           <p className="tooltip-comments" style={{ color: '#fff', fontWeight: 'bold' }}>
@@ -272,8 +268,8 @@ export default function MountainView({ stories, socialData, onViewChange }) {
             <div style={{ marginBottom: '4px' }}><strong>Length:</strong> {hoveredStory.length}</div>
             <div><strong>Hours of life:</strong> {hoveredStory.hours}</div>
             <div style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-              <div><span style={{ color: '#a855f7', fontWeight: 'bold' }}>Pratyush:</span> {hoveredStory.rankingPratyush}</div>
-              <div><span style={{ color: '#06b6d4', fontWeight: 'bold' }}>Kanav:</span> {hoveredStory.rankingKanav}</div>
+              <div><span style={{ color: '#a855f7', fontWeight: 'bold' }}>Pratyush:</span> {tierLabel(hoveredStory.rankingPratyush, 'Unseen')}</div>
+              <div><span style={{ color: '#06b6d4', fontWeight: 'bold' }}>Kanav:</span> {tierLabel(hoveredStory.rankingKanav, 'Unseen')}</div>
             </div>
             
             {socialData && (socialData[hoveredStory.name]?.likes > 0 || socialData[hoveredStory.name]?.comments > 0) && (

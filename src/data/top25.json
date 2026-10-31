@@ -1,463 +1,377 @@
 [
   {
     "id": "top-1",
-    "rank": 1,
     "name": "The Beginning After the end",
-    "medium": [
-      "comic",
-      "Novel"
-    ],
-    "genre": [
-      "Isekai",
-      "Fantasy",
-      "Action"
-    ],
+    "medium": "comic, Novel",
+    "genre": "Isekai, Fantasy, Action",
     "length": "529 Novel chapters (ongoing), 206 Comic chapters (ongoing)",
     "hours": "100",
     "rankingPratyush": "Peak",
+    "commentsPratyush": "",
     "rankingKanav": "Peak",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/cc/The_Beginning_After_the_End_webtoon_volume_1_cover.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/c/cc/The_Beginning_After_the_End_webtoon_volume_1_cover.jpg",
+    "rank": 1
   },
   {
     "id": "top-2",
-    "rank": 2,
     "name": "Jujutsu Kaisen",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Dark Fantasy",
-      "Supernatural"
-    ],
+    "medium": "anime, Manga",
+    "genre": "Action, Dark Fantasy, Supernatural",
     "length": "271 manga chapters, 52 anime episodes, 1 movie",
     "hours": "28",
     "rankingPratyush": "S",
+    "commentsPratyush": "",
     "rankingKanav": "Peak",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-H3TdM3g5ZUe9.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx101517-H3TdM3g5ZUe9.jpg",
+    "rank": 2
   },
   {
     "id": "top-3",
-    "rank": 3,
     "name": "omniscient readers viewpoint",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "Apocalyptic"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy, Apocalyptic",
     "length": "551 Novel chapters, 308 Manhwa chapters  (ongoing)",
     "hours": "98",
     "rankingPratyush": "Peak",
+    "commentsPratyush": "",
     "rankingKanav": "Peak",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/69/Omniscient_Reader%27s_Viewpoint_Volume_1_Cover.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/69/Omniscient_Reader%27s_Viewpoint_Volume_1_Cover.jpg",
+    "rank": 3
   },
   {
     "id": "top-4",
-    "rank": 4,
     "name": "Avatar: ATLA",
-    "medium": [
-      "show",
-      "comic"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
+    "medium": "show, comic",
+    "genre": "Action, Adventure, Fantasy",
     "length": "61 Avatar: The Last Airbender episodes, 18 Avatar comics (main post-ATLA comics)",
     "hours": "25",
     "rankingPratyush": "Peak",
+    "commentsPratyush": "",
     "rankingKanav": "Peak",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar_The_Last_Airbender_The_Promise_Part_1_cover.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar_The_Last_Airbender_The_Promise_Part_1_cover.jpg",
+    "rank": 4
   },
   {
     "id": "top-5",
-    "rank": 5,
     "name": "Attack on Titan",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Dark Fantasy"
-    ],
+    "medium": "anime, Manga",
+    "genre": "Action, Dark Fantasy",
     "length": "75 episodes total, 139 chapters",
     "hours": "30",
-    "rankingPratyush": "Unseen",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
     "rankingKanav": "Peak",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx53390-1RsuABC34P9D.jpg",
+    "rank": 5
   },
   {
     "id": "top-6",
-    "rank": 6,
     "name": "Arcane",
-    "medium": [
-      "show"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Sci-Fi/Fantasy"
-    ],
+    "medium": "show",
+    "genre": "Action, Adventure, Sci-Fi/Fantasy",
     "length": "18 Episodes",
     "hours": "14",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "rank": 6
   },
   {
     "id": "top-7",
-    "rank": 7,
     "name": "Cowboy Bebop",
-    "medium": [
-      "anime"
-    ],
-    "genre": [
-      "Sci-Fi",
-      "Action"
-    ],
+    "medium": "anime",
+    "genre": "Sci-Fi, Action",
     "length": "26 episodes",
     "hours": "9",
     "rankingPratyush": "Peak",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png",
+    "rank": 7
   },
   {
     "id": "top-8",
-    "rank": 8,
     "name": "Fullmetal Alchemist Brotherhood",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Action",
-      "Adventure",
-      "Fantasy"
-    ],
+    "medium": "anime, Manga",
+    "genre": "Action, Adventure, Fantasy",
     "length": "64 episodes",
     "hours": "21",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg",
+    "rank": 8
   },
   {
     "id": "top-9",
-    "rank": 9,
     "name": "Death Note",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Psychological Thriller",
-      "Supernatural"
-    ],
+    "medium": "anime, Manga",
+    "genre": "Psychological Thriller, Supernatural",
     "length": "37 anime episodes",
     "hours": "12",
     "rankingPratyush": "S",
+    "commentsPratyush": "",
     "rankingKanav": "S",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx30021-FE6kmrfpuKyb.jpg",
+    "rank": 9
   },
   {
     "id": "top-10",
-    "rank": 10,
     "name": "Overgeared",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "LitRPG",
-      "Fantasy",
-      "Action"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "LitRPG, Fantasy, Action",
     "length": "2,059 novel chapters, 300+ comic chapters (ongoing)",
     "hours": "353",
     "rankingPratyush": "S",
+    "commentsPratyush": "",
     "rankingKanav": "S",
-    "imageUrl": "https://m.media-amazon.com/images/I/91j2VjH7jSL._AC_UF1000,1000_QL80_.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/91j2VjH7jSL._AC_UF1000,1000_QL80_.jpg",
+    "rank": 10
   },
   {
     "id": "top-11",
-    "rank": 11,
     "name": "Mistborn",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "High Fantasy",
-      "Adventure"
-    ],
+    "medium": "Book",
+    "genre": "High Fantasy, Adventure",
     "length": "6 books, I've read first 3",
     "hours": "60",
     "rankingPratyush": "S",
+    "commentsPratyush": "",
     "rankingKanav": "S",
-    "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1617768316i/68428.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1617768316i/68428.jpg",
+    "rank": 11
   },
   {
     "id": "top-12",
-    "rank": 12,
     "name": "Cyberpunk Edgerunners",
-    "medium": [
-      "anime"
-    ],
-    "genre": [
-      "Sci-Fi",
-      "Action",
-      "Cyberpunk"
-    ],
+    "medium": "anime",
+    "genre": "Sci-Fi, Action, Cyberpunk",
     "length": "10 episodes",
     "hours": "3",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg",
+    "rank": 12
   },
   {
     "id": "top-13",
-    "rank": 13,
     "name": "Alice in Borderland",
-    "medium": [
-      "show",
-      "Manga"
-    ],
-    "genre": [
-      "Thriller",
-      "Survival",
-      "Sci-Fi"
-    ],
+    "medium": "show, Manga",
+    "genre": "Thriller, Survival, Sci-Fi",
     "length": "22 episodes",
     "hours": "18",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZDdhMTAwMmQtOTVlYi00OTcwLTllZGMtMjc4NGU0NzFhODM3XkEyXkFqcGc@._V1_.jpg"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZDdhMTAwMmQtOTVlYi00OTcwLTllZGMtMjc4NGU0NzFhODM3XkEyXkFqcGc@._V1_.jpg",
+    "rank": 13
   },
   {
     "id": "top-14",
-    "rank": 14,
     "name": "Return of the Mount Hua sect",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Martial Arts",
-      "Action",
-      "Comedy"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Martial Arts, Action, Comedy",
     "length": "172 chapters (ongoing)",
     "hours": "6",
     "rankingPratyush": "A",
+    "commentsPratyush": "",
     "rankingKanav": "S",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132144-i5B4VnG9sRgh.png"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx132144-i5B4VnG9sRgh.png",
+    "rank": 14
   },
   {
     "id": "top-15",
-    "rank": 15,
     "name": "Frieren",
-    "medium": [
-      "anime",
-      "Manga"
-    ],
-    "genre": [
-      "Fantasy",
-      "Adventure"
-    ],
+    "medium": "anime, Manga",
+    "genre": "Fantasy, Adventure",
     "length": "28 episodes",
     "hours": "9",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118586-CXKgWikBFQgS.jpg",
+    "rank": 15
   },
   {
     "id": "top-16",
-    "rank": 16,
     "name": "Ember Knight",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Fantasy",
-      "Action",
-      "Drama"
-    ],
+    "medium": "Manhwa",
+    "genre": "Fantasy, Action, Drama",
     "length": "246 Ongoing",
     "hours": "8",
-    "rankingPratyush": "Unseen",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
     "rankingKanav": "S",
-    "imageUrl": "https://static.wikia.nocookie.net/koreanwebtoons/images/3/30/The_Ember_Knight.jpg/revision/latest?cb=20210831104144"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://image-repository-cdn.tappytoon.com/series/530/67995900-4a46-425f-be6b-be914702c0ef.jpg",
+    "rank": 16
   },
   {
     "id": "top-17",
-    "rank": 17,
     "name": "The Greatest Estate Developer",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Isekai",
-      "Comedy",
-      "Fantasy"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Isekai, Comedy, Fantasy",
     "length": "223 manhwa chapters",
     "hours": "7",
     "rankingPratyush": "S",
+    "commentsPratyush": "",
     "rankingKanav": "A",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx140407-fJQr0fmqq1IO.png",
+    "rank": 17
   },
   {
     "id": "top-18",
-    "rank": 18,
     "name": "Odd Taxi",
-    "medium": [
-      "anime"
-    ],
-    "genre": [
-      "Mystery",
-      "Thriller"
-    ],
+    "medium": "anime",
+    "genre": "Mystery, Thriller",
     "length": "13 episodes",
     "hours": "4",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx128564-TOB0GlDMx2xe.jpg"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx128564-TOB0GlDMx2xe.jpg",
+    "rank": 18
   },
   {
     "id": "top-19",
-    "rank": 19,
     "name": "Invincible",
-    "medium": [
-      "show",
-      "comic"
-    ],
-    "genre": [
-      "Superhero",
-      "Action",
-      "Drama"
-    ],
+    "medium": "show, comic",
+    "genre": "Superhero, Action, Drama",
     "length": "26 episodes, 144 chapters",
     "hours": "24",
     "rankingPratyush": "S",
+    "commentsPratyush": "",
     "rankingKanav": "S",
-    "imageUrl": "https://m.media-amazon.com/images/I/61z68MpchzL._AC_UF894,1000_QL80_.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/61z68MpchzL._AC_UF894,1000_QL80_.jpg",
+    "rank": 19
   },
   {
     "id": "top-20",
-    "rank": 20,
     "name": "Star-Embracing Sword Master",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Action, Fantasy",
     "length": "131 chapters, ongoing",
     "hours": "4",
     "rankingPratyush": "A",
+    "commentsPratyush": "",
     "rankingKanav": "S",
-    "imageUrl": "https://media.kitsu.app/manga/69516/poster_image/large-aad39241dd00e02a4646f7e548056b40.jpeg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://media.kitsu.app/manga/69516/poster_image/large-aad39241dd00e02a4646f7e548056b40.jpeg",
+    "rank": 20
   },
   {
     "id": "top-21",
-    "rank": 21,
     "name": "The Nebula's Civilization",
-    "medium": [
-      "Manhwa"
-    ],
-    "genre": [
-      "Sci-Fi",
-      "Fantasy",
-      "Strategy"
-    ],
+    "medium": "Manhwa",
+    "genre": "Sci-Fi, Fantasy, Strategy",
     "length": "140 (S1: 55, S2: 55, S3: 30+) Ongoing",
     "hours": "5",
-    "rankingPratyush": "Unseen",
+    "rankingPratyush": "-",
+    "commentsPratyush": "",
     "rankingKanav": "S",
-    "imageUrl": "https://cdn.wuxiaworld.com/images/covers/tnc.webp?v=98466158499b9b08199019f2f11638dd424c9a3b"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://cdn.wuxiaworld.com/images/covers/tnc.webp?v=98466158499b9b08199019f2f11638dd424c9a3b",
+    "rank": 21
   },
   {
     "id": "top-22",
-    "rank": 22,
     "name": "Violet Evergarden",
-    "medium": [
-      "anime",
-      "Novel"
-    ],
-    "genre": [
-      "Drama",
-      "Fantasy",
-      "Slice of Life"
-    ],
+    "medium": "anime, Novel",
+    "genre": "Drama, Fantasy, Slice of Life",
     "length": "13 episodes, 2 movies",
     "hours": "8",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-ubzq619ZA2E9.png"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-ubzq619ZA2E9.png",
+    "rank": 22
   },
   {
     "id": "top-23",
-    "rank": 23,
     "name": "Solo leveling",
-    "medium": [
-      "Manhwa",
-      "Novel",
-      "anime"
-    ],
-    "genre": [
-      "Action",
-      "Fantasy",
-      "LitRPG"
-    ],
+    "medium": "Manhwa, Novel, anime",
+    "genre": "Action, Fantasy, LitRPG",
     "length": "270 novel, 200 comic chapters, 68 sequel comic chapters (ongoing), anime 2 seasons (ongoing)",
     "hours": "62",
     "rankingPratyush": "S",
+    "commentsPratyush": "",
     "rankingKanav": "A",
-    "imageUrl": "https://m.media-amazon.com/images/I/81jS951SgDL.jpg"
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/81jS951SgDL.jpg",
+    "rank": 23
   },
   {
     "id": "top-24",
-    "rank": 24,
     "name": "Death is the only ending for the villainess",
-    "medium": [
-      "Manhwa",
-      "Novel"
-    ],
-    "genre": [
-      "Isekai",
-      "Romance",
-      "Drama"
-    ],
+    "medium": "Manhwa, Novel",
+    "genre": "Isekai, Romance, Drama",
     "length": "279 novel chapters, 214 comic chapters",
     "hours": "54",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118408-zZuOINqjBZYn.jpg"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx118408-zZuOINqjBZYn.jpg",
+    "rank": 24
   },
   {
     "id": "top-25",
-    "rank": 25,
     "name": "Six of Crows",
-    "medium": [
-      "Book"
-    ],
-    "genre": [
-      "Fantasy",
-      "Heist",
-      "Young Adult"
-    ],
+    "medium": "Book",
+    "genre": "Fantasy, Heist, Young Adult",
     "length": "2 books",
     "hours": "20",
     "rankingPratyush": "S",
-    "rankingKanav": "Unseen",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXutcZTb4QY2BDU6v61Y78IB_9nlYnxr3_0DE8Oz5qOA&s"
+    "commentsPratyush": "",
+    "rankingKanav": "-",
+    "commentsKanav": "",
+    "favoriteCharacters": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXutcZTb4QY2BDU6v61Y78IB_9nlYnxr3_0DE8Oz5qOA&s",
+    "rank": 25
   }
 ]

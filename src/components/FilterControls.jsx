@@ -12,10 +12,9 @@ export default function FilterControls({
   setSelectedGenre,
   allMediums,
   allGenres,
+  tiers,
   onResetFilters
 }) {
-  const tiers = ['Peak', 'S', 'A', 'B', 'Pending'];
-
   return (
     <div className="controls-card">
       <div className="controls-row-top" style={{ justifyContent: 'flex-end' }}>
@@ -88,7 +87,7 @@ export default function FilterControls({
             >
               All Genres
             </button>
-            {allGenres.slice(0, 10).map((g) => (
+            {allGenres.map((g) => (
               <button
                 key={g}
                 className={`chip ${selectedGenre === g ? 'active' : ''}`}

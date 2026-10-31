@@ -3,7 +3,9 @@ import {
   ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Cell,
   BarChart, Bar
 } from 'recharts';
-import Header from './Header';
+import Poster from './Poster';
+import { tierScore, tierLabel, tierForScore, TIER_KEYS, tierKey, SCORE_MIN, SCORE_MAX, SCORE_TICKS } from '../lib/tiers';
+import { consolidateMedium, slugify } from '../lib/stories';
 
 // Helper to truncate long story names
 const truncateName = (name) => {
@@ -15,31 +17,7 @@ const truncateName = (name) => {
   return name;
 };
 
-// Helper to convert tier strings to numerical values (0 to 10)
-const getTierValue = (rank) => {
-  if (!rank || rank === '-') return null; // We use null for missing ratings
-  const cleanRank = rank.trim().toUpperCase();
-  if (cleanRank === 'PEAK') return 10;
-  if (cleanRank === 'S') return 9;
-  if (cleanRank === 'A') return 8;
-  if (cleanRank === 'B') return 7;
-  if (cleanRank === 'C') return 6;
-  if (cleanRank === 'D') return 5;
-  if (cleanRank === 'F') return 4;
-  return null;
-};
-
-// Helper for formatting Y-axis labels
-const formatTierLabel = (val) => {
-  if (val >= 10) return 'Peak';
-  if (val >= 9) return 'S';
-  if (val >= 8) return 'A';
-  if (val >= 7) return 'B';
-  if (val >= 6) return 'C';
-  if (val >= 5) return 'D';
-  if (val >= 4) return 'F';
-  return '';
-};
+const AXIS_DOMAIN = [SCORE_MIN - 0.5, SCORE_MAX + 0.5];
 
 // Custom Tooltip component for Recharts
 const CustomTooltip = ({ active, payload, isBubbleChart }) => {
@@ -47,9 +25,7 @@ const CustomTooltip = ({ active, payload, isBubbleChart }) => {
     const data = payload[0].payload;
     return (
       <div className="polaroid-card" style={{ width: '250px', zIndex: 1000, transform: 'rotate(2deg)' }}>
-        {data.imageUrl && (
-          <img src={data.imageUrl} alt={data.name} className="polaroid-img" />
-        )}
+        <Poster story={data} className="polaroid-img" />
         <div style={{ marginTop: '10px' }}>
           <span style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>{truncateName(data.name)}</span>
           <div style={{ fontSize: '1.2rem', color: '#2563eb', marginTop: '4px' }}>
@@ -57,12 +33,12 @@ const CustomTooltip = ({ active, payload, isBubbleChart }) => {
           </div>
           {isBubbleChart ? (
             <div style={{ fontSize: '1.1rem', marginTop: '4px', borderTop: '1px dashed #ccc', paddingTop: '4px' }}>
-              <div style={{ color: '#2563eb' }}>P: {data.rankingPratyush || '-'}</div>
-              <div style={{ color: '#d97706' }}>K: {data.rankingKanav || '-'}</div>
+              <div style={{ color: '#2563eb' }}>P: {tierLabel(data.rankingPratyush)}</div>
+              <div style={{ color: '#d97706' }}>K: {tierLabel(data.rankingKanav)}</div>
             </div>
           ) : (
             <div style={{ fontSize: '1.1rem', marginTop: '4px', borderTop: '1px dashed #ccc', paddingTop: '4px' }}>
-              Rating: {data.yAxisValue.toFixed(1)}
+              Rating: {tierForScore(data.yAxisValue)} ({data.yAxisValue.toFixed(1)})
             </div>
           )}
         </div>
@@ -73,28 +49,32 @@ const CustomTooltip = ({ active, payload, isBubbleChart }) => {
   return null;
 };
 
+// Hand-picked favourites; the poster comes from the story they belong to.
+const PRATYUSH_FAVORITES = [
+  { character: 'Arthur Leywin', story: 'The Beginning After the end' },
+  { character: 'Kim Dokja', story: 'omniscient readers viewpoint' },
+  { character: 'Spider-Man', story: 'Marvel Cinematic Universe' },
+];
+const KANAV_FAVORITES = [
+  { character: 'Regis', story: 'The Beginning After the end' },
+  { character: 'Reiner', story: 'Attack on Titan' },
+  { character: 'Levi', story: 'Attack on Titan' },
+];
+
 export default function ChartsView({ stories, onViewChange }) {
   const [scatterFilter, setScatterFilter] = useState('average'); // 'average', 'pratyush', 'kanav'
+  const storiesBySlug = useMemo(() => Object.fromEntries(stories.map(s => [s.slug, s])), [stories]);
 
   // Parse stories to ensure they have valid hours
   const validStories = useMemo(() => {
     return stories
-      .map(story => {
-        let parsedHours = null;
-        if (story.hours) {
-          // Extract numbers (e.g., "500+", "2,000")
-          const cleanStr = story.hours.toString().replace(/,/g, '');
-          const numMatch = cleanStr.match(/\d+(\.\d+)?/);
-          if (numMatch) parsedHours = parseFloat(numMatch[0]);
-        }
-        return {
-          ...story,
-          parsedHours,
-          pVal: getTierValue(story.rankingPratyush),
-          kVal: getTierValue(story.rankingKanav)
-        };
-      })
-      .filter(s => s.parsedHours !== null && !isNaN(s.parsedHours)); // Omit missing hours
+      .map(story => ({
+        ...story,
+        parsedHours: story.hoursNum,
+        pVal: tierScore(story.rankingPratyush),
+        kVal: tierScore(story.rankingKanav)
+      }))
+      .filter(s => s.parsedHours > 0); // Omit missing hours (log scale can't plot 0)
   }, [stories]);
 
   // Scatter Plot Data
@@ -149,8 +129,8 @@ export default function ChartsView({ stories, onViewChange }) {
           const radius = 0.24 + ringIndex * 0.20;
           const angle = (posInRing / itemsInRing) * 2 * Math.PI + (ringIndex * 0.3);
 
-          const plotKVal = Math.min(10.3, Math.max(3.2, story.kVal + radius * Math.cos(angle)));
-          const plotPVal = Math.min(10.3, Math.max(3.2, story.pVal + radius * Math.sin(angle)));
+          const plotKVal = Math.min(SCORE_MAX + 0.3, Math.max(SCORE_MIN - 0.3, story.kVal + radius * Math.cos(angle)));
+          const plotPVal = Math.min(SCORE_MAX + 0.3, Math.max(SCORE_MIN - 0.3, story.pVal + radius * Math.sin(angle)));
 
           result.push({
             ...story,
@@ -169,19 +149,10 @@ export default function ChartsView({ stories, onViewChange }) {
     const genreStats = {};
     const mediumStats = {};
     
-    const consolidateMedium = (m) => {
-      const low = m.toLowerCase();
-      if (['novel', 'book'].includes(low)) return 'Books + Novels';
-      if (['show', 'anime'].includes(low)) return 'Shows';
-      if (['manhwa', 'manga', 'comic'].includes(low)) return 'Comics';
-      if (low === 'movie') return 'Movies';
-      if (low === 'game') return 'Games';
-      return 'Other';
-    };
 
     stories.forEach(story => {
-      const pVal = getTierValue(story.rankingPratyush);
-      const kVal = getTierValue(story.rankingKanav);
+      const pVal = tierScore(story.rankingPratyush);
+      const kVal = tierScore(story.rankingKanav);
       let avg = null;
       if (pVal !== null && kVal !== null) avg = (pVal + kVal) / 2;
       else if (pVal !== null) avg = pVal;
@@ -219,16 +190,16 @@ export default function ChartsView({ stories, onViewChange }) {
   // Collaborative Synergy & Top 3 Contested Cases calculation
   const agreementStats = useMemo(() => {
     const dualRated = stories.filter(s => {
-      const p = getTierValue(s.rankingPratyush);
-      const k = getTierValue(s.rankingKanav);
+      const p = tierScore(s.rankingPratyush);
+      const k = tierScore(s.rankingKanav);
       return p !== null && k !== null;
     });
     if (dualRated.length === 0) return { rate: '0.0%', totalBoth: 0, topDisagreements: [] };
 
     let closeMatches = 0;
     const itemsWithDelta = dualRated.map(s => {
-      const p = getTierValue(s.rankingPratyush);
-      const k = getTierValue(s.rankingKanav);
+      const p = tierScore(s.rankingPratyush);
+      const k = tierScore(s.rankingKanav);
       const delta = Math.abs(p - k);
       if (delta <= 1) closeMatches++;
       return { story: s, delta };
@@ -242,32 +213,15 @@ export default function ChartsView({ stories, onViewChange }) {
   }, [stories]);
 
   const getBrotherStats = (allStories, isPratyush) => {
-    const consolidateMedium = (m) => {
-      const low = m.toLowerCase();
-      if (['novel', 'book'].includes(low)) return 'Books + Novels';
-      if (['show', 'anime'].includes(low)) return 'Shows';
-      if (['manhwa', 'manga', 'comic'].includes(low)) return 'Comics';
-      if (low === 'movie') return 'Movies';
-      if (low === 'game') return 'Games';
-      return 'Other';
-    };
 
-    const ratingCounts = { Peak: 0, S: 0, A: 0, B: 0, C: 0, D: 0, F: 0 };
+    const ratingCounts = Object.fromEntries(TIER_KEYS.map(t => [t, 0]));
     const mediumCounts = {};
     const genreCounts = {};
 
     allStories.forEach(story => {
       const rank = isPratyush ? story.rankingPratyush : story.rankingKanav;
-      if (!rank || rank === '-') return;
-      
-      const cleanRank = rank.trim().toUpperCase();
-      if (cleanRank === 'PEAK') ratingCounts.Peak++;
-      else if (cleanRank === 'S') ratingCounts.S++;
-      else if (cleanRank === 'A') ratingCounts.A++;
-      else if (cleanRank === 'B') ratingCounts.B++;
-      else if (cleanRank === 'C') ratingCounts.C++;
-      else if (cleanRank === 'D') ratingCounts.D++;
-      else if (cleanRank === 'F') ratingCounts.F++;
+      if (tierScore(rank) === null) return;
+      ratingCounts[tierKey(rank)]++;
 
       const uniqueConsolidated = Array.from(new Set(story.medium.map(consolidateMedium)));
       uniqueConsolidated.forEach(cm => {
@@ -279,7 +233,7 @@ export default function ChartsView({ stories, onViewChange }) {
       });
     });
 
-    const ratingData = ['Peak', 'S', 'A', 'B', 'C', 'D', 'F'].map(tier => ({ tier, count: ratingCounts[tier] }));
+    const ratingData = TIER_KEYS.map(tier => ({ tier, count: ratingCounts[tier] }));
     const mediumData = Object.keys(mediumCounts).map(m => ({ name: m, count: mediumCounts[m] })).sort((a, b) => b.count - a.count);
     const genreData = Object.keys(genreCounts).map(g => ({ name: g, count: genreCounts[g] })).sort((a, b) => b.count - a.count).slice(0, 5);
 
@@ -345,10 +299,10 @@ export default function ChartsView({ stories, onViewChange }) {
                   type="number" 
                   dataKey="yAxisValue" 
                   name="Rating" 
-                  domain={[3.5, 10.5]} 
+                  domain={AXIS_DOMAIN} 
                   stroke="#1f2937"
-                  ticks={[4, 5, 6, 7, 8, 9, 10]}
-                  tickFormatter={formatTierLabel}
+                  ticks={SCORE_TICKS}
+                  tickFormatter={tierForScore}
                   label={{ value: 'Tier Rating', angle: -90, position: 'insideLeft', fill: '#1f2937' }} 
                 />
                 <RechartsTooltip cursor={{ strokeDasharray: '3 3' }} content={<CustomTooltip isBubbleChart={false} />} wrapperStyle={{ zIndex: 1000 }} />
@@ -393,7 +347,7 @@ export default function ChartsView({ stories, onViewChange }) {
                 {agreementStats.topDisagreements.map((story, i) => (
                   <div key={story.id} style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed #ccc', paddingBottom: '4px' }}>
                     <span style={{ color: '#111', fontFamily: 'Special Elite', cursor: 'pointer' }} onClick={() => onViewChange('cards', story)}>{truncateName(story.name)}</span>
-                    <span style={{ color: '#dc2626', fontFamily: 'Caveat', fontSize: '1.2rem' }}>Pratyush: {story.rankingPratyush} vs Kanav: {story.rankingKanav}</span>
+                    <span style={{ color: '#dc2626', fontFamily: 'Caveat', fontSize: '1.2rem' }}>Pratyush: {tierLabel(story.rankingPratyush)} vs Kanav: {tierLabel(story.rankingKanav)}</span>
                   </div>
                 ))}
               </div>
@@ -419,20 +373,20 @@ export default function ChartsView({ stories, onViewChange }) {
                   type="number" 
                   dataKey="plotKVal" 
                   name="Subject Kanav's Ratings" 
-                  domain={[3.5, 10.5]} 
+                  domain={AXIS_DOMAIN} 
                   stroke="#1f2937"
-                  ticks={[4, 5, 6, 7, 8, 9, 10]}
-                  tickFormatter={formatTierLabel}
+                  ticks={SCORE_TICKS}
+                  tickFormatter={tierForScore}
                   label={{ value: "Subject Kanav's Ratings", position: 'insideBottom', offset: -10, fill: '#1f2937' }} 
                 />
                 <YAxis 
                   type="number" 
                   dataKey="plotPVal" 
                   name="Subject Pratyush's Ratings" 
-                  domain={[3.5, 10.5]} 
+                  domain={AXIS_DOMAIN} 
                   stroke="#1f2937"
-                  ticks={[4, 5, 6, 7, 8, 9, 10]}
-                  tickFormatter={formatTierLabel}
+                  ticks={SCORE_TICKS}
+                  tickFormatter={tierForScore}
                   label={{ value: "Subject Pratyush's Ratings", angle: -90, position: 'insideLeft', fill: '#1f2937' }} 
                 />
                 <ZAxis type="number" dataKey="parsedHours" range={[60, 2500]} name="Hours" />
@@ -488,12 +442,17 @@ export default function ChartsView({ stories, onViewChange }) {
                 👤 Persons of Interest
               </h4>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'flex-start' }}>
-                {['Arthur Leywin', 'Kim Dokja', 'Spider-Man'].map(char => (
-                  <div key={char} className="polaroid-card" style={{ width: '100px', height: '120px', padding: '10px 10px 40px 10px', display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ flex: 1, background: '#222', width: '100%' }}></div>
-                    <span style={{ bottom: '10px', left: '0', right: '0', textAlign: 'center', fontSize: '1.2rem' }}>{char}</span>
-                  </div>
-                ))}
+                {PRATYUSH_FAVORITES.map(({ character, story: storyName }) => {
+                  const story = storiesBySlug[slugify(storyName)];
+                  return (
+                    <div key={character} className="polaroid-card" style={{ width: '100px', height: '120px', padding: '10px 10px 40px 10px', display: 'flex', flexDirection: 'column', cursor: story ? 'pointer' : 'default' }} onClick={() => story && onViewChange('cards', story)} title={story?.name}>
+                      {story
+                        ? <Poster story={story} style={{ flex: 1, width: '100%', minHeight: 0, objectFit: 'cover' }} />
+                        : <div style={{ flex: 1, background: '#222', width: '100%' }}></div>}
+                      <span style={{ bottom: '10px', left: '0', right: '0', textAlign: 'center', fontSize: '1.2rem' }}>{character}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -549,12 +508,17 @@ export default function ChartsView({ stories, onViewChange }) {
                 👤 Persons of Interest
               </h4>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'flex-start' }}>
-                {['Regis', 'Reiner', 'Levi'].map(char => (
-                  <div key={char} className="polaroid-card" style={{ width: '100px', height: '120px', padding: '10px 10px 40px 10px', display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ flex: 1, background: '#222', width: '100%' }}></div>
-                    <span style={{ bottom: '10px', left: '0', right: '0', textAlign: 'center', fontSize: '1.2rem' }}>{char}</span>
-                  </div>
-                ))}
+                {KANAV_FAVORITES.map(({ character, story: storyName }) => {
+                  const story = storiesBySlug[slugify(storyName)];
+                  return (
+                    <div key={character} className="polaroid-card" style={{ width: '100px', height: '120px', padding: '10px 10px 40px 10px', display: 'flex', flexDirection: 'column', cursor: story ? 'pointer' : 'default' }} onClick={() => story && onViewChange('cards', story)} title={story?.name}>
+                      {story
+                        ? <Poster story={story} style={{ flex: 1, width: '100%', minHeight: 0, objectFit: 'cover' }} />
+                        : <div style={{ flex: 1, background: '#222', width: '100%' }}></div>}
+                      <span style={{ bottom: '10px', left: '0', right: '0', textAlign: 'center', fontSize: '1.2rem' }}>{character}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 

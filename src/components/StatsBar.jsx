@@ -1,9 +1,11 @@
 import React from 'react';
-import { Flame, Zap, Sparkles, ThumbsUp, Database } from 'lucide-react';
+import { Flame, Zap, Sparkles, Database } from 'lucide-react';
+import { tierKey } from '../lib/tiers';
 
 export default function StatsBar({ stories }) {
-  const countRank = (rank) => stories.filter(s => s.rankingPratyush === rank || s.rankingKanav === rank).length;
-  const peakCount = stories.filter(s => s.rankingPratyush === 'Peak' || s.rankingKanav === 'Peak').length;
+  const countRank = (tier) =>
+    stories.filter(s => tierKey(s.rankingPratyush) === tier || tierKey(s.rankingKanav) === tier).length;
+  const peakCount = countRank('Peak');
 
   return (
     <div 
