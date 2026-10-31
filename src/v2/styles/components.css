@@ -246,6 +246,7 @@
   transition: background var(--dur-1), border-color var(--dur-1), color var(--dur-1);
 }
 .v2-chip:hover { border-color: var(--ink-2); color: var(--ink); }
+.v2-chip:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .v2-chip[aria-pressed='true'] { background: var(--ink); border-color: var(--ink); color: var(--ink-inverse); }
 
 .v2-field { display: grid; gap: var(--space-1); }
@@ -261,6 +262,14 @@
   transition: border-color var(--dur-1), box-shadow var(--dur-1);
 }
 .v2-input:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px var(--paper-3); }
+.v2-select {
+  appearance: none;
+  padding-right: 2.2em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234a4038' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.85em center;
+  cursor: pointer;
+}
 .v2-input--area { resize: vertical; min-height: 7rem; line-height: 1.5; }
 
 /* ───────── Contact form ───────── */

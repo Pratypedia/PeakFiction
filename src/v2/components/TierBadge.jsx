@@ -12,7 +12,7 @@ export default function TierBadge({ rank, size = 'md', title }) {
       style={{ '--tier-color': color, '--tier-wash': wash }}
       title={title ?? (parsed ? `${parsed.label} tier` : 'Not rated yet')}
     >
-      {parsed ? parsed.label : '–'}
+      {parsed ? parsed.label : <><span aria-hidden="true">–</span><span className="v2-visually-hidden">not rated yet</span></>}
     </span>
   );
 }
